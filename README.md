@@ -2,7 +2,7 @@
   <img src="public/tpblogo.svg" width="400px" align="center" alt="Logo da Tech" />
   <h1 align="center">Tech Pro Bem</h1>
   <p align="center">
-    ✨ <a href="https://www.techprobem.com.br">https://www.techprobem.com.br</a> ✨
+    ✨ <a href="https://www.techprobem.com.br">Acesse o site do projeto</a> ✨
     <br/>
     Uma comunidade onde impulsionamos pessoas, carreiras e projetos sociais.
   </p>
