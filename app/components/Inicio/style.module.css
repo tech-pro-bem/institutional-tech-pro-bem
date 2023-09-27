@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+.container {
+
+    padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.container img {
+    width: 19.5rem;
+    height: 18.75rem;
+    margin-top: 1.5rem;
+}
+
+.text {
+    width: 19.5rem;
+    align-items: flex-start;
+    color: #030302;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 2rem;
+}
+
+.title {
+    font-weight: 300;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    opacity: 87%;
+}
+
+.description {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        padding: 3rem 3.5rem 0 3.5rem;
+        gap:2rem;
+    }
+    .container img {
+        width: 42rem;
+        height: 32rem;
+    }
+
+    .text {
+        padding: 3.5rem 0 0 0;
+        gap: 2rem;
+        width: 29.4rem;
+    }
+
+    .title {
+        margin-top: 0.5rem;
+        line-height: 3.8rem;
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
