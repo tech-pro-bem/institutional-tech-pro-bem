@@ -1,10 +1,9 @@
-
-import styles from './page.module.css'
+import { Inicio } from "./components/Inicio";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
+    <main>
+      <Inicio />
     </main>
   )
 }
