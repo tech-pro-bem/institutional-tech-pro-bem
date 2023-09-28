@@ -1,5 +1,17 @@
+:root {
+  /* Neutral */
+  --neutral-black: #030302;
+  --neutral-gray-darkest: #575452;
+  --neutral-gray-dark: #817c79;
+  --neutral-gray-medium: #bdbab9;
+  --neutral-gray-light: #d2d0cf;
+  --neutral-gray-lightest: #e7e6e5;
+  --neutral-white: #fdfcfc;
+}
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,7 +20,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -16,17 +29,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, div {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div {
   font-size: inherit;
   font-weight: normal;
   text-wrap: balance;
