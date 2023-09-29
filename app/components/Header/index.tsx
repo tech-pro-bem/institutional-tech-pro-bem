@@ -10,6 +10,7 @@ import logo from "../../../public/logo1.svg";
 export function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
   const [headerHeight, setHeaderHeight] = useState<number>();
+  const [hasShadow, setHasShadow] = useState<boolean>(false);
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -22,8 +23,29 @@ export function Header() {
     updateHeaderHeight();
   });
 
+  useEffect(() => {
+    function checkScroll() {
+      if (window.scrollY > 0) {
+        setHasShadow(true);
+      } else {
+        setHasShadow(false);
+      }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+
+    checkScroll();
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
+
   return (
-    <header id="header" className={styles.header}>
+    <header
+      id="header"
+      className={`${styles.header} ${hasShadow ? styles.hasShadow : ""}`}
+    >
       <div className={styles.headerContainer}>
         <Link className={styles.logo} href="/">
           <Image
