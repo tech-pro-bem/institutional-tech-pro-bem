@@ -1,5 +1,14 @@
 :root {
-  /* Neutral */
+  /* Primary colors */
+  --primary-extra-dark: #4100b3;
+  --primary-darkest: #5b00fa;
+  --primary-dark: #8742ff;
+  --primary-medium: #9e66ff;
+  --primary-light: #bb94ff;
+  --primary-lightest: #cfb3ff;
+  --primary-extra-light: #e2d1ff;
+
+  /* Neutral colors */
   --neutral-black: #030302;
   --neutral-gray-darkest: #575452;
   --neutral-gray-dark: #817c79;
@@ -7,6 +16,23 @@
   --neutral-gray-light: #d2d0cf;
   --neutral-gray-lightest: #e7e6e5;
   --neutral-white: #fdfcfc;
+
+  /* Font sizes mobile */
+  --bodySizeMobile1: 1rem;
+  --bodyHeightMobile1: 1.375rem;
+  --bodyWeightMobile1: 400;
+
+  /* Font sizes desktop */
+  --bodySizeDesktop1: 1.125rem;
+  --bodyHeightDesktop1: 1.5rem;
+  --bodyWeightDesktop1: 400;
+
+  /* Shadows */
+  --shadow-lightest: 0px 2px 8px 0px rgba(87, 84, 82, 0.08);
+  --shadow-light: 0px 4px 16px 0px rgba(87, 84, 82, 0.1);
+  --shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
+  --shadow-dark: 0px 12px 32px 0px rgba(87, 84, 82, 0.14);
+  --shadow-darkest: 0px 16px 40px 0px rgba(87, 84, 82, 0.16);
 }
 
 *,
