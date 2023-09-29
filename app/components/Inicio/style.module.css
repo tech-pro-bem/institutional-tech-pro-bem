@@ -43,7 +43,7 @@
   background: linear-gradient(90deg, #c4f5f6 -63.31%, #e2d1ff 114.71%);
   width: 100%;
   height: 80px;
-  margin-top: -5rem;
+  margin-top: -6rem;
 }
 
 @media screen and (min-width: 1280px) {
@@ -73,5 +73,9 @@
   .description {
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+
+  .testeQuemSomos {
+    margin-top: -5rem;
   }
 }

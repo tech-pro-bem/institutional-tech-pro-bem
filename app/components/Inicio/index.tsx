@@ -6,7 +6,8 @@ import styles from './style.module.css';
 
 export function Inicio() {
   return (
-    <>
+    <section className={styles.inicio}>
+      {/* acho que para manter a semantica seria valido manter a section */}
       <div className={styles.container}>
         <div className={styles.text}>
           <h1 className={styles.title}>
@@ -22,6 +23,6 @@ export function Inicio() {
       </div>
       <div className={styles.testeQuemSomos}></div>
       {/* verificar se vai manter essa div ou juntar com a proxima sessão */}
-    </>
+    </section>
   );
 }
