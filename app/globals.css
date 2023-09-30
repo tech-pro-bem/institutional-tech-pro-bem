@@ -43,3 +43,48 @@ a {
 iframe {
   border: 0;
 }
+
+:root {
+  /* Primary colors */
+  --primary-dark: #8742ff;
+  --primary-extra-light: #e2d1ff;
+
+  /* Neutral colors */
+  --neutral-black: #030302;
+  --neutral-gray-darkest: #575452;
+  --neutral-white: #fdfcfc;
+
+  /* Font sizes */
+  --fs-4: 1rem; /* 16px */
+  --fs-5: 1.125rem; /* 18px */
+  --fs-9: 2.5rem; /* 40px */
+  --fs-10: 3.5rem; /* 56px */
+
+  /* Font Weight */
+  --fw-300: 300;
+  --fw-400: 400;
+
+  /* Shadows */
+  --shadow-light: 0px 4px 16px 0px rgba(87, 84, 82, 0.1);
+  --shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
+}
+
+.h1{
+  font-size: var(--fs-9);
+  font-weight: var(--fw-300);
+  line-height: 1.2;
+}
+.body1 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-400);
+  line-height: 1.35;
+}
+
+@media(min-width: 80em) {
+  .h1{
+    font-size: var(--fs-10);
+  }
+  .body1 {
+    font-size: var(--fs-5);
+  }
+}
