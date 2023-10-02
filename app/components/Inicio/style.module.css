@@ -51,6 +51,7 @@
   .container img {
     width: 42rem;
     height: 32rem;
+    margin-top: 0;
   }
 
   .text {
