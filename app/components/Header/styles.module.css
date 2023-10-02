@@ -2,6 +2,7 @@
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   background-color: var(--neutral-white);
 }
 
@@ -112,15 +113,17 @@
 /* Menu Navbar */
 
 .navbar {
-  display: none;
-  width: 100%;
   position: fixed;
-  bottom: 0;
+  top: -100%;
   left: 0;
+  width: 100%;
+  z-index: -1;
+  transition: top 0.5s ease-in-out;
 }
 
 .navbar.open {
-  display: block;
+  top: 64px;
+  bottom: 0;
 }
 
 .navbar ul {
@@ -181,6 +184,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
+    z-index: 0;
 
     background-color: var(--neutral-white);
   }
@@ -199,10 +203,6 @@
     padding: 0;
     width: fit-content;
     list-style-type: none;
-
-    font-size: var(--bodySizeDesktop1);
-    line-height: var(--bodyHeightDesktop1);
-    font-weight: var(--bodyWeightDesktop1);
   }
 
   .navbar li:hover {

@@ -9,7 +9,7 @@ import logo from '../../../public/logo1.svg'
 
 export function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
-  const [headerHeight, setHeaderHeight] = useState<number>()
+  const [headerHeight, setHeaderHeight] = useState<number>(64)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
 
   useEffect(() => {
@@ -74,7 +74,6 @@ export function Header() {
 
           <nav
             className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
-            style={{ top: `${headerHeight}px` }}
           >
             <ul className="body1">
               <li>
@@ -100,7 +99,7 @@ export function Header() {
               </li>
             </ul>
 
-            <div className={styles.opacityMenu}></div>
+            {isMenuOpened && <div className={styles.opacityMenu}></div>}
           </nav>
         </div>
       </header>
