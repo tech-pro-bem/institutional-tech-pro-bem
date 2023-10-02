@@ -16,24 +16,22 @@
 
 .text {
   width: 19.5rem;
-  align-items: flex-start;
-  color: #030302;
+  color: var(--neutral-black);
   font-family: 'Nunito Sans', sans-serif;
-  gap: 2rem;
 }
 
 .title {
   font-weight: 300;
   line-height: 3rem;
-  font-size: 2.5rem;
-  opacity: 87%;
+  font-size: var(--fs-9);
+  opacity: 0.87;
 }
 
 .description {
   margin-top: 2rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4rem;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-400);
+  line-height: 1.35;
 }
 
 .testeQuemSomos {
@@ -43,12 +41,15 @@
   margin-top: -6rem;
 }
 
-@media screen and (min-width: 1280px) {
+@media(min-width: 80em) {
   /* utilizar min a max na media ou limitar o max com max-widht */
+ 
+  /*Fiz alteração no container, tirei o padding, acho que era isso que não tava centralizando o bloco*/
   .container {
     display: flex;
-    padding: 3rem 3.5rem 0rem 3.5rem;
-    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.875rem;
   }
   .container img {
     width: 42rem;
@@ -65,11 +66,11 @@
   .title {
     margin-top: 0.5rem;
     line-height: 3.8rem;
-    font-size: 3.5rem;
+    font-size: var(--fs-10);
   }
 
   .description {
-    font-size: 1.2rem;
+    font-size: var(--fs-5);
     line-height: 1.5rem;
   }
 
