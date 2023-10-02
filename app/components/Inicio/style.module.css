@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
 
 /*
-    Utilizar rem como medida?
-    Mobile first
     padding responsivo ou margin auto
     verificar se o layout para tablet aumenta verticalmente ou só ajuste de larguras
 */
@@ -12,7 +10,6 @@
 }
 
 .container img {
-  width: 19.5rem;
   height: 18.75rem;
   margin-top: 1.5rem;
 }
@@ -50,7 +47,7 @@
   /* utilizar min a max na media ou limitar o max com max-widht */
   .container {
     display: flex;
-    padding: 3rem 3.5rem 0 3.5rem;
+    padding: 3rem 3.5rem 0rem 3.5rem;
     gap: 2rem;
   }
   .container img {
@@ -62,6 +59,7 @@
     padding: 3.5rem 0 0 0;
     gap: 2rem;
     width: 29.4rem;
+
   }
 
   .title {
@@ -76,6 +74,6 @@
   }
 
   .testeQuemSomos {
-    margin-top: -5rem;
+    margin-top: -6.5rem;
   }
 }
