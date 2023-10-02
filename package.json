@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{tsx,ts,css}": "eslint --fix"
+    "*.{tsx,ts}": "eslint --fix"
   },
   "dependencies": {
     "@types/node": "20.5.7",

@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import inicioLogo from '../../../public/inicio.svg';
-import styles from './style.module.css';
+import Image from 'next/image'
+import inicioLogo from '../../../public/inicio.svg'
+import styles from './style.module.css'
 
 export function Inicio() {
   return (
@@ -15,9 +15,10 @@ export function Inicio() {
             a tecnologia é um meio poderoso para transformar vidas.
           </p>
         </div>
-        <Image src={inicioLogo} alt='Logo Inicio' />
+        <Image src={inicioLogo} alt="Logo Inicio" />
         {/* onde salvar as imagens, qual alt utilizar */}
+        {/* a div com o gradiente entra aqui ou vem da proxima sessão */}
       </div>
     </section>
-  );
+  )
 }
