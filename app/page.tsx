@@ -1,9 +1,9 @@
-import { Inicio } from './components/Inicio'
+import { SessionBegin } from './components/SessionBegin'
 
 export default function Home() {
   return (
     <main>
-      <Inicio />
+      <SessionBegin />
     </main>
   )
 }

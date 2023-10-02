@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
 
-/*
-    padding responsivo ou margin auto
-    verificar se o layout para tablet aumenta verticalmente ou só ajuste de larguras
-*/
-
-.container {
+.layout_begin {
   padding-top: 2rem;
   /* centralizar o conteudo no layout para tablet */
   display: flex;
@@ -17,7 +12,7 @@
   /* passar o container para o global */
 }
 
-.container img {
+.layout_begin img {
   height: 18.75rem;
   margin-top: 1.5rem;
   width: 100%;
