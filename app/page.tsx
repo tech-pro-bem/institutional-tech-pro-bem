@@ -1,9 +1,13 @@
-import { Inicio } from "./components/Inicio";
 
+import { Header } from "./components/Header";
+import { Inicio } from "./components/Inicio";
 export default function Home() {
   return (
-    <main>
-      <Inicio />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Inicio />
+      </main>
+    </>
   )
 }

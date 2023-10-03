@@ -1,5 +1,6 @@
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,7 +9,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -16,17 +18,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, div {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div {
   font-size: inherit;
   font-weight: normal;
   text-wrap: balance;
@@ -69,7 +86,7 @@ iframe {
   --shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
 }
 
-.h1{
+.h1 {
   font-size: var(--fs-9);
   font-weight: var(--fw-300);
   line-height: 1.2;
@@ -80,8 +97,8 @@ iframe {
   line-height: 1.35;
 }
 
-@media(min-width: 80em) {
-  .h1{
+@media (min-width: 80em) {
+  .h1 {
     font-size: var(--fs-10);
   }
   .body1 {
