@@ -6,11 +6,33 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
+import { useObserver } from '@/app/utils/useObserver'
 
 export function Header() {
+  const sections = [
+    {
+      id: 'inicio',
+      text: 'Início',
+    },
+    {
+      id: 'duvidas',
+      text: 'Dúvidas',
+    },
+    {
+      id: 'acompanhe',
+      text: 'Acompanhe',
+    },
+    {
+      id: 'contato',
+      text: 'Contato',
+    },
+  ]
+
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
   const [headerHeight, setHeaderHeight] = useState<number>(64)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
+  const { activeId } = useObserver('section')
+  console.log(activeId)
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -76,27 +98,13 @@ export function Header() {
             className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
           >
             <ul className="body1">
-              <li>
-                <Link href="">Início</Link>
-              </li>
-              <li>
-                <Link href="">Sobre</Link>
-              </li>
-              <li>
-                <Link href="">Impacto</Link>
-              </li>
-              <li>
-                <Link href="">Depoimentos</Link>
-              </li>
-              <li>
-                <Link href="">Dúvidas</Link>
-              </li>
-              <li>
-                <Link href="">Nos acompanhe</Link>
-              </li>
-              <li>
-                <Link href="">Contato</Link>
-              </li>
+              {sections.map((section) => {
+                return (
+                  <li key={section.id}>
+                    <Link href={`#${section.id}`}>{section.text}</Link>
+                  </li>
+                )
+              })}
             </ul>
 
             {isMenuOpened && <div className={styles.opacityMenu}></div>}

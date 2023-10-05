@@ -149,9 +149,6 @@
 
 .navbar ul:first-child {
   padding-top: 1rem;
-}
-
-.navbar ul:last-child {
   padding-bottom: 1rem;
 }
 
@@ -215,10 +212,7 @@
 
   .navbar ul:first-child {
     padding-top: 0;
-  }
-
-  .navbar ul:last-child {
-    padding-bottom: 0;
+    padding-bottom: 0rem;
   }
 
   .opacityMenu {
