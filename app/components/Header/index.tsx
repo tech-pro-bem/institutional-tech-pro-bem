@@ -32,7 +32,6 @@ export function Header() {
   const [headerHeight, setHeaderHeight] = useState<number>(64)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const { activeId } = useObserver('section')
-  console.log(activeId)
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -100,8 +99,32 @@ export function Header() {
             <ul className="body1">
               {sections.map((section) => {
                 return (
-                  <li key={section.id}>
-                    <Link href={`#${section.id}`}>{section.text}</Link>
+                  <li
+                    key={section.id}
+                    className={section.id === activeId ? styles.activeLink : ''}
+                  >
+                    <Link
+                      href={`#${section.id}`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        document
+                          .querySelector(`#${section.id}`)
+                          ?.scrollIntoView({
+                            behavior: 'smooth',
+                          })
+                      }}
+                    >
+                      <div className={styles.textDiv}>
+                        {section.text}
+                        <div
+                          className={
+                            section.id === activeId
+                              ? styles.indicator
+                              : styles.hideIndicator
+                          }
+                        ></div>
+                      </div>
+                    </Link>
                   </li>
                 )
               })}
@@ -111,7 +134,12 @@ export function Header() {
           </nav>
         </div>
       </header>
-      <div style={{ marginBottom: `${headerHeight}px` }}></div>
+      <div
+        style={{
+          height: `${headerHeight}px`,
+          display: hasShadow ? 'block' : 'none',
+        }}
+      ></div>
     </>
   )
 }

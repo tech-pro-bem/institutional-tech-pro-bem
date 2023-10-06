@@ -27,7 +27,7 @@ export function useObserver(observableTarget: string) {
     return () => {
       if (observer.current) observer.current.disconnect()
     }
-  }, [])
+  }, [observableTarget])
 
   return { activeId }
 }
