@@ -29,9 +29,9 @@ export function Header() {
   ]
 
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
-  const [headerHeight, setHeaderHeight] = useState<number>(64)
+  const [headerHeight, setHeaderHeight] = useState<number>(6)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
-  const { activeId } = useObserver('section')
+  const { activeId } = useObserver('section', headerHeight)
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -107,6 +107,7 @@ export function Header() {
                       href={`#${section.id}`}
                       onClick={(e) => {
                         e.preventDefault()
+                        setIsMenuOpened(!isMenuOpened)
                         document
                           .querySelector(`#${section.id}`)
                           ?.scrollIntoView({
@@ -130,16 +131,15 @@ export function Header() {
               })}
             </ul>
 
-            {isMenuOpened && <div className={styles.opacityMenu}></div>}
+            {isMenuOpened && (
+              <div
+                onClick={() => setIsMenuOpened(!isMenuOpened)}
+                className={styles.opacityMenu}
+              ></div>
+            )}
           </nav>
         </div>
       </header>
-      <div
-        style={{
-          height: `${headerHeight}px`,
-          display: hasShadow ? 'block' : 'none',
-        }}
-      ></div>
     </>
   )
 }

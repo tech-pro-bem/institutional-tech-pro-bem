@@ -1,16 +1,12 @@
 .header {
-  position: relative;
-  width: 100%;
+  position: sticky;
+  top: 0;
 
   background-color: var(--neutral-white);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .header.hasShadow {
-  position: fixed;
-  top: 0;
-  left: 0;
   box-shadow: var(--shadow-medium);
 }
 
