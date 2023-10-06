@@ -5,7 +5,7 @@ import styles from './style.module.css'
 export function Inicio() {
   return (
     <section className={styles.inicio}>
-      <div className={styles.container}>
+      <div className={`${styles.container} container`}>
         <div className={styles.text}>
           <h1 className={styles.title}>
             Impulsionamos pessoas, carreiras e projetos sociais

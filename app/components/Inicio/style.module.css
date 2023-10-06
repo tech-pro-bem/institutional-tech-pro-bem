@@ -6,24 +6,29 @@
 */
 
 .container {
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  padding-top: 2rem;
   /* centralizar o conteudo no layout para tablet */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* max-width: 1170px;
+  margin-inline: auto;
+  width: 90%; */
+  /* passar o container para o global */
 }
 
 .container img {
   height: 18.75rem;
   margin-top: 1.5rem;
   width: 100%;
-  max-width: 350px;
+  /* max-width: 350px; */
 }
 
 .text {
-  width: 19.5rem;
+  min-width: 19.5rem;
   color: var(--neutral-black);
   font-family: 'Nunito Sans', sans-serif;
+  width: 100%;
 }
 
 .title {
@@ -42,16 +47,15 @@
 
 /* Layout tablet display flex row - para manter a imagem ao lado*/
 
-/* @media (max-width: 1279px) and (min-width: 768px) {
+@media (max-width: 1279px) and (min-width: 768px) {
   .container {
     justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
   }
 
   .text {
-    width: 50%;
-    max-width: 360px;
+    width: 100%;
+    max-width: 470px;
   }
 
   .title {
@@ -61,13 +65,14 @@
   }
 
   .container img {
-    width: 50%;
-    max-width: 530px;
+    width: 100%;
     height: auto;
     margin-top: 0;
     transform: translateY(60px);
+    min-width: 300px;
+    /* max-width: 672px; */
   }
-} */
+}
 
 /* Colocando uma imagem maior e colocando textos lado a lado */
 /* @media (min-width: 768px) and (max-width: 1279px) {
@@ -121,13 +126,14 @@
     width: 42rem;
     height: 32rem;
     margin-top: 0;
-    max-width: 672px;
+    /* max-width: 672px; */
   }
 
   .text {
     padding: 3.5rem 0 0 0;
     gap: 2rem;
-    width: 29.4rem;
+    width: 40%;
+    max-width: 470px;
   }
 
   .title {
