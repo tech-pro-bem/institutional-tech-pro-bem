@@ -3,34 +3,35 @@
 import styles from './styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
 import { useObserver } from '@/app/utils/useObserver'
 
+const sections = [
+  {
+    id: 'inicio',
+    text: 'Início',
+  },
+  {
+    id: 'duvidas',
+    text: 'Dúvidas',
+  },
+  {
+    id: 'acompanhe',
+    text: 'Acompanhe',
+  },
+  {
+    id: 'contato',
+    text: 'Contato',
+  },
+]
 export function Header() {
-  const sections = [
-    {
-      id: 'inicio',
-      text: 'Início',
-    },
-    {
-      id: 'duvidas',
-      text: 'Dúvidas',
-    },
-    {
-      id: 'acompanhe',
-      text: 'Acompanhe',
-    },
-    {
-      id: 'contato',
-      text: 'Contato',
-    },
-  ]
-
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
   const [headerHeight, setHeaderHeight] = useState<number>(6)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
+  const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
+  const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
   const { activeId } = useObserver('section', headerHeight)
 
   useEffect(() => {
@@ -61,6 +62,39 @@ export function Header() {
       window.removeEventListener('scroll', checkScroll)
     }
   }, [])
+
+  useEffect(() => {
+    const actualActiveLink = sections.find((section) => section.id === activeId)
+
+    if (actualActiveLink) {
+      const activeElement: HTMLLIElement | null = document.querySelector(
+        // eslint-disable-next-line prettier/prettier
+        `[data-id=${actualActiveLink.id}]`
+      )
+
+      if (activeElement) {
+        setIndicatorLeft(activeElement.offsetLeft)
+        setIndicatorWidth(activeElement.clientWidth)
+      }
+    }
+  }, [activeId])
+
+  function handleLinkClick(
+    e: MouseEvent<HTMLAnchorElement>,
+    // eslint-disable-next-line prettier/prettier
+    sectionId: string
+  ) {
+    setIsMenuOpened(false)
+    const liElement: Element | null = e.currentTarget.offsetParent
+
+    if (liElement instanceof HTMLLIElement) {
+      setIndicatorLeft(liElement.offsetLeft)
+      setIndicatorWidth(liElement.clientWidth)
+      document.querySelector(`#${sectionId}`)?.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  }
 
   return (
     <>
@@ -101,34 +135,29 @@ export function Header() {
                 return (
                   <li
                     key={section.id}
+                    data-id={section.id}
                     className={section.id === activeId ? styles.activeLink : ''}
                   >
                     <Link
                       href={`#${section.id}`}
+                      scroll={false}
                       onClick={(e) => {
-                        e.preventDefault()
-                        setIsMenuOpened(!isMenuOpened)
-                        document
-                          .querySelector(`#${section.id}`)
-                          ?.scrollIntoView({
-                            behavior: 'smooth',
-                          })
+                        handleLinkClick(e, section.id)
                       }}
                     >
-                      <div className={styles.textDiv}>
-                        {section.text}
-                        <div
-                          className={
-                            section.id === activeId
-                              ? styles.indicator
-                              : styles.hideIndicator
-                          }
-                        ></div>
-                      </div>
+                      <span>{section.text}</span>
                     </Link>
                   </li>
                 )
               })}
+
+              <div
+                className={styles.indicator}
+                style={{
+                  width: `${indicatorWidth}px`,
+                  left: `${indicatorLeft}px`,
+                }}
+              ></div>
             </ul>
 
             {isMenuOpened && (
