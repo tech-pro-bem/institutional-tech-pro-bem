@@ -3,7 +3,7 @@
 import styles from './styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MouseEvent, useEffect, useState } from 'react'
+import { MouseEvent, useEffect, useRef, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
 import { useObserver } from '@/app/utils/useObserver'
@@ -32,6 +32,8 @@ export function Header() {
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
   const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
+
+  const resizeTimeoutRef = useRef<number | null>(null)
   const { activeId } = useObserver('section', headerHeight)
 
   useEffect(() => {
@@ -68,8 +70,7 @@ export function Header() {
 
     if (actualActiveLink) {
       const activeElement: HTMLLIElement | null = document.querySelector(
-        // eslint-disable-next-line prettier/prettier
-        `[data-id=${actualActiveLink.id}]`
+        `[data-id=${actualActiveLink.id}]`,
       )
 
       if (activeElement) {
@@ -79,10 +80,40 @@ export function Header() {
     }
   }, [activeId])
 
+  useEffect(() => {
+    function handleResize() {
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current)
+      }
+
+      resizeTimeoutRef.current = window.setTimeout(() => {
+        const actualActiveLink = sections.find(
+          (section) => section.id === activeId,
+        )
+
+        if (actualActiveLink) {
+          const activeElement: HTMLLIElement | null = document.querySelector(
+            `[data-id=${actualActiveLink.id}]`,
+          )
+
+          if (activeElement) {
+            setIndicatorLeft(activeElement.offsetLeft)
+            setIndicatorWidth(activeElement.clientWidth)
+          }
+        }
+      }, 500)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [activeId])
+
   function handleLinkClick(
     e: MouseEvent<HTMLAnchorElement>,
-    // eslint-disable-next-line prettier/prettier
-    sectionId: string
+    sectionId: string,
   ) {
     setIsMenuOpened(false)
     const liElement: Element | null = e.currentTarget.offsetParent

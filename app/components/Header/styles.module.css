@@ -270,9 +270,10 @@
 
   .navbar li:hover {
     color: var(--primary-dark);
+    background-color: var(--neutral-white);
   }
 
-  .navbar li:active {
+  .navbar li a:active {
     background-color: var(--neutral-white);
   }
 
