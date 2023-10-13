@@ -136,6 +136,7 @@ export function Header() {
                   <li
                     key={section.id}
                     data-id={section.id}
+                    data-test={section.id}
                     className={section.id === activeId ? styles.activeLink : ''}
                   >
                     <Link

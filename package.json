@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
+    "cypress": "^13.3.1",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1"
   }
