@@ -8,24 +8,8 @@ import { MouseEvent, useEffect, useRef, useState } from 'react'
 import logo from '../../../public/logo1.svg'
 import { useObserver } from '@/app/utils/useObserver'
 
-const sections = [
-  {
-    id: 'inicio',
-    text: 'Início',
-  },
-  {
-    id: 'duvidas',
-    text: 'Dúvidas',
-  },
-  {
-    id: 'acompanhe',
-    text: 'Acompanhe',
-  },
-  {
-    id: 'contato',
-    text: 'Contato',
-  },
-]
+const sections = ['Início', 'Dúvidas', 'Acompanhe', 'Contato']
+
 export function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
   const [headerHeight, setHeaderHeight] = useState<number>(6)
@@ -35,6 +19,16 @@ export function Header() {
 
   const resizeTimeoutRef = useRef<number | null>(null)
   const { activeId } = useObserver('section', headerHeight)
+
+  function idFactory(string: string) {
+    const normalizedText = string
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+
+    const lowercaseText = normalizedText.toLowerCase()
+
+    return lowercaseText
+  }
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -66,11 +60,13 @@ export function Header() {
   }, [])
 
   useEffect(() => {
-    const actualActiveLink = sections.find((section) => section.id === activeId)
+    const actualActiveLink = sections.find(
+      (section) => idFactory(section) === activeId,
+    )
 
     if (actualActiveLink) {
       const activeElement: HTMLLIElement | null = document.querySelector(
-        `[data-id=${actualActiveLink.id}]`,
+        `[data-id=${idFactory(actualActiveLink)}]`,
       )
 
       if (activeElement) {
@@ -88,12 +84,12 @@ export function Header() {
 
       resizeTimeoutRef.current = window.setTimeout(() => {
         const actualActiveLink = sections.find(
-          (section) => section.id === activeId,
+          (section) => idFactory(section) === activeId,
         )
 
         if (actualActiveLink) {
           const activeElement: HTMLLIElement | null = document.querySelector(
-            `[data-id=${actualActiveLink.id}]`,
+            `[data-id=${idFactory(actualActiveLink)}]`,
           )
 
           if (activeElement) {
@@ -165,18 +161,20 @@ export function Header() {
               {sections.map((section) => {
                 return (
                   <li
-                    key={section.id}
-                    data-id={section.id}
-                    className={section.id === activeId ? styles.activeLink : ''}
+                    key={idFactory(section)}
+                    data-id={idFactory(section)}
+                    className={
+                      idFactory(section) === activeId ? styles.activeLink : ''
+                    }
                   >
                     <Link
-                      href={`#${section.id}`}
+                      href={`#${idFactory(section)}`}
                       scroll={false}
                       onClick={(e) => {
-                        handleLinkClick(e, section.id)
+                        handleLinkClick(e, idFactory(section))
                       }}
                     >
-                      <span>{section.text}</span>
+                      <span>{section}</span>
                     </Link>
                   </li>
                 )

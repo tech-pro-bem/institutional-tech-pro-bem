@@ -38,13 +38,7 @@
   padding: 0.5rem 0.25rem;
   width: 2rem;
   height: 2rem;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -56,13 +50,7 @@
   background: var(--neutral-gray-darkest);
   border-radius: 0.5rem;
   opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -71,30 +59,18 @@
 }
 
 .hamburguerIcon span:nth-child(1) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .hamburguerIcon span:nth-child(2) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .hamburguerIcon span:nth-child(3) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .closeIcon span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -104,9 +80,6 @@
 }
 
 .closeIcon span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -143,10 +116,6 @@
   color: var(--neutral-black);
   text-align: center;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 }
 
@@ -172,7 +141,6 @@
   border-bottom: 2px solid var(--primary-medium);
   padding-bottom: 0.5rem;
 
-  -webkit-transition: margin 0.5s ease;
   transition: margin 0.5s ease;
 }
 
@@ -264,7 +232,6 @@
     height: 2px;
     background-color: var(--primary-medium);
 
-    -webkit-transition: all 0.5s ease;
     transition: all 0.8s ease;
   }
 
