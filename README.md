@@ -4,7 +4,7 @@
   <p align="center">
     ✨ <a href="https://www.techprobem.com.br">https://www.techprobem.com.br</a> ✨
     <br/>
-    Uma comunidade onde impulsionamos pessoas, carreiras e projetos sociais.
+    Uma comunidade onde impulsionamos pessoas, carreiras e projetos sociais!
   </p>
 </p>
 
