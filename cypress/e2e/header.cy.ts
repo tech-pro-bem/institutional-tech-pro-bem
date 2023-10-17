@@ -4,11 +4,15 @@ describe('Testa se o Header está funcionando', () => {
     // viewport para a tela grande, verficar como vai fazer para a menor
     cy.viewport(1280, 720)
     // Link para entender o viewport: https://docs.cypress.io/api/commands/viewport
+    cy.wait(4000)
   })
 
   it('should be go to session begin', () => {
     // Localize o botão que você deseja clicar
+
     cy.getByData('inicio').click()
+    cy.wait(3000)
+    cy.getByData('indicator').should('be.visible')
 
     // Aguarde um momento para que a animação de rolagem seja concluída (ajuste conforme necessário)
     cy.wait(1000) // Ajuste o tempo de espera conforme necessário

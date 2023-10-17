@@ -115,6 +115,7 @@ export function Header() {
             className={styles.menuButton}
             onClick={() => setIsMenuOpened(!isMenuOpened)}
             type="button"
+            data-test="menu-hamburguer"
           >
             <div
               className={`${styles.hamburguerIcon} ${
@@ -158,6 +159,7 @@ export function Header() {
                   width: `${indicatorWidth}px`,
                   left: `${indicatorLeft}px`,
                 }}
+                data-test="indicator"
               ></div>
             </ul>
 
