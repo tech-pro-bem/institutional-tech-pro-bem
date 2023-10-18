@@ -4,6 +4,7 @@
 
   background-color: var(--neutral-white);
   z-index: 2;
+  transition: all 0.5s ease;
 }
 
 .header.hasShadow {

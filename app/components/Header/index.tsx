@@ -17,6 +17,7 @@ export function Header() {
   const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
 
   const resizeTimeoutRef = useRef<number | null>(null)
+  const scrollTimeoutRef = useRef<number | null>(null)
   const { activeId } = useObserver('section')
 
   function idFactory(string: string) {
@@ -31,16 +32,20 @@ export function Header() {
 
   useEffect(() => {
     function checkScroll() {
-      if (window.scrollY > 0) {
-        setHasShadow(true)
-      } else {
-        setHasShadow(false)
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current)
       }
+
+      scrollTimeoutRef.current = window.setTimeout(() => {
+        if (window.scrollY > 0) {
+          setHasShadow(true)
+        } else {
+          setHasShadow(false)
+        }
+      }, 100)
     }
 
     window.addEventListener('scroll', checkScroll)
-
-    checkScroll()
 
     return () => {
       window.removeEventListener('scroll', checkScroll)
