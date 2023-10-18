@@ -3,7 +3,7 @@
 import styles from './styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MouseEvent, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
 import { useObserver } from '@/app/utils/useObserver'
@@ -19,6 +19,7 @@ export function Header() {
 
   const resizeTimeoutRef = useRef<number | null>(null)
   const scrollTimeoutRef = useRef<number | null>(null)
+  const ulRef = useRef<HTMLUListElement | null>(null)
   const { activeId } = useObserver('section')
 
   useEffect(() => {
@@ -48,15 +49,15 @@ export function Header() {
       (section) => idFactory(section) === activeId,
     )
 
-    if (actualActiveLink) {
-      const activeElement: HTMLLIElement | null = document.querySelector(
-        `[data-id=${idFactory(actualActiveLink)}]`,
-      )
-
-      if (activeElement) {
-        setIndicatorLeft(activeElement.offsetLeft)
-        setIndicatorWidth(activeElement.clientWidth)
-      }
+    if (actualActiveLink && ulRef.current) {
+      ulRef.current.childNodes.forEach((liElement) => {
+        if (liElement instanceof HTMLLIElement) {
+          if (liElement.dataset.id === idFactory(actualActiveLink)) {
+            setIndicatorLeft(liElement.offsetLeft)
+            setIndicatorWidth(liElement.clientWidth)
+          }
+        }
+      })
     }
   }, [activeId])
 
@@ -71,15 +72,15 @@ export function Header() {
           (section) => idFactory(section) === activeId,
         )
 
-        if (actualActiveLink) {
-          const activeElement: HTMLLIElement | null = document.querySelector(
-            `[data-id=${idFactory(actualActiveLink)}]`,
-          )
-
-          if (activeElement) {
-            setIndicatorLeft(activeElement.offsetLeft)
-            setIndicatorWidth(activeElement.clientWidth)
-          }
+        if (actualActiveLink && ulRef.current) {
+          ulRef.current.childNodes.forEach((liElement) => {
+            if (liElement instanceof HTMLLIElement) {
+              if (liElement.dataset.id === idFactory(actualActiveLink)) {
+                setIndicatorLeft(liElement.offsetLeft)
+                setIndicatorWidth(liElement.clientWidth)
+              }
+            }
+          })
         }
       }, 500)
     }
@@ -90,22 +91,6 @@ export function Header() {
       window.removeEventListener('resize', handleResize)
     }
   }, [activeId])
-
-  function handleLinkClick(
-    e: MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) {
-    setIsMenuOpened(false)
-    const liElement: Element | null = e.currentTarget.offsetParent
-
-    if (liElement instanceof HTMLLIElement) {
-      setIndicatorLeft(liElement.offsetLeft)
-      setIndicatorWidth(liElement.clientWidth)
-      document.querySelector(`#${sectionId}`)?.scrollIntoView({
-        behavior: 'smooth',
-      })
-    }
-  }
 
   return (
     <>
@@ -142,7 +127,7 @@ export function Header() {
             <nav
               className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
             >
-              <ul className="body1">
+              <ul ref={ulRef} className="body1">
                 {sections.map((section) => {
                   return (
                     <li
@@ -154,10 +139,7 @@ export function Header() {
                     >
                       <Link
                         href={`#${idFactory(section)}`}
-                        scroll={false}
-                        onClick={(e) => {
-                          handleLinkClick(e, idFactory(section))
-                        }}
+                        onClick={() => setIsMenuOpened(false)}
                       >
                         <span>{section}</span>
                       </Link>
@@ -176,7 +158,7 @@ export function Header() {
 
               {isMenuOpened && (
                 <div
-                  onClick={() => setIsMenuOpened(!isMenuOpened)}
+                  onClick={() => setIsMenuOpened(false)}
                   className={styles.opacityMenu}
                 ></div>
               )}
