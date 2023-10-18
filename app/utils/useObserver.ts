@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useObserver(observableTarget: string, headerHeight: number) {
+export function useObserver(observableTarget: string) {
   const observer = useRef<IntersectionObserver>()
   const [activeId, setActiveId] = useState('')
 
@@ -23,14 +23,14 @@ export function useObserver(observableTarget: string, headerHeight: number) {
         observer.current.observe(element)
       }
       if (element instanceof HTMLElement) {
-        element.style.scrollMarginTop = `${headerHeight}px`
+        element.className = 'scrollMarginTop'
       }
     })
 
     return () => {
       if (observer.current) observer.current.disconnect()
     }
-  }, [observableTarget, headerHeight])
+  }, [observableTarget])
 
   return { activeId }
 }

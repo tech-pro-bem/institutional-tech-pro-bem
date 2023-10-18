@@ -12,13 +12,12 @@ const sections = ['Início', 'Dúvidas', 'Acompanhe', 'Contato']
 
 export function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
-  const [headerHeight, setHeaderHeight] = useState<number>(6)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
   const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
 
   const resizeTimeoutRef = useRef<number | null>(null)
-  const { activeId } = useObserver('section', headerHeight)
+  const { activeId } = useObserver('section')
 
   function idFactory(string: string) {
     const normalizedText = string
@@ -29,17 +28,6 @@ export function Header() {
 
     return lowercaseText
   }
-
-  useEffect(() => {
-    const updateHeaderHeight = () => {
-      const headerElement = document.querySelector('#header')
-      if (headerElement) {
-        setHeaderHeight(headerElement.clientHeight)
-      }
-    }
-
-    updateHeaderHeight()
-  })
 
   useEffect(() => {
     function checkScroll() {

@@ -98,11 +98,20 @@ iframe {
   line-height: 1.35;
 }
 
+.scrollMarginTop {
+  scroll-margin-top: 4rem;
+}
+
 @media (min-width: 80em) {
   .h1 {
     font-size: var(--fs-10);
   }
+
   .body1 {
     font-size: var(--fs-5);
+  }
+
+  .scrollMarginTop {
+    scroll-margin-top: 6rem;
   }
 }
