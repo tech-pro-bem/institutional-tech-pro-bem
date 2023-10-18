@@ -7,6 +7,7 @@ import { MouseEvent, useEffect, useRef, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
 import { useObserver } from '@/app/utils/useObserver'
+import { idFactory } from '@/app/utils/idFactory'
 
 const sections = ['Início', 'Dúvidas', 'Acompanhe', 'Contato']
 
@@ -19,16 +20,6 @@ export function Header() {
   const resizeTimeoutRef = useRef<number | null>(null)
   const scrollTimeoutRef = useRef<number | null>(null)
   const { activeId } = useObserver('section')
-
-  function idFactory(string: string) {
-    const normalizedText = string
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-
-    const lowercaseText = normalizedText.toLowerCase()
-
-    return lowercaseText
-  }
 
   useEffect(() => {
     function checkScroll() {
@@ -123,72 +114,74 @@ export function Header() {
         className={`${styles.header} ${hasShadow ? styles.hasShadow : ''}`}
       >
         <div className={styles.headerContainer}>
-          <Link className={styles.logo} href="/">
-            <Image
-              className={styles.logo}
-              src={logo}
-              alt="Logo da Tech Pro Bem"
-            />
-          </Link>
+          <div className={styles.headerInnerContainer}>
+            <Link className={styles.logo} href="/">
+              <Image
+                className={styles.logo}
+                src={logo}
+                alt="Logo da Tech Pro Bem"
+              />
+            </Link>
 
-          <button
-            className={styles.menuButton}
-            onClick={() => setIsMenuOpened(!isMenuOpened)}
-            type="button"
-          >
-            <div
-              className={`${styles.hamburguerIcon} ${
-                isMenuOpened ? styles.closeIcon : ''
-              }`}
+            <button
+              className={styles.menuButton}
+              onClick={() => setIsMenuOpened(!isMenuOpened)}
+              type="button"
             >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
+              <div
+                className={`${styles.hamburguerIcon} ${
+                  isMenuOpened ? styles.closeIcon : ''
+                }`}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
 
-          <nav
-            className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
-          >
-            <ul className="body1">
-              {sections.map((section) => {
-                return (
-                  <li
-                    key={idFactory(section)}
-                    data-id={idFactory(section)}
-                    className={
-                      idFactory(section) === activeId ? styles.activeLink : ''
-                    }
-                  >
-                    <Link
-                      href={`#${idFactory(section)}`}
-                      scroll={false}
-                      onClick={(e) => {
-                        handleLinkClick(e, idFactory(section))
-                      }}
+            <nav
+              className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
+            >
+              <ul className="body1">
+                {sections.map((section) => {
+                  return (
+                    <li
+                      key={idFactory(section)}
+                      data-id={idFactory(section)}
+                      className={
+                        idFactory(section) === activeId ? styles.activeLink : ''
+                      }
                     >
-                      <span>{section}</span>
-                    </Link>
-                  </li>
-                )
-              })}
+                      <Link
+                        href={`#${idFactory(section)}`}
+                        scroll={false}
+                        onClick={(e) => {
+                          handleLinkClick(e, idFactory(section))
+                        }}
+                      >
+                        <span>{section}</span>
+                      </Link>
+                    </li>
+                  )
+                })}
 
-              <div
-                className={styles.indicator}
-                style={{
-                  width: `${indicatorWidth}px`,
-                  left: `${indicatorLeft}px`,
-                }}
-              ></div>
-            </ul>
+                <div
+                  className={styles.indicator}
+                  style={{
+                    width: `${indicatorWidth}px`,
+                    left: `${indicatorLeft}px`,
+                  }}
+                ></div>
+              </ul>
 
-            {isMenuOpened && (
-              <div
-                onClick={() => setIsMenuOpened(!isMenuOpened)}
-                className={styles.opacityMenu}
-              ></div>
-            )}
-          </nav>
+              {isMenuOpened && (
+                <div
+                  onClick={() => setIsMenuOpened(!isMenuOpened)}
+                  className={styles.opacityMenu}
+                ></div>
+              )}
+            </nav>
+          </div>
         </div>
       </header>
     </>
