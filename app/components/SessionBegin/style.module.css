@@ -41,7 +41,7 @@
 
   .text {
     width: 100%;
-    max-width: 470px;
+    max-width: 29.375rem;
   }
 
   .title {
@@ -55,8 +55,8 @@
     height: auto;
     margin-top: 0;
     transform: translateY(60px);
-    min-width: 300px;
-    max-width: 672px;
+    min-width: 18.75rem;
+    max-width: 42rem;
   }
 }
 
@@ -72,14 +72,14 @@
     width: 42rem;
     height: 32rem;
     margin-top: 0;
-    max-width: 672px;
+    max-width: 42rem;
   }
 
   .text {
     padding: 3.5rem 0 0 0;
     gap: 2rem;
     width: 40%;
-    max-width: 470px;
+    max-width: 29.375rem;
   }
 
   .title {
