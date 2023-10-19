@@ -16,13 +16,6 @@
   width: 100%;
 }
 
-.title {
-  font-weight: var(--fw-300);
-  line-height: 3rem;
-  font-size: var(--fs-9);
-  opacity: 0.87;
-}
-
 .description {
   margin-top: 2rem;
   font-size: var(--fs-4);
@@ -52,8 +45,6 @@
 
   .title {
     margin-top: 0.5rem;
-    line-height: 2.8rem;
-    font-size: var(--fs-9);
   }
 }
 
@@ -79,8 +70,6 @@
 
   .title {
     margin-top: 0.5rem;
-    line-height: 3.8rem;
-    font-size: var(--fs-10);
   }
 
   .description {
