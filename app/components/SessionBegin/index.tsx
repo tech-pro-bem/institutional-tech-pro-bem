@@ -5,7 +5,7 @@ import styles from './style.module.css'
 export function SessionBegin() {
   return (
     <section className={styles.inicio}>
-      <div className={`${styles.layout} container`}>
+      <div className={`${styles.layout_begin} container`}>
         <div className={styles.text}>
           <h1 className={styles.title}>
             Impulsionamos pessoas, carreiras e projetos sociais
@@ -16,8 +16,6 @@ export function SessionBegin() {
           </p>
         </div>
         <Image src={inicioLogo} alt="Logo Inicio" />
-        {/* onde salvar as imagens, qual alt utilizar */}
-        {/* a div com o gradiente entra aqui ou vem da proxima sessão */}
       </div>
     </section>
   )
