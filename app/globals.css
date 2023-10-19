@@ -50,6 +50,7 @@ div {
   text-size-adjust: auto;
   overflow-wrap: break-word;
   vertical-align: baseline;
+  color: var(--neutral-black);
 }
 
 a {
@@ -89,19 +90,19 @@ iframe {
   --shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
 }
 
-.h1 {
+h1 {
   font-size: var(--fs-9);
   font-weight: var(--fw-600);
   line-height: 1.2;
 }
 
-.h2 {
+h2 {
   font-size: var(--fs-7);
   font-weight: var(--fw-600);
   line-height: 1.25;
 }
 
-.h4 {
+h3 {
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
   line-height: 1.25;

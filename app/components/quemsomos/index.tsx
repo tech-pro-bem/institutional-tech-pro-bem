@@ -5,7 +5,7 @@ export function QuemSomos() {
   return (
     <section className={styles.quemsomos}>
       <div className={`${styles.layout} container`}>
-        <h2 className="h2">Quem somos</h2>
+        <h2>Quem somos</h2>
         <div className={styles.right}>
           <p className="body1">
             A Tech Pro Bem é uma comunidade de tecnologia onde conectamos
@@ -21,7 +21,7 @@ export function QuemSomos() {
           </p>
         </div>
         <div className={styles.left}>
-          <h3 className="h4">Como funciona?</h3>
+          <h3>Como funciona?</h3>
           <p className="body1">
             Selecionamos uma organização sem fins lucrativos que entrou em
             contato conosco e passou por um alinhamento de objetivos e
