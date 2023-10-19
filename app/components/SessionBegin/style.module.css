@@ -31,12 +31,21 @@
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
   line-height: 1.35;
+  opacity: 0.6;
 }
 
-@media (max-width: 79.9375em) and (min-width: 48em) {
+@media  (min-width: 48em) and (max-width: 79.9375em)  {
   .layout_begin {
     justify-content: center;
     flex-direction: row;
+  }
+  .layout_begin img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    transform: translateY(60px);
+    min-width: 18.75rem;
+    max-width: 42rem;
   }
 
   .text {
@@ -48,15 +57,6 @@
     margin-top: 0.5rem;
     line-height: 2.8rem;
     font-size: var(--fs-9);
-  }
-
-  .container img {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    transform: translateY(60px);
-    min-width: 18.75rem;
-    max-width: 42rem;
   }
 }
 
@@ -79,7 +79,6 @@
     padding: 3.5rem 0 0 0;
     gap: 2rem;
     width: 40%;
-    max-width: 29.375rem;
   }
 
   .title {
