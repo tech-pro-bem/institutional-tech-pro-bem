@@ -75,8 +75,9 @@ iframe {
   /* Font sizes */
   --fs-4: 1rem; /* 16px */
   --fs-5: 1.125rem; /* 18px */
-  --fs-6: 1.5rem; /* 24px */
-  --fs-7: 2rem; /* 32px */
+  --fs-6: 1.25rem; /* 20px */
+  --fs-7: 1.5rem; /* 24px */
+  --fs-8: 2rem; /* 32px */
   --fs-9: 2.5rem; /* 40px */
   --fs-10: 3.5rem; /* 56px */
 
@@ -95,6 +96,18 @@ h1 {
   font-weight: var(--fw-300);
   line-height: 3rem;
   opacity: 0.87;
+}
+
+h2 {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  line-height: 1.25;
 }
 
 .body1 {
