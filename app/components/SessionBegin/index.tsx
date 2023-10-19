@@ -2,10 +2,10 @@ import Image from 'next/image'
 import inicioLogo from '../../../public/inicio.svg'
 import styles from './style.module.css'
 
-export function Inicio() {
+export function SessionBegin() {
   return (
     <section className={styles.inicio}>
-      <div className={`${styles.container} container`}>
+      <div className={`${styles.layout} container`}>
         <div className={styles.text}>
           <h1 className={styles.title}>
             Impulsionamos pessoas, carreiras e projetos sociais
