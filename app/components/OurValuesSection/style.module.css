@@ -5,9 +5,10 @@
     max-width: 87%;
     width: fit-content;
     margin: 0 auto;
-    box-shadow: 0 0.25rem 1rem 0.5rem rgba(87, 84, 82, 0.1);
+    box-shadow: var(--shadow-light);
     padding-inline: 3rem;
     padding-block: 1rem;
+    transform: translateY(-16rem);
 }
 
 .values_content {
@@ -45,9 +46,23 @@
     font-weight: var(--fw-400);
 }
 
+@media screen and (min-width: 48em) and (max-width: 79.9375em) {
+    .main_box{
+        max-width: 40rem;
+    }
+    .values_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .value { 
+        max-width: 14rem;
+    }
+}
+
 @media screen and (min-width: 80em) {
     .main_box {
         max-width: 70.875rem;
+        transform: translateY(-10rem);
     }
     .title {
         margin-top: none;
