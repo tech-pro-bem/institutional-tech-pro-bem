@@ -3,19 +3,23 @@
   height: 100vh;
   background: linear-gradient(90deg, #c4f5f6 -63.31%, #e2d1ff 114.71%);
   margin-top: -3.5rem;
+  padding-bottom: 4rem;
+  height: 64.75rem;
+}
+.layout {
+  padding-top: 3.8rem;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  gap: 1.5rem;
 }
-.container {
-  padding-top: 3.8rem;
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.title {
-  margin-top: 0.5rem;
-  line-height: 2.8rem;
-  font-size: var(--fs-9);
-}
-@media (max-width: 1279px) and (min-width: 768px) {
+
+/* @media (max-width: 1279px) and (min-width: 768px) {
   .quemsomos {
     margin-top: 0;
   }
@@ -24,4 +28,4 @@
   .quemsomos {
     margin-top: -8.625rem;
   }
-}
+} */
