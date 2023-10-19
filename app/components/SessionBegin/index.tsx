@@ -16,8 +16,6 @@ export function SessionBegin() {
           </p>
         </div>
         <Image src={inicioLogo} alt="Logo Inicio" />
-        {/* onde salvar as imagens, qual alt utilizar */}
-        {/* a div com o gradiente entra aqui ou vem da proxima sessão */}
       </div>
     </section>
   )
