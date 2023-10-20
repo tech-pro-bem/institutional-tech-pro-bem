@@ -1,11 +1,11 @@
 .main_box {
     background-color: var(--neutral-white);
-    height: fit-content;
-    border-radius: 0.5rem;
-    max-width: 87%;
-    width: fit-content;
-    margin: 0 auto;
     box-shadow: var(--shadow-light);
+    border-radius: 0.5rem;
+    width: fit-content;
+    max-width: 87%;
+    height: fit-content;
+    margin: 0 auto;
     padding-inline: 3rem;
     padding-block: 1rem;
     transform: translateY(-16rem);
@@ -27,7 +27,6 @@
 
 .value {
     max-width: 12.5rem;
-    display: block;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
