@@ -23,6 +23,34 @@
   .about {
     margin-top: 2rem;
   }
+
+  .layout_about {
+    /* padding-top: 8.125rem; */
+    gap: 0;
+  }
+
+  .text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .right {
+    width: 50%;
+    min-width: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
 }
 @media (min-width: 80em) {
   .about {
@@ -39,15 +67,19 @@
     display: flex;
     width: 100%;
     /* justify-content: space-between; */
-    gap: 10.75rem;
+    /* gap: 10.75rem; */
   }
 
   .right {
+    width: 50%;
     margin-top: 2rem;
-    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .left {
-    width: 31.2rem;
+    width: 50%;
+    margin-top: 0;
   }
 }

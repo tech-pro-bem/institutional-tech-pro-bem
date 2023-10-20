@@ -1,11 +1,11 @@
+import { SessionAboutUs } from './components/SessionAboutUs'
 import { SessionBegin } from './components/SessionBegin'
-import { QuemSomos } from './components/quemsomos'
 
 export default function Home() {
   return (
     <main>
       <SessionBegin />
-      <QuemSomos />
+      <SessionAboutUs />
     </main>
   )
 }

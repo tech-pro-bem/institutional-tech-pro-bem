@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.css'
 
-export function QuemSomos() {
+export function SessionAboutUs() {
   return (
     <section className={styles.about}>
       <div className={`${styles.layout_about} container`}>
@@ -13,7 +13,6 @@ export function QuemSomos() {
               profissionais de diferentes áreas para criar soluções digitais
               para ONGs e projetos sociais.
             </p>
-            <br></br>
             <p className="body1">
               Oferecemos experiência prática em um time multidisciplinar, com o
               objetivo de impulsionar o aprendizado das competências necessárias
