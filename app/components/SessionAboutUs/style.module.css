@@ -25,7 +25,6 @@
   }
 
   .layout_about {
-    /* padding-top: 8.125rem; */
     gap: 0;
   }
 
@@ -38,6 +37,7 @@
   .right {
     width: 50%;
     min-width: 390px;
+    padding-right: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,8 +66,6 @@
   .text {
     display: flex;
     width: 100%;
-    /* justify-content: space-between; */
-    /* gap: 10.75rem; */
   }
 
   .right {
