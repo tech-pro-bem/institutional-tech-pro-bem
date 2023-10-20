@@ -97,7 +97,7 @@ iframe {
 .h1 {
   font-size: var(--fs-9);
   font-weight: var(--fw-300);
-  line-height: 3rem;
+  line-height: 1.2;
   opacity: 0.87;
 }
 
@@ -120,21 +120,14 @@ iframe {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 73.125rem;
   margin-inline: auto;
   width: 90%;
 }
 
-@media (min-width: 48em) and (max-width: 79.9375em) {
-  .h1 {
-    line-height: 2.8rem;
-    font-size: var(--fs-9);
-  }
-}
-
 @media (min-width: 80em) {
   .h1 {
-    line-height: 3.8rem;
+    line-height: 1.07;
     font-size: var(--fs-10);
   }
   .body1 {
