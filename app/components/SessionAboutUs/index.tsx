@@ -5,7 +5,7 @@ export function SessionAboutUs() {
   return (
     <section className={styles.about}>
       <div className={`${styles.layout_about} container`}>
-        <h2>Quem somos</h2>
+        <h2 className="h2">Quem somos</h2>
         <div className={styles.text}>
           <div className={styles.right}>
             <p className="body1">
@@ -21,7 +21,7 @@ export function SessionAboutUs() {
             </p>
           </div>
           <div className={styles.left}>
-            <h3>Como funciona?</h3>
+            <h3 className="h3">Como funciona?</h3>
             <p className="body1">
               Selecionamos uma organização sem fins lucrativos que entrou em
               contato conosco e passou por um alinhamento de objetivos e
