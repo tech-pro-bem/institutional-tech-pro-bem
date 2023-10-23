@@ -1,9 +1,14 @@
 import { OurValues } from './components/OurValuesSection'
-
+import { Header } from "./components/Header";
+import { Inicio } from "./components/Inicio";
 export default function Home() {
   return (
-    <main>
-      <OurValues />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Inicio />
+        <OurValues />
+      </main>
+    </>
   )
 }
