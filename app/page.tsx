@@ -1,11 +1,15 @@
-import { SessionAboutUs } from './components/SessionAboutUs'
+import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
+import { SessionAboutUs } from './components/SessionAboutUs'
 
 export default function Home() {
   return (
-    <main>
-      <SessionBegin />
-      <SessionAboutUs />
-    </main>
+    <>
+      <Header />
+      <main>
+        <SessionBegin />
+        <SessionAboutUs />
+      </main>
+    </>
   )
 }
