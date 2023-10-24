@@ -23,7 +23,7 @@ export function useObserver(observableTarget: string) {
         observer.current.observe(element)
       }
       if (element instanceof HTMLElement) {
-        element.className = 'scrollMarginTop'
+        element.classList.add('scrollMarginTop')
       }
     })
 
