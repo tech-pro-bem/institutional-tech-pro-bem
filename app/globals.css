@@ -93,6 +93,7 @@ h1 {
   opacity: 0.87;
 }
 
+
 .body1 {
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
@@ -114,6 +115,7 @@ h1 {
   .body1 {
     font-size: var(--fs-5);
   }
+  
 }
 
 .container {
@@ -121,3 +123,4 @@ h1 {
   margin-inline: auto;
   width: 90%;
 }
+
