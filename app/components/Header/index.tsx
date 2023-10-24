@@ -20,7 +20,9 @@ export function Header() {
   const resizeTimeoutRef = useRef<number | null>(null)
   const scrollTimeoutRef = useRef<number | null>(null)
   const ulRef = useRef<HTMLUListElement | null>(null)
-  const { activeId } = useObserver('section')
+
+  const sectionsWithHash = sections.map((section) => `#${idFactory(section)}`)
+  const { activeId } = useObserver(sectionsWithHash.join(', '))
 
   useEffect(() => {
     function checkScroll() {
