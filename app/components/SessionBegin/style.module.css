@@ -24,11 +24,6 @@
   line-height: 1.35;
   opacity: 0.87;
 
-
-  
-  padding: 0;
-  text-align-last: left;
-  
 }
 
 
@@ -70,7 +65,7 @@
     width: 42rem;
     height: 32rem;
     max-width: 42rem;
-    margin: -2.125rem 0 0 0;
+    transform: translate(0)
   }
 
   .text {
