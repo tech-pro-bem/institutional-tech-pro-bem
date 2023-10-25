@@ -66,7 +66,7 @@ describe('template spec', () => {
 
       // Realize as asserções para verificar as dimensões
       expect(larguraElemento).to.equal(1170) // px
-      expect(alturaElemento).to.equal(510) // px
+      expect(alturaElemento).to.equal(510) // 544
     })
   })
 
@@ -79,13 +79,8 @@ describe('template spec', () => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
 
-      // Realize as asserções para verificar as dimensões
-      // As dimensôes foram baseadas pelo padding do elemento
-
-      // padding: 32px, 24px, 32px, 24px
-
       expect(larguraElemento).to.equal(312) // 324
-      expect(alturaElemento).to.equal(660) // 523
+      expect(alturaElemento).to.equal(660)
     })
   })
 })
