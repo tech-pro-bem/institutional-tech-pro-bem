@@ -24,6 +24,9 @@ export function Header() {
   const sectionsWithHash = sections.map((section) => `#${idFactory(section)}`)
   const { activeId } = useObserver(sectionsWithHash.join(', '))
 
+  // This useEffect checks if the user has scrolled the page and sets the
+  // hasShadow state to true to add a shadow to the header. The shadow stays as
+  // long as the user is scrolled below the top of the page.
   useEffect(() => {
     function checkScroll() {
       if (scrollTimeoutRef.current) {
