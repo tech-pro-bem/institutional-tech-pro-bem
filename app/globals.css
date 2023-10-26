@@ -91,6 +91,8 @@ h1 {
   font-weight: var(--fw-300);
   line-height: 3rem;
   opacity: 0.87;
+  margin-inline: auto;
+  max-width: 20ch;
 }
 
 
