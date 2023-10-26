@@ -70,6 +70,7 @@ iframe {
   --neutral-black: #030302;
   --neutral-gray-darkest: #575452;
   --neutral-white: #fdfcfc;
+  --neutral-gray: #F5F3F2;
 
   /* Font sizes */
   --fs-4: 1rem; /* 16px */

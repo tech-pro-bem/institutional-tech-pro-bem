@@ -4,7 +4,7 @@ import styles from './style.module.css'
 
 export function SessionBegin() {
   return (
-    <section>
+    <section className={styles.begin}>
       <div className={`${styles.layout_begin} container`}>
         <div className={styles.text}>
           <h1 className={styles.title}>
