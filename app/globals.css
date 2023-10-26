@@ -92,6 +92,8 @@ h1 {
   font-weight: var(--fw-300);
   line-height: 3rem;
   opacity: 0.87;
+  max-width: 20ch;
+  margin-inline: auto;
 }
 
 .body1 {
