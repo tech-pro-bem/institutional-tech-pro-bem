@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 import logo from '../../../public/logo1.svg'
-import { useObserver } from '@/app/utils/useObserver'
+import { useObserver } from './useObserver'
 import { idFactory } from '@/app/utils/idFactory'
 
 const sections = ['Início', 'Dúvidas', 'Acompanhe', 'Contato']
@@ -47,20 +47,24 @@ export function Header() {
   }, [])
 
   useEffect(() => {
-    const actualActiveLink = sections.find(
+    const currentActiveLink = sections.find(
       (section) => idFactory(section) === activeId,
     )
 
-    if (actualActiveLink && ulRef.current) {
-      ulRef.current.childNodes.forEach((liElement) => {
-        if (liElement instanceof HTMLLIElement) {
-          if (liElement.dataset.id === idFactory(actualActiveLink)) {
-            setIndicatorLeft(liElement.offsetLeft)
-            setIndicatorWidth(liElement.clientWidth)
-          }
-        }
-      })
+    if (!(currentActiveLink && ulRef.current)) {
+      return
     }
+
+    ulRef.current.childNodes.forEach((liElement) => {
+      if (!(liElement instanceof HTMLLIElement)) {
+        return
+      }
+
+      if (liElement.dataset.id === idFactory(currentActiveLink)) {
+        setIndicatorLeft(liElement.offsetLeft)
+        setIndicatorWidth(liElement.clientWidth)
+      }
+    })
   }, [activeId])
 
   useEffect(() => {
@@ -70,20 +74,24 @@ export function Header() {
       }
 
       resizeTimeoutRef.current = window.setTimeout(() => {
-        const actualActiveLink = sections.find(
+        const currentActiveLink = sections.find(
           (section) => idFactory(section) === activeId,
         )
 
-        if (actualActiveLink && ulRef.current) {
-          ulRef.current.childNodes.forEach((liElement) => {
-            if (liElement instanceof HTMLLIElement) {
-              if (liElement.dataset.id === idFactory(actualActiveLink)) {
-                setIndicatorLeft(liElement.offsetLeft)
-                setIndicatorWidth(liElement.clientWidth)
-              }
-            }
-          })
+        if (!(currentActiveLink && ulRef.current)) {
+          return
         }
+
+        ulRef.current.childNodes.forEach((liElement) => {
+          if (!(liElement instanceof HTMLLIElement)) {
+            return
+          }
+
+          if (liElement.dataset.id === idFactory(currentActiveLink)) {
+            setIndicatorLeft(liElement.offsetLeft)
+            setIndicatorWidth(liElement.clientWidth)
+          }
+        })
       }, 500)
     }
 
@@ -97,75 +105,72 @@ export function Header() {
   return (
     <>
       <header
-        id="header"
         className={`${styles.header} ${hasShadow ? styles.hasShadow : ''}`}
       >
         <div className={styles.headerContainer}>
-          <div className={styles.headerInnerContainer}>
-            <Link className={styles.logo} href="/">
-              <Image
-                className={styles.logo}
-                src={logo}
-                alt="Logo da Tech Pro Bem"
-              />
-            </Link>
+          <Link className={styles.logo} href="/">
+            <Image
+              className={styles.logo}
+              src={logo}
+              alt="Logo da Tech Pro Bem"
+            />
+          </Link>
 
-            <button
-              className={styles.menuButton}
-              onClick={() => setIsMenuOpened(!isMenuOpened)}
-              type="button"
+          <button
+            className={styles.menuButton}
+            onClick={() => setIsMenuOpened(!isMenuOpened)}
+            type="button"
+          >
+            <div
+              className={`${styles.hamburguerIcon} ${
+                isMenuOpened ? styles.closeIcon : ''
+              }`}
             >
-              <div
-                className={`${styles.hamburguerIcon} ${
-                  isMenuOpened ? styles.closeIcon : ''
-                }`}
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </button>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
 
-            <nav
-              className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
-            >
-              <ul ref={ulRef} className="body1">
-                {sections.map((section) => {
-                  return (
-                    <li
-                      key={idFactory(section)}
-                      data-id={idFactory(section)}
-                      className={
-                        idFactory(section) === activeId ? styles.activeLink : ''
-                      }
+          <nav
+            className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
+          >
+            <ul ref={ulRef} className="body1">
+              {sections.map((section) => {
+                return (
+                  <li
+                    key={idFactory(section)}
+                    data-id={idFactory(section)}
+                    className={
+                      idFactory(section) === activeId ? styles.activeLink : ''
+                    }
+                  >
+                    <Link
+                      href={`#${idFactory(section)}`}
+                      onClick={() => setIsMenuOpened(false)}
                     >
-                      <Link
-                        href={`#${idFactory(section)}`}
-                        onClick={() => setIsMenuOpened(false)}
-                      >
-                        <span>{section}</span>
-                      </Link>
-                    </li>
-                  )
-                })}
+                      <span>{section}</span>
+                    </Link>
+                  </li>
+                )
+              })}
 
-                <div
-                  className={styles.indicator}
-                  style={{
-                    width: `${indicatorWidth}px`,
-                    left: `${indicatorLeft}px`,
-                  }}
-                ></div>
-              </ul>
+              <div
+                className={styles.indicator}
+                style={{
+                  width: `${indicatorWidth}px`,
+                  left: `${indicatorLeft}px`,
+                }}
+              ></div>
+            </ul>
 
-              {isMenuOpened && (
-                <div
-                  onClick={() => setIsMenuOpened(false)}
-                  className={styles.opacityMenu}
-                ></div>
-              )}
-            </nav>
-          </div>
+            {isMenuOpened && (
+              <div
+                onClick={() => setIsMenuOpened(false)}
+                className={styles.opacityMenu}
+              ></div>
+            )}
+          </nav>
         </div>
       </header>
     </>

@@ -4,7 +4,7 @@
 
   background-color: var(--neutral-white);
   z-index: 2;
-  transition: all 0.5s ease;
+  transition: box-shadow 0.5s ease;
 }
 
 .header.hasShadow {
@@ -12,20 +12,15 @@
 }
 
 .headerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 
-  padding: 1rem 1.5rem;
-}
-
-.headerInnerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  max-width: 113rem;
+  max-width: 120rem;
+  padding: 1rem 1.5rem;
+  margin-inline: auto;
   width: 100%;
 }
 
@@ -151,8 +146,6 @@
 .navbar li.activeLink a span {
   border-bottom: 2px solid var(--primary-medium);
   padding-bottom: 0.5rem;
-
-  transition: margin 0.5s ease;
 }
 
 .navbar ul:first-child {
@@ -206,10 +199,6 @@
     background-color: var(--neutral-white);
   }
 
-  .navbar.open {
-    display: flex;
-  }
-
   .navbar ul {
     position: relative;
     flex-direction: row;
@@ -243,7 +232,9 @@
     height: 2px;
     background-color: var(--primary-medium);
 
-    transition: all 0.5s ease;
+    transition:
+      width 0.5s ease,
+      left 0.5s ease;
   }
 
   .navbar li:hover {
