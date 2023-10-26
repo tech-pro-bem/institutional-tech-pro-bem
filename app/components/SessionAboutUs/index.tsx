@@ -7,7 +7,7 @@ export function SessionAboutUs() {
       <div className={`${styles.layout_about} container`}>
         <h2 className="h2">Quem somos</h2>
         <div className={styles.text}>
-          <div className={styles.right}>
+          <div className={styles.left}>
             <p className="body1">
               A Tech Pro Bem é uma comunidade de tecnologia onde conectamos
               profissionais de diferentes áreas para criar soluções digitais
@@ -20,7 +20,7 @@ export function SessionAboutUs() {
               trabalho.
             </p>
           </div>
-          <div className={styles.left}>
+          <div className={styles.right}>
             <h3 className="h3">Como funciona?</h3>
             <p className="body1">
               Selecionamos uma organização sem fins lucrativos que entrou em
