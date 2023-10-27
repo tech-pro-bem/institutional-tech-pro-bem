@@ -1,8 +1,7 @@
 .main_box {
     width: fit-content;
     max-width: 87%;
-    padding-inline: 3rem;
-    padding-block: 1rem;
+    padding: 2rem 3.5rem 0.5rem 3.5rem;
     border-radius: 0.5rem;
 
     background-color: var(--neutral-white);
@@ -13,22 +12,20 @@
 
 .values {
     height: fit-content;
-    margin: 0 auto;
     text-align: center;
 }
 
 .title {
-    margin-block: 1rem;
+    margin-bottom: 1rem;
 }
 
 .values_content {
-    max-width: 100%;
+    justify-content: space-between;
 }
 
 .value {
     max-width: 12.5rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .value_image {
