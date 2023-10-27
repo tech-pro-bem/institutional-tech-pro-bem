@@ -28,6 +28,12 @@ export function Header() {
   // hasShadow state to true to add a shadow to the header. The shadow stays as
   // long as the user is scrolled below the top of the page.
   useEffect(() => {
+    // Inside the function, a debounce technique is used to avoid triggering the
+    // function too many times and affecting performance. The function is
+    // executed 100 milliseconds after the user has stopped scrolling to avoid
+    // taking too long for the shadow to appear. This value is generally used
+    // for scroll debounces found in online examples.
+
     function checkScroll() {
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current)

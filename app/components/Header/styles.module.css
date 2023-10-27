@@ -165,7 +165,7 @@
     background-color: var(--primary-extra-light);
   }
 
-  .navbar a:hover {
+  .navbar li a {
     cursor: pointer;
   }
 }
