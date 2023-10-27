@@ -1,14 +1,14 @@
 .main_box {
-    background-color: var(--neutral-white);
-    box-shadow: var(--shadow-light);
-    border-radius: 0.5rem;
     width: fit-content;
     max-width: 87%;
-    height: fit-content;
-    margin: 0 auto;
     padding-inline: 3rem;
     padding-block: 1rem;
-    /* transform: translateY(-16rem); */
+    border-radius: 0.5rem;
+
+    background-color: var(--neutral-white);
+    box-shadow: var(--shadow-light);
+    
+    transform: translateY(-16rem);
 }
 
 .values {
@@ -38,11 +38,6 @@
 
 .value_text {
     margin-bottom: 0.75rem;
-}
-
-.value_description {
-    font-size: var(--fs-4);
-    font-weight: var(--fw-400);
 }
 
 @media screen and (min-width: 48em) and (max-width: 79.9375em) {

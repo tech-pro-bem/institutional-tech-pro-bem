@@ -16,7 +16,7 @@ export function OurValues() {
     getData()
   }, [])
   return (
-    <section className={style.main_box}>
+    <section className={`${style.main_box} container`}>
       <div className={style.values}>
         <h3 className={`h3 ${style.title}`}>Nossos Valores</h3>
         <div className={style.values_content}>
@@ -30,9 +30,7 @@ export function OurValues() {
                 height={value.fields.symbol.fields.file.details.image.height}
               ></Image>
               <h4 className={`h4 ${style.value_text}`}>{value.fields.title}</h4>
-              <span className={style.value_description}>
-                {value.fields.description}
-              </span>
+              <span className="fs4">{value.fields.description}</span>
             </div>
           ))}
         </div>
