@@ -19,9 +19,7 @@
   align-items: center;
 
   max-width: 120rem;
-  padding: 1rem 1.5rem;
-  margin-inline: auto;
-  width: 100%;
+  padding: 1rem 0;
 }
 
 .logo {
@@ -176,7 +174,8 @@
   }
 
   .headerContainer {
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 0;
+    width: 94.2%;
   }
 
   .logo {

@@ -116,7 +116,7 @@ export function Header() {
       <header
         className={`${styles.header} ${hasShadow ? styles.hasShadow : ''}`}
       >
-        <div className={styles.headerContainer}>
+        <div className={`container ${styles.headerContainer}`}>
           <Link className={styles.logo} href="/">
             <Image
               className={styles.logo}

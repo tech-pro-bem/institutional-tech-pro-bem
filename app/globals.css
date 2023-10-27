@@ -51,6 +51,7 @@ div {
   text-size-adjust: auto;
   overflow-wrap: break-word;
   vertical-align: baseline;
+  color: var(--neutral-black);
 }
 
 a {
@@ -76,18 +77,24 @@ iframe {
   /* Font sizes */
   --fs-4: 1rem; /* 16px */
   --fs-5: 1.125rem; /* 18px */
+  --fs-6: 1.25rem; /* 20px */
+  --fs-7: 1.5rem; /* 24px */
+  --fs-8: 2rem; /* 32px */
   --fs-9: 2.5rem; /* 40px */
   --fs-10: 3.5rem; /* 56px */
 
   /* Font Weight */
   --fw-300: 300;
   --fw-400: 400;
+  --fw-600: 600;
 
   /* Shadows */
   --shadow-light: 0px 4px 16px 0px rgba(87, 84, 82, 0.1);
   --shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
-}
 
+  /* Gradient */
+  --gradiente-light: linear-gradient(90deg, #c4f5f6 -63.31%, #e2d1ff 114.71%);
+}
 
 .h1,
 h1 {
@@ -97,10 +104,28 @@ h1 {
   opacity: 0.87;
 }
 
+.h2 {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+}
+
+.h3 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+}
+
 .body1 {
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
   line-height: 1.35;
+}
+
+.container {
+  max-width: 73.125rem;
+  margin-inline: auto;
+  width: 86.75%;
 }
 
 .scrollMarginTop {
@@ -109,7 +134,7 @@ h1 {
 
 @media (min-width: 48em) and (max-width: 79.9375em) {
   h1,
-  .h1{
+  .h1 {
     line-height: 2.8rem;
     font-size: var(--fs-9);
   }
@@ -118,8 +143,13 @@ h1 {
 @media (min-width: 80em) {
   h1,
   .h1 {
-    line-height: 3.8rem;
+    line-height: 1.07;
     font-size: var(--fs-10);
+  }
+
+  .h2 {
+    font-size: var(--fs-9);
+    line-height: 1.2;
   }
 
   .body1 {
@@ -129,10 +159,4 @@ h1 {
   .scrollMarginTop {
     scroll-margin-top: 6rem;
   }
-}
-
-.container {
-  max-width: 1170px;
-  margin-inline: auto;
-  width: 90%;
 }
