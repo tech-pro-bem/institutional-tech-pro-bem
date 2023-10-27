@@ -27,10 +27,10 @@ export function SessionAboutUs() {
               contato conosco e passou por um alinhamento de objetivos e
               expectativas. A cada ciclo realizamos um processo seletivo para
               formar nossas equipes com{' '}
-              <b>
+              <strong>
                 Agilistas, Product Owners, UX/UI Designers, UX Writers,
                 Desenvolvedores, Analistas de Qualidade e Recursos Humanos.
-              </b>{' '}
+              </strong>{' '}
               Todos os times possuem três níveis de senioridade profissional:
               júnior, líder e pessoa mentora.
             </p>
