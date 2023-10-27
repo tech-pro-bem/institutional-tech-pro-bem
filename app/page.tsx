@@ -1,12 +1,15 @@
 import { OurValues } from './components/OurValuesSection'
 import { Header } from './components/Header'
-import { Inicio } from './components/Inicio'
+import { SessionBegin } from './components/SessionBegin'
+import { SessionAboutUs } from './components/SessionAboutUs'
+
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <Inicio />
+        <SessionBegin />
+        <SessionAboutUs />
         <OurValues />
       </main>
     </>
