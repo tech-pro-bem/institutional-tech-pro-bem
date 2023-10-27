@@ -44,7 +44,6 @@
   }
 
   .right {
-    justify-content: flex-end;
     width: 50%;
     margin-top: 0;
   }
