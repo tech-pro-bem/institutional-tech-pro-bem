@@ -1,3 +1,4 @@
+import { OurValues } from './components/OurValuesSection'
 import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
@@ -9,6 +10,7 @@ export default function Home() {
       <main>
         <SessionBegin />
         <SessionAboutUs />
+        <OurValues />
       </main>
     </>
   )

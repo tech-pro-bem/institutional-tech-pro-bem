@@ -124,6 +124,22 @@ iframe {
   margin-inline: auto;
   width: 90%;
 }
+.h3 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+}
+.h4 {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+}
+
+.fs4 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-400);
+  line-height: 1.37;
+}
 
 @media (min-width: 80em) {
   .h1 {
@@ -133,9 +149,14 @@ iframe {
   .body1 {
     font-size: var(--fs-5);
   }
-
   .h2 {
     font-size: var(--fs-9);
     line-height: 1.2;
+  }
+  .h3 {
+    font-size: var(--fs-8);
+  }
+  .h4 {
+    font-size: var(--fs-7);
   }
 }
