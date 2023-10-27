@@ -7,7 +7,7 @@ export function SessionBegin() {
     <section className={styles.begin}>
       <div className={`${styles.layout_begin} container`}>
         <div className={styles.text}>
-          <h1 className={`${styles.title} text-h1`}>
+          <h1 className={`${styles.title} h1`}>
             Impulsionamos pessoas, carreiras e projetos sociais
           </h1>
           <p className={styles.description}>
