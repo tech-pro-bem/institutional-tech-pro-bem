@@ -39,7 +39,7 @@
     justify-content: space-between;
     width: 50%;
     min-width: 390px;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-right: 2.5rem;
   }
 
@@ -56,9 +56,5 @@
 
   .layout_about {
     padding-top: 8.125rem;
-  }
-
-  .left {
-    margin-top: 2rem;
   }
 }
