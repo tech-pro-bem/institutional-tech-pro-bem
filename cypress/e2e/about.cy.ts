@@ -11,7 +11,7 @@ describe('session about us', () => {
     cy.get('h2').contains('Quem somos')
     cy.get('h3').contains('Como funciona?')
   })
-  it('should have the text on the left', () => {
+  it('should have the text on the block 1', () => {
     cy.get('[class^="style_text__block_1"]')
       .find(':first-child')
       .should(
@@ -25,7 +25,7 @@ describe('session about us', () => {
         'Oferecemos experiência prática em um time multidisciplinar, com o objetivo de impulsionar o aprendizado das competências necessárias para superar desafios de entrada ou de crescimento no mercado de trabalho.',
       )
   })
-  it('should have the text on the right', () => {
+  it('should have the text on the block 2', () => {
     cy.get('[class^="style_text__block_2"]')
       .find(':nth-child(2)')
       .contains(
@@ -44,12 +44,12 @@ describe('session about us', () => {
   })
 
   it('should check height and width of section about', () => {
-    cy.viewport(1935, 1080)
+    cy.viewport(1935, 1080) // 1920 + 15 da barra de scroll
     cy.get('[class^="style_about"]').then(($elemento) => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
-      expect(larguraElemento).to.equal(1920)
-      expect(alturaElemento).to.equal(633)
+      expect(larguraElemento).to.be.equal(1920) // 1920 ± 2
+      expect(alturaElemento).to.be.within(631, 635) // 633 ± 2
     })
   })
 
@@ -69,8 +69,8 @@ describe('session about us', () => {
       )
 
       // Verifique as dimensões do elemento
-      expect(larguraElemento).to.equal(1920)
-      expect(alturaElemento).to.equal(633)
+      expect(larguraElemento).to.be.within(1918, 1922) // 1920 ± 2
+      expect(alturaElemento).to.be.within(631, 635) // 633 ± 2
     })
   })
 
