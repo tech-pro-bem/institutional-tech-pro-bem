@@ -45,11 +45,8 @@
   .text__block_1 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 50%;
-    min-width: 390px;
     margin-top: 2rem;
-    padding-right: 2.5rem;
   }
 
   .text__block_2 {
