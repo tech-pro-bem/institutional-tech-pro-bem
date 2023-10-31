@@ -24,7 +24,7 @@
 }
 
 .text__block_1 > p + p {
-  margin-top: var(--fs-4);
+  margin-top: 1.375rem;
 }
 
 @media (min-width: 48em) {
@@ -40,13 +40,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    gap: 10.75rem;
   }
 
   .text__block_1 {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-top: 2rem;
+    margin-top: 3.25rem;
   }
 
   .text__block_2 {
@@ -55,7 +56,7 @@
   }
 
   .title_about {
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.5em;
   }
 }
 @media (min-width: 80em) {
