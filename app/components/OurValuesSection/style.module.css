@@ -1,17 +1,15 @@
 .main_box {
     max-width: 19.5rem;
     padding-block: 2rem 3rem;
-    padding-inline: 2.8125rem;
+    padding-inline: 3.5rem;
     border-radius: 0.5rem;
 
     background-color: var(--neutral-white);
     box-shadow: var(--shadow-light);
     
-    transform: translateY(-16rem);
-}
-
-.values {
     text-align: center;
+
+    transform: translateY(-16rem);
 }
 
 .title {
@@ -27,7 +25,7 @@
 }
 
 .value_image {
-    margin: 0 auto;
+    margin-inline: auto;
     margin-bottom: 0.75rem;
 }
 
@@ -68,6 +66,5 @@
     }
     .value {
         max-width: 13.75rem;
-        width: 100%;
     }
 }
