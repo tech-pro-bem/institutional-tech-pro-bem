@@ -2,13 +2,13 @@
   background: var(--gradiente-light);
   margin-top: -0.75rem;
   padding-bottom: 20rem;
+  padding-top: 3.75rem;
 }
 
 .layout_about {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-top: 3.8rem;
 }
 
 .right {
@@ -52,9 +52,6 @@
   .about {
     margin-top: -6.5rem;
     padding-bottom: 14.5rem;
-  }
-
-  .layout_about {
     padding-top: 8.125rem;
   }
 }
