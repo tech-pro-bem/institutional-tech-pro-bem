@@ -16,6 +16,7 @@ export function Header() {
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
   const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   const resizeTimeoutRef = useRef<number | null>(null)
   const scrollTimeoutRef = useRef<number | null>(null)
@@ -83,6 +84,8 @@ export function Header() {
       }
 
       resizeTimeoutRef.current = window.setTimeout(() => {
+        setScreenWidth(window.innerWidth)
+
         const currentActiveLink = sections.find(
           (section) => idFactory(section) === activeId,
         )
@@ -160,7 +163,7 @@ export function Header() {
                     <Link
                       href={`#${idFactory(section)}`}
                       onClick={() => setIsMenuOpened(false)}
-                      tabIndex={isMenuOpened ? 0 : -1}
+                      tabIndex={screenWidth > 1280 || isMenuOpened ? 0 : -1}
                     >
                       <span>{section}</span>
                     </Link>
