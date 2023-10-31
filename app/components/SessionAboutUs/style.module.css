@@ -18,6 +18,10 @@
   margin-top: 1.5rem;
 }
 
+.text__block_1 > p + p {
+  margin-top: var(--fs-4);
+}
+
 @media (min-width: 48em) {
   .about {
     margin-top: 2rem;
