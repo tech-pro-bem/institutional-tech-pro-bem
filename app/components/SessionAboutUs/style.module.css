@@ -53,6 +53,10 @@
     width: 50%;
     margin-top: 0;
   }
+
+  .title_about {
+    margin-bottom: -0.5rem;
+  }
 }
 @media (min-width: 80em) {
   .about {

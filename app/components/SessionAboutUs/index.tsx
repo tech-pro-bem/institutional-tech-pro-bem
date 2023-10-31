@@ -5,7 +5,7 @@ export function SessionAboutUs() {
   return (
     <section className={styles.about}>
       <div className={`${styles.layout_about} container`}>
-        <h2 className="h2">Quem somos</h2>
+        <h2 className={`${styles.title_about} h2`}>Quem somos</h2>
         <div className={styles.text}>
           <div className={styles.text__block_1}>
             <p className="body1">
