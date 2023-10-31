@@ -129,6 +129,8 @@ export function Header() {
             className={styles.menuButton}
             onClick={() => setIsMenuOpened(!isMenuOpened)}
             type="button"
+            aria-expanded={isMenuOpened ? 'true' : 'false'}
+            aria-controls="menu"
           >
             <div
               className={`${styles.hamburguerIcon} ${
@@ -142,6 +144,7 @@ export function Header() {
           </button>
 
           <nav
+            id="menu"
             className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
           >
             <ul ref={ulRef} className="body1">
@@ -157,6 +160,7 @@ export function Header() {
                     <Link
                       href={`#${idFactory(section)}`}
                       onClick={() => setIsMenuOpened(false)}
+                      tabIndex={isMenuOpened ? 0 : -1}
                     >
                       <span>{section}</span>
                     </Link>
