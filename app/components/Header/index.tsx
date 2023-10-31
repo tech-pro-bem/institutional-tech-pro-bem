@@ -16,7 +16,7 @@ export function Header() {
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
   const [indicatorLeft, setIndicatorLeft] = useState<number>(0)
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [screenWidth, setScreenWidth] = useState<number>(0)
 
   const resizeTimeoutRef = useRef<number | null>(null)
   const scrollTimeoutRef = useRef<number | null>(null)
@@ -27,13 +27,17 @@ export function Header() {
 
   // This useEffect checks if the user has scrolled the page and sets the
   // hasShadow state to true to add a shadow to the header. The shadow stays as
-  // long as the user is scrolled below the top of the page.
+  // long as the user is scrolled below the top of the page.  Additionally, it
+  // determines the screen width to identify if the displayed menu is the mobile
+  // version.
   useEffect(() => {
     // Inside the function, a debounce technique is used to avoid triggering the
     // function too many times and affecting performance. The function is
     // executed 100 milliseconds after the user has stopped scrolling to avoid
     // taking too long for the shadow to appear. This value is generally used
     // for scroll debounces found in online examples.
+
+    setScreenWidth(window.innerWidth)
 
     function checkScroll() {
       if (scrollTimeoutRef.current) {
@@ -163,7 +167,7 @@ export function Header() {
                     <Link
                       href={`#${idFactory(section)}`}
                       onClick={() => setIsMenuOpened(false)}
-                      tabIndex={screenWidth > 1280 || isMenuOpened ? 0 : -1}
+                      tabIndex={screenWidth >= 1280 || isMenuOpened ? 0 : -1}
                     >
                       <span>{section}</span>
                     </Link>
