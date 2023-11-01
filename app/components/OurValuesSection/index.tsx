@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import style from './style.module.css'
 
-export async function OurValues() {
+export function OurValues() {
   const [values, setValues] = useState<Tables<Values>[]>([])
   useEffect(() => {
     async function getData() {
