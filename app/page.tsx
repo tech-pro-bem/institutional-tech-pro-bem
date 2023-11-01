@@ -11,6 +11,8 @@ export default function Home() {
         <SessionBegin />
         <SessionAboutUs />
         <OurValues />
+        <OurValues />
+        <OurValues />
       </main>
     </>
   )
