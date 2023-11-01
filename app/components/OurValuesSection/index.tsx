@@ -1,22 +1,22 @@
-// 'use client'
+'use client'
 
 import { Tables, Values } from '@/app/protocols'
 import { getContentfulData } from '@/app/utils/getContentfulData'
 import Image from 'next/image'
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './style.module.css'
 
 export async function OurValues() {
-  // const [values, setValues] = useState<Tables<Values>[]>([])
-  // useEffect(() => {
-  //   async function getData() {
-  //     const data: Tables<Values>[] = await getContentfulData('ourValues')
-  //     setValues(data)
-  //   }
-  //   getData()
-  // }, [])
+  const [values, setValues] = useState<Tables<Values>[]>([])
+  useEffect(() => {
+    async function getData() {
+      const data: Tables<Values>[] = await getContentfulData('ourValues')
+      setValues(data)
+    }
+    getData()
+  }, [])
 
-  const values: Tables<Values>[] = await getContentfulData('ourValues')
+  // const values: Tables<Values>[] = await getContentfulData('ourValues')
 
   return (
     <section className={`${style.main_box} container`}>
