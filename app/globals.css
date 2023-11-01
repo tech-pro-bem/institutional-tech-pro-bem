@@ -11,7 +11,8 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,11 +67,13 @@ iframe {
   /* Primary colors */
   --primary-dark: #8742ff;
   --primary-extra-light: #e2d1ff;
+  --primary-medium: #9e66ff;
 
   /* Neutral colors */
   --neutral-black: #030302;
   --neutral-gray-darkest: #575452;
   --neutral-white: #fdfcfc;
+  --neutral-gray: #f5f3f2;
 
   /* Font sizes */
   --fs-4: 1rem; /* 16px */
@@ -94,7 +97,8 @@ iframe {
   --gradiente-light: linear-gradient(90deg, #c4f5f6 -63.31%, #e2d1ff 114.71%);
 }
 
-.h1 {
+.h1,
+h1 {
   font-size: var(--fs-9);
   font-weight: var(--fw-300);
   line-height: 1.2;
@@ -122,13 +126,9 @@ iframe {
 .container {
   max-width: 73.125rem;
   margin-inline: auto;
-  width: 90%;
+  width: 86.75%;
 }
-.h3 {
-  font-size: var(--fs-7);
-  font-weight: var(--fw-600);
-  line-height: 1.25;
-}
+
 .h4 {
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
@@ -141,22 +141,42 @@ iframe {
   line-height: 1.37;
 }
 
+.scrollMarginTop {
+  scroll-margin-top: 4rem;
+}
+
+@media (min-width: 48em) and (max-width: 79.9375em) {
+  h1,
+  .h1 {
+    line-height: 2.8rem;
+    font-size: var(--fs-9);
+  }
+}
+
 @media (min-width: 80em) {
+  h1,
   .h1 {
     line-height: 1.07;
     font-size: var(--fs-10);
   }
-  .body1 {
-    font-size: var(--fs-5);
-  }
+
   .h2 {
     font-size: var(--fs-9);
     line-height: 1.2;
   }
+
+  .body1 {
+    font-size: var(--fs-5);
+  }
+
   .h3 {
     font-size: var(--fs-8);
   }
   .h4 {
     font-size: var(--fs-7);
+  }
+
+  .scrollMarginTop {
+    scroll-margin-top: 6rem;
   }
 }

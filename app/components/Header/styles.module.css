@@ -1,9 +1,10 @@
 .header {
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
-  left: 0;
+
   background-color: var(--neutral-white);
+  z-index: 2;
+  transition: box-shadow 0.5s ease;
 }
 
 .header.hasShadow {
@@ -11,11 +12,14 @@
 }
 
 .headerContainer {
-  display: flex;
-  justify-content: space-between;
   position: relative;
 
-  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 120rem;
+  padding: 1rem 0;
 }
 
 .logo {
@@ -38,13 +42,7 @@
   padding: 0.5rem 0.25rem;
   width: 2rem;
   height: 2rem;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -56,13 +54,7 @@
   background: var(--neutral-gray-darkest);
   border-radius: 0.5rem;
   opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -71,30 +63,18 @@
 }
 
 .hamburguerIcon span:nth-child(1) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .hamburguerIcon span:nth-child(2) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .hamburguerIcon span:nth-child(3) {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
   transform-origin: left center;
 }
 
 .closeIcon span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -104,9 +84,6 @@
 }
 
 .closeIcon span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -122,7 +99,7 @@
 }
 
 .navbar.open {
-  top: 64px;
+  top: 4rem;
   bottom: 0;
 }
 
@@ -135,23 +112,42 @@
 }
 
 .navbar li {
-  padding: 1em 1.5em;
+  position: relative;
+
   width: 100%;
   list-style-type: none;
 
   color: var(--neutral-black);
   text-align: center;
+
+  user-select: none;
 }
 
-.navbar li:active {
+.navbar li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: default;
+}
+
+.navbar li a:active {
   background-color: var(--primary-extra-light);
+}
+
+.navbar li.activeLink a {
+  color: var(--primary-dark);
+  padding-bottom: 0.5rem;
+}
+
+.navbar li.activeLink a span {
+  border-bottom: 2px solid var(--primary-medium);
+  padding-bottom: 0.5rem;
 }
 
 .navbar ul:first-child {
   padding-top: 1rem;
-}
-
-.navbar ul:last-child {
   padding-bottom: 1rem;
 }
 
@@ -162,13 +158,24 @@
   opacity: 20%;
 }
 
-@media screen and (min-width: 80em) {
+@media (min-width: 40em) {
+  .navbar li:hover {
+    background-color: var(--primary-extra-light);
+  }
+
+  .navbar li a {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 80em) {
   .header.hasShadow {
     box-shadow: var(--shadow-light);
   }
 
   .headerContainer {
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 0;
+    width: 94.2%;
   }
 
   .logo {
@@ -178,6 +185,8 @@
   .menuButton {
     display: none;
   }
+
+  /* Menu Navbar */
 
   .navbar {
     position: initial;
@@ -189,11 +198,8 @@
     background-color: var(--neutral-white);
   }
 
-  .navbar.open {
-    display: flex;
-  }
-
   .navbar ul {
+    position: relative;
     flex-direction: row;
     align-items: center;
     gap: 3rem;
@@ -205,20 +211,43 @@
     list-style-type: none;
   }
 
-  .navbar li:hover {
-    color: var(--primary-dark);
+  .navbar li a {
+    padding: 0;
+    cursor: pointer;
   }
 
-  .navbar li:active {
+  .navbar li.activeLink a {
+    padding-bottom: 0;
+  }
+
+  .navbar li.activeLink a span {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .indicator {
+    position: absolute;
+    bottom: -0.5rem;
+    height: 2px;
+    background-color: var(--primary-medium);
+
+    transition:
+      width 0.5s ease,
+      left 0.5s ease;
+  }
+
+  .navbar li:hover {
+    color: var(--primary-dark);
+    background-color: var(--neutral-white);
+  }
+
+  .navbar li a:active {
     background-color: var(--neutral-white);
   }
 
   .navbar ul:first-child {
     padding-top: 0;
-  }
-
-  .navbar ul:last-child {
-    padding-bottom: 0;
+    padding-bottom: 0rem;
   }
 
   .opacityMenu {
