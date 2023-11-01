@@ -52,6 +52,7 @@ div {
   overflow-wrap: break-word;
   vertical-align: baseline;
   color: var(--neutral-black);
+  /*Retirar o color daqui*/
 }
 
 a {
@@ -120,7 +121,7 @@ h1 {
 .body1 {
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
-  line-height: 1.375;
+  line-height: 1.35;
 }
 
 .container {
