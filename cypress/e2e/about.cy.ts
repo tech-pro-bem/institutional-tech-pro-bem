@@ -43,7 +43,7 @@ describe('session about us', () => {
     )
   })
 
-  it.only('should check height and width of section about', () => {
+  it('should check height and width of section about', () => {
     cy.viewport(1935, 1080) // 1920 + 15 da barra de scroll
     cy.get('[class^="style_about"]').then(($elemento) => {
       const larguraElemento = $elemento[0].clientWidth
