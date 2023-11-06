@@ -157,3 +157,28 @@ describe('should check overflow text block 1', () => {
     })
   })
 })
+
+describe('numero de paragrafos', () => {
+  it.only('verifica se os possui 2 paragrafos dentro da div text__block_1', () => {
+    cy.visit('http://localhost:3000')
+    cy.get('[class^="style_text__block_1"]').should('have.length', 1)
+
+    cy.get('[class^="style_text__block_1"]').find('p').should('have.length', 2)
+
+    // cy.get('[class^="style_text__block_1"]').find(':first-child').should()
+
+    cy.get('[class^="style_text__block_1"]')
+      .find(':first-child')
+      .should(($paragrafo) => {
+        const texto = $paragrafo.text()
+        expect(texto.length).to.be.lessThan(165)
+      })
+
+    cy.get('[class^="style_text__block_1"]')
+      .find(':nth-child(2)')
+      .should(($paragrafo) => {
+        const texto = $paragrafo.text()
+        expect(texto.length).to.be.lessThan(210)
+      })
+  })
+})
