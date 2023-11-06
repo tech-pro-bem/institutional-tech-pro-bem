@@ -159,7 +159,7 @@ describe('should check overflow text block 1', () => {
 })
 
 describe('numero de paragrafos', () => {
-  it.only('verifica se os possui 2 paragrafos dentro da div text__block_1', () => {
+  it('verifica se os possui 2 paragrafos dentro da div text__block_1', () => {
     cy.visit('http://localhost:3000')
     cy.get('[class^="style_text__block_1"]').should('have.length', 1)
 
