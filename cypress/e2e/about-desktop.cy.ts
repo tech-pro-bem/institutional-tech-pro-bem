@@ -1,6 +1,7 @@
 describe('session about us', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
+    cy.viewport(1935, 1080)
   })
 
   it('should have the class about', () => {
@@ -34,7 +35,6 @@ describe('session about us', () => {
   })
 
   it('verifica padding da sessao about', () => {
-    cy.viewport(1935, 1080)
     cy.get('[class^="style_about"]').should('have.css', 'padding-top', '130px')
     cy.get('[class^="style_about"]').should(
       'have.css',
@@ -44,7 +44,6 @@ describe('session about us', () => {
   })
 
   it('should check height and width of section about', () => {
-    cy.viewport(1935, 1080) // 1920 + 15 da barra de scroll
     cy.get('[class^="style_about"]').then(($elemento) => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
@@ -54,9 +53,6 @@ describe('session about us', () => {
   })
 
   it('should check height and width of section about', () => {
-    // Ajuste a viewport para o tamanho desejado
-    cy.viewport(1935, 1080)
-
     // Selecione o elemento
     cy.get('[class^="style_about"]').then(($elemento) => {
       // Obtenha as dimensões calculadas do elemento, incluindo a barra de rolagem
@@ -75,17 +71,13 @@ describe('session about us', () => {
   })
 
   it('should check width of container', () => {
-    cy.viewport(1920, 1080)
-
     cy.get('.container').should('exist')
     cy.get('.container').then(($elemento) => {
       const larguraElemento = $elemento[1].clientWidth
       expect(larguraElemento).to.equal(1170)
     })
   })
-})
 
-describe('should check overflow', () => {
   it('verifica se o container está dentro dos limites da sessao about', () => {
     cy.visit('http://localhost:3000')
     cy.get('[class^="style_about"]').then(($about) => {
@@ -99,9 +91,7 @@ describe('should check overflow', () => {
       })
     })
   })
-})
 
-describe('should check overflow text', () => {
   it('verifica se o elemento filho está dentro dos limites do elemento pai', () => {
     cy.visit('http://localhost:3000')
     cy.get('[class^="style_text__block_1"]').then(($left) => {
@@ -127,9 +117,7 @@ describe('should check overflow text', () => {
         })
     })
   })
-})
 
-describe('should check overflow text block 1', () => {
   it('verifica se os 2 paragrafos entao dentro da div text__block_1', () => {
     cy.visit('http://localhost:3000')
     cy.get('[class^="style_text__block_1"]').then(($pai) => {
@@ -156,16 +144,12 @@ describe('should check overflow text block 1', () => {
         })
     })
   })
-})
 
-describe('numero de paragrafos', () => {
   it('verifica se os possui 2 paragrafos dentro da div text__block_1', () => {
     cy.visit('http://localhost:3000')
     cy.get('[class^="style_text__block_1"]').should('have.length', 1)
 
     cy.get('[class^="style_text__block_1"]').find('p').should('have.length', 2)
-
-    // cy.get('[class^="style_text__block_1"]').find(':first-child').should()
 
     cy.get('[class^="style_text__block_1"]')
       .find(':first-child')
