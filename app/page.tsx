@@ -6,20 +6,19 @@ import { getContentfulData } from './utils/getContentfulData'
 
 export default async function Home() {
   const promises = [
-    getContentfulData('header'),
-    getContentfulData('begin'),
-    getContentfulData('about'),
+    // getContentfulData('header'),
+    // getContentfulData('begin'),
+    // getContentfulData('about'),
     getContentfulData('ourValues'),
   ]
 
-  const [headerValues, beginValues, AboutUsValues, ourValues] =
-    await Promise.all(promises)
+  const [ourValues] = await Promise.all(promises)
   return (
     <>
-      <Header values={headerValues} />
+      <Header />
       <main>
-        <SessionBegin values={beginValues} />
-        <SessionAboutUs values={AboutUsValues} />
+        <SessionBegin />
+        <SessionAboutUs />
         <OurValues values={ourValues} />
       </main>
     </>
