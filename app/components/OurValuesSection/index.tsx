@@ -24,23 +24,21 @@ export const OurValues: React.FC<OurValuesProps> = async ({ values }) => {
 
   return (
     <section className={`${style.main_box} container`}>
-      <div className={style.values}>
-        <h3 className={`h3 ${style.title}`}>Nossos Valores</h3>
-        <div className={style.values_content}>
-          {values?.map((value: Tables<Values>) => (
-            <div key={value.fields.title} className={style.value}>
-              <Image
-                className={style.value_image}
-                src={`https:${value.fields.symbol.fields.file.url}`}
-                alt={value.fields.title}
-                width={value.fields.symbol.fields.file.details.image.width}
-                height={value.fields.symbol.fields.file.details.image.height}
-              ></Image>
-              <h4 className={`h4 ${style.value_text}`}>{value.fields.title}</h4>
-              <span className="fs4">{value.fields.description}</span>
-            </div>
-          ))}
-        </div>
+      <h3 className={`h3 ${style.title}`}>Nossos Valores</h3>
+      <div className={style.values_content}>
+        {values?.map((value: Tables<Values>) => (
+          <div key={value.fields.title} className={style.value}>
+            <Image
+              className={style.value_image}
+              src={`https:${value.fields.symbol.fields.file.url}`}
+              alt={value.fields.title}
+              width={value.fields.symbol.fields.file.details.image.width}
+              height={value.fields.symbol.fields.file.details.image.height}
+            ></Image>
+            <h4 className={`h4 ${style.value_text}`}>{value.fields.title}</h4>
+            <span className="fs4">{value.fields.description}</span>
+          </div>
+        ))}
       </div>
     </section>
   )
