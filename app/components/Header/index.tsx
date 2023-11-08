@@ -154,7 +154,7 @@ export function Header() {
             id="menu"
             className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
           >
-            <ul ref={ulRef} className="body1">
+            <ul ref={ulRef} className="regular-text">
               {sections.map((section) => {
                 return (
                   <li

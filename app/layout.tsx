@@ -1,4 +1,7 @@
+import './styles/reset.css'
 import './globals.css'
+import './styles/typography.css'
+import './styles/colors.css'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
 

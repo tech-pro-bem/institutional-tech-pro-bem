@@ -5,15 +5,15 @@ export function SessionAboutUs() {
   return (
     <section className={styles.about}>
       <div className={`${styles.layout_about} container`}>
-        <h2 className={`${styles.title_about} h2`}>Quem somos</h2>
+        <h2 className={`${styles.title_about} title`}>Quem somos</h2>
         <div className={styles.text}>
           <div className={styles.text__block_1}>
-            <p className="body1">
+            <p className="regular-text">
               A Tech Pro Bem é uma comunidade de tecnologia onde conectamos
               profissionais de diferentes áreas para criar soluções digitais
               para ONGs e projetos sociais.
             </p>
-            <p className="body1">
+            <p className="regular-text">
               Oferecemos experiência prática em um time multidisciplinar, com o
               objetivo de impulsionar o aprendizado das competências necessárias
               para superar desafios de entrada ou de crescimento no mercado de
@@ -21,8 +21,8 @@ export function SessionAboutUs() {
             </p>
           </div>
           <div className={styles.text__block_2}>
-            <h3 className="h3">Como funciona?</h3>
-            <p className="body1">
+            <h3 className="title title--small">Como funciona?</h3>
+            <p className="regular-text">
               Selecionamos uma organização sem fins lucrativos que entrou em
               contato conosco e passou por um alinhamento de objetivos e
               expectativas. A cada ciclo realizamos um processo seletivo para
