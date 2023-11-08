@@ -1,4 +1,4 @@
-describe('session about us', () => {
+describe('Desktop - session about us', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
     cy.viewport(1935, 1080)

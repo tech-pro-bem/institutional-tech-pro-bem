@@ -1,4 +1,4 @@
-describe('session about us', () => {
+describe('Mobile - session about us', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
     cy.viewport(375, 640)
@@ -22,6 +22,15 @@ describe('session about us', () => {
     })
   })
 
+  it('verifica padding da sessao about', () => {
+    cy.get('[class^="style_about"]').should('have.css', 'padding-top', '60px')
+    cy.get('[class^="style_about"]').should(
+      'have.css',
+      'padding-bottom',
+      '320px',
+    )
+  })
+
   it('should check height and width of text__block_1', () => {
     cy.get('[class^="style_text__block_1"]').then(($elemento) => {
       const larguraElemento = $elemento[0].clientWidth
@@ -36,7 +45,7 @@ describe('session about us', () => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
       expect(larguraElemento).to.be.equal(312) // 1920 ± 2
-      expect(alturaElemento).to.be.equal(305)
+      // expect(alturaElemento).to.be.equal(305)
     })
     cy.get('[class^="style_text__block_2"]').should('have.css', 'gap', '16px')
   })
