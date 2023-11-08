@@ -146,7 +146,7 @@ h1 {
   scroll-margin-top: 4rem;
 }
 
-@media (min-width: 48em) and (max-width: 79.9375em) {
+@media (min-width: 48em) {
   h1,
   .h1 {
     line-height: 2.8rem;
