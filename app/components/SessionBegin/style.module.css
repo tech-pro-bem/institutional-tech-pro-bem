@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .layout_begin img {
@@ -42,15 +43,15 @@
 
 @media (min-width: 48em) {
   .begin {
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
   }
   .layout_begin {
-    justify-content: center;
+    /* align-items: flex-start; */
     flex-direction: row;
   }
   .layout_begin img {
     margin-top: 0;
-    transform: translateY(6rem);
+    transform: translateY(3rem);
     min-width: 18.75rem;
     max-width: 42rem;
   }
