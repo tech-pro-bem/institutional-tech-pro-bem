@@ -61,7 +61,7 @@
 }
 @media (min-width: 80em) {
   .about {
-    margin-top: -4rem;
+    margin-top: 0;
     padding-bottom: 14.5rem;
     padding-top: 8.125rem;
   }

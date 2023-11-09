@@ -69,21 +69,18 @@
   }
 
   .layout_begin {
-    justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.875rem;
   }
   .layout_begin img {
     width: 42rem;
     height: 27.15rem;
     max-width: 42rem;
-    padding-top: 2.375rem;
-    transform: translateY(0);
+    transform: translateY(4rem);
   }
 
   .text {
-    padding-top: 3.5rem;
     width: 40%;
   }
 
