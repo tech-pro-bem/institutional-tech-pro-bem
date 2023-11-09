@@ -63,24 +63,27 @@
 }
 
 @media (min-width: 80em) {
+  .begin {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+
   .layout_begin {
     justify-content: center;
     flex-direction: row;
     align-items: flex-start;
     gap: 1.875rem;
-    height: 31.875rem;
   }
   .layout_begin img {
     width: 42rem;
     height: 27.15rem;
     max-width: 42rem;
-    padding-top: 0;
-    transform: translateY(3.75rem);
+    padding-top: 2.375rem;
+    transform: translateY(0);
   }
 
   .text {
     padding-top: 3.5rem;
-    gap: 2rem;
     width: 40%;
   }
 
