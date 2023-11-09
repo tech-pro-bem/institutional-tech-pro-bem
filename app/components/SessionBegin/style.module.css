@@ -41,26 +41,23 @@
 }
 
 @media (min-width: 48em) {
+  .begin {
+    padding-bottom: 4rem;
+  }
   .layout_begin {
     justify-content: center;
     flex-direction: row;
   }
   .layout_begin img {
-    width: 100%;
-    height: auto;
-    transform: translateY(1rem);
+    margin-top: 0;
+    transform: translateY(6rem);
     min-width: 18.75rem;
     max-width: 42rem;
   }
 
   .text {
     width: 100%;
-
     max-width: 29.375rem;
-  }
-
-  .title {
-    margin-top: 0.5rem;
   }
 }
 
