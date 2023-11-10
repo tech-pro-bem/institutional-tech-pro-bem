@@ -1,0 +1,66 @@
+.footer {
+  width: 100%;
+  padding-top: 4rem;
+  background: var(--gradiente-light);
+}
+
+.infoContainer,
+.infoContainer div,
+.infoContainer address {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.infoContainer div,
+.infoContainer address {
+  gap: 0.5rem;
+}
+
+.infoContainer a:hover,
+.infoContainer a:active {
+  text-decoration: underline;
+}
+
+.infoContainer a:visited {
+  text-decoration: none;
+}
+
+.infoSubtitle {
+  color: var(--neutral-gray-darkest);
+}
+
+.infoTitle {
+  font-weight: 600;
+}
+
+.infoField {
+  display: inline-flex;
+  gap: 0.5rem;
+
+  font-style: normal;
+  line-height: 22px;
+}
+
+.infoField img {
+  width: 1.5rem;
+}
+
+.logoContainer {
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 4rem;
+  background: var(--neutral-white);
+}
+
+.tpblogo {
+  width: 10.75rem;
+  margin: auto;
+}
+
+@media (min-width: 80em) {
+  .infoContainer {
+    flex-direction: row;
+    gap: 4.5rem;
+  }
+}

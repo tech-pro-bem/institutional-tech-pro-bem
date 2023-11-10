@@ -1,7 +1,9 @@
-import { OurValues } from './components/OurValuesSection'
 import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
+import { OurValues } from './components/OurValuesSection'
+import { Footer } from './components/Footer'
+
 import { getContentfulData } from './utils/getContentfulData'
 
 export default async function Home() {
@@ -20,6 +22,7 @@ export default async function Home() {
         <SessionBegin />
         <SessionAboutUs />
         <OurValues values={ourValues} />
+        <Footer />
       </main>
     </>
   )
