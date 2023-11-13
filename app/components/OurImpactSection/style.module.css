@@ -1,19 +1,16 @@
 .main_box_impact {
     padding-block: 4.5rem;
-    /* background-color: teal; */
     text-align: center;
 }
 
 .title_impact {
     margin-bottom: 4.5rem;
-    /* background-color: antiquewhite; */
 }
 
 .impact {
     margin: auto;
     margin-bottom: 4rem;
     max-width: 11.875rem;
-    /* background-color: rgb(223, 255, 255); */
 }
 
 .impact:last-child {
@@ -23,13 +20,11 @@
 .impact h1 {
     margin-bottom: 0.25rem;
     color: var(--secondary-dark);
-    /* background-color: aqua; */
 }
 
 .impact p {
     color: var(--neutral-black);
     min-height: 4.125rem;
-    /* background-color: blue; */
 }
 
 @media screen and (min-width: 80em) {
