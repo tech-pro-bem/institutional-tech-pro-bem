@@ -20,8 +20,3 @@ export interface Values {
     }
   }
 }
-
-export interface Impact {
-  result: string
-  description: string
-}
