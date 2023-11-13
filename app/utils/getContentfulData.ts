@@ -5,6 +5,10 @@ export async function getContentfulData(table: string) {
   const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ?? '',
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ?? '',
+    environment:
+      process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT === 'staging'
+        ? 'staging'
+        : 'master',
   })
 
   const res = await client.getEntries({
