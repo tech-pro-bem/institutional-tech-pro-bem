@@ -1,42 +1,51 @@
 import React from 'react'
 import styles from './style.module.css'
+import { AboutValues } from './types'
+import { Tables } from '@/app/protocols'
 
-export function SessionAboutUs() {
+interface OurValuesProps {
+  values: Tables<AboutValues>[] // Declara a propriedade values como um array de objetos Values
+}
+
+export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
+  console.log(values)
   return (
     <section className={styles.about}>
-      <div className={`${styles.layout_about} container`}>
-        <h2 className={`${styles.title_about} title`}>Quem somos</h2>
-        <div className={styles.text}>
-          <div className={styles.text__block_1}>
-            <p className="regular-text">
-              A Tech Pro Bem é uma comunidade de tecnologia onde conectamos
-              profissionais de diferentes áreas para criar soluções digitais
-              para ONGs e projetos sociais.
-            </p>
-            <p className="regular-text">
-              Oferecemos experiência prática em um time multidisciplinar, com o
-              objetivo de impulsionar o aprendizado das competências necessárias
-              para superar desafios de entrada ou de crescimento no mercado de
-              trabalho.
-            </p>
-          </div>
-          <div className={styles.text__block_2}>
-            <h3 className="title title--small">Como funciona?</h3>
-            <p className="regular-text">
-              Selecionamos uma organização sem fins lucrativos que entrou em
-              contato conosco e passou por um alinhamento de objetivos e
-              expectativas. A cada ciclo realizamos um processo seletivo para
-              formar nossas equipes com{' '}
-              <strong>
-                Agilistas, Product Owners, UX/UI Designers, UX Writers,
-                Desenvolvedores, Analistas de Qualidade e Recursos Humanos.
-              </strong>{' '}
-              Todos os times possuem três níveis de senioridade profissional:
-              júnior, líder e pessoa mentora.
-            </p>
+      {values.map((value: Tables<AboutValues>) => (
+        <div
+          className={`${styles.layout_about} container`}
+          key={value.fields.id}
+        >
+          <h2 className={`${styles.title_about} title`}>
+            {value.fields.titleAbout}
+          </h2>
+          <div className={styles.text}>
+            <div className={styles.text__block_1}>
+              {value.fields.about
+                .split('\n')
+                .map((value: string, index: number) => (
+                  <p key={index} className="regular-text">
+                    {value}
+                  </p>
+                ))}
+            </div>
+            <div className={styles.text__block_2}>
+              <h3 className="title title--small">
+                {value.fields.titleHowItWorks}
+              </h3>
+              <p
+                className="regular-text"
+                dangerouslySetInnerHTML={{
+                  __html: value.fields.howItWorks.replace(
+                    /__(.*?)__/g,
+                    '<strong>$1</strong>',
+                  ),
+                }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </section>
   )
 }

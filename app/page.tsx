@@ -8,17 +8,17 @@ export default async function Home() {
   const promises = [
     // getContentfulData('header'),
     // getContentfulData('begin'),
-    // getContentfulData('about'),
+    getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
   ]
 
-  const [ourValues] = await Promise.all(promises)
+  const [aboutValues, ourValues] = await Promise.all(promises)
   return (
     <>
       <Header />
       <main>
         <SessionBegin />
-        <SessionAboutUs />
+        <SessionAboutUs values={aboutValues} />
         <OurValues values={ourValues} />
       </main>
     </>
