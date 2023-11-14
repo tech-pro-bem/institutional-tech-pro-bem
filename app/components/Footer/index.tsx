@@ -6,8 +6,9 @@ import InstagramIcon from '../../../public/InstagramIcon.svg'
 import LinkedinIcon from '../../../public/LinkedinIcon.svg'
 import MailIcon from '../../../public/MailIcon.svg'
 
-import { FooterValues } from './types'
 import { Tables } from '@/app/protocols'
+import { idFactory } from '@/app/utils/idFactory'
+import { FooterValues } from './types'
 
 interface FooterProps {
   values: Tables<FooterValues>[]
@@ -19,7 +20,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
       {values.map((value: Tables<FooterValues>) => (
         <footer
           key={value.fields.id}
-          id={value.fields.id}
+          id={idFactory(value.fields.id)}
           className={styles.footer}
         >
           <div className={`${styles.infoContainer} container`}>

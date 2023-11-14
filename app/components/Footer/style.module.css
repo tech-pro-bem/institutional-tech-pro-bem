@@ -1,7 +1,10 @@
 .footer {
   width: 100%;
-  padding-top: 4rem;
   background: var(--gradiente-light);
+}
+
+.infoContainer {
+  padding: 4rem 0;
 }
 
 .infoContainer,
@@ -33,6 +36,7 @@
 
 .infoTitle {
   font-weight: 600;
+  text-wrap: wrap;
 }
 
 .infoField {
@@ -50,7 +54,6 @@
 .logoContainer {
   width: 100%;
   padding: 1rem 0;
-  margin-top: 4rem;
   background: var(--neutral-white);
 }
 
