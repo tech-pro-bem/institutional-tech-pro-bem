@@ -12,9 +12,11 @@ export default async function Home() {
     // getContentfulData('begin'),
     // getContentfulData('about'),
     getContentfulData('ourValues'),
+    getContentfulData('footer'),
   ]
 
-  const [ourValues] = await Promise.all(promises)
+  const [ourValues, footer] = await Promise.all(promises)
+
   return (
     <>
       <Header />
@@ -22,7 +24,7 @@ export default async function Home() {
         <SessionBegin />
         <SessionAboutUs />
         <OurValues values={ourValues} />
-        <Footer />
+        <Footer values={footer} />
       </main>
     </>
   )
