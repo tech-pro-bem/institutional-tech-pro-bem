@@ -1,5 +1,4 @@
 .footer {
-  width: 100%;
   background: var(--gradiente-light);
 }
 
@@ -34,10 +33,6 @@
   text-wrap: wrap;
 }
 
-.infoTitle {
-  font-weight: 600;
-}
-
 .infoField {
   display: inline-flex;
   gap: 0.5rem;
@@ -51,13 +46,12 @@
 }
 
 .logoContainer {
-  width: 100%;
   padding: 1rem 0;
   background: var(--neutral-white);
 }
 
 .tpblogo {
-  width: 10.75rem;
+  width: 9.75rem;
   margin: auto;
 }
 

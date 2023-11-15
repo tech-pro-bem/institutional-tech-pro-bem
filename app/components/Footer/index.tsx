@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
               <p className={`${styles.infoSubtitle} regular-text`}>
                 {value.fields.textTalk}
               </p>
-              <h4 className={`${styles.infoTitle} title--extra-small`}>
+              <h4 className="title title--extra-small">
                 {value.fields.inviteTalk}
               </h4>
               <address>
@@ -40,7 +40,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                   {value.fields.emailTech}
                 </p>
                 <a
-                  href="https://www.linkedin.com/company/techprobem/"
+                  href={`https://${value.fields.linkedinTech}`}
                   target="_blank"
                   rel="noopener"
                   className={styles.infoField}
@@ -49,12 +49,12 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                   {value.fields.linkedinTech}
                 </a>
                 <a
-                  href="https://www.instagram.com/techprobem/"
+                  href={`https://www.instagram.com/${value.fields.instagramTech}`}
                   target="_blank"
                   rel="noopener"
                   className={styles.infoField}
                 >
-                  <Image src={InstagramIcon} alt="Ícone do Instagram" />
+                  <Image src={InstagramIcon} alt="Ícone do Instagram" />@
                   {value.fields.instagramTech}
                 </a>
               </address>
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
               <p className={`${styles.infoSubtitle} regular-text`}>
                 {value.fields.textPartnership}
               </p>
-              <h4 className={`${styles.infoTitle} title--extra-small`}>
+              <h4 className="title title--extra-small">
                 {value.fields.invitePartnership}
               </h4>
               <address>
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
               src={`https:${value.fields.logo.fields.file.url}`}
               width={value.fields.logo.fields.file.details.image.width}
               height={value.fields.logo.fields.file.details.image.height}
-              alt="Logo da Tech Pro Bem"
+              alt={value.fields.logo.fields.description}
             />
           </div>
         </footer>
