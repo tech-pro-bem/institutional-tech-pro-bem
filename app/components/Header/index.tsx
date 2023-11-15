@@ -5,13 +5,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-import logo from '../../../public/logo1.svg'
 import { useObserver } from './useObserver'
 import { idFactory } from '@/app/utils/idFactory'
+import { HeaderValues } from './types'
+import { Tables } from '@/app/protocols'
 
-const sections = ['Início', 'Dúvidas', 'Acompanhe', 'Contato']
+interface HeaderProps {
+  values: Tables<HeaderValues>[]
+}
 
-export function Header() {
+export const Header: React.FC<HeaderProps> = ({ values }) => {
+  const sections = values[0].fields.section
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
   const [hasShadow, setHasShadow] = useState<boolean>(false)
   const [indicatorWidth, setIndicatorWidth] = useState<number>(0)
@@ -22,7 +26,9 @@ export function Header() {
   const scrollTimeoutRef = useRef<number | null>(null)
   const ulRef = useRef<HTMLUListElement | null>(null)
 
-  const sectionsWithHash = sections.map((section) => `#${idFactory(section)}`)
+  const sectionsWithHash = sections?.map(
+    (section: string) => `#${idFactory(section)}`,
+  )
   const { activeId } = useObserver(sectionsWithHash.join(', '))
 
   // This useEffect checks if the user has scrolled the page and sets the
@@ -62,7 +68,7 @@ export function Header() {
 
   useEffect(() => {
     const currentActiveLink = sections.find(
-      (section) => idFactory(section) === activeId,
+      (section: string) => idFactory(section) === activeId,
     )
 
     if (!(currentActiveLink && ulRef.current)) {
@@ -91,7 +97,7 @@ export function Header() {
         setScreenWidth(window.innerWidth)
 
         const currentActiveLink = sections.find(
-          (section) => idFactory(section) === activeId,
+          (section: string) => idFactory(section) === activeId,
         )
 
         if (!(currentActiveLink && ulRef.current)) {
@@ -127,8 +133,10 @@ export function Header() {
           <Link className={styles.logo} href="/">
             <Image
               className={styles.logo}
-              src={logo}
-              alt="Logo da Tech Pro Bem"
+              src={`https:${values[0].fields.logo.fields.file.url}`}
+              alt={values[0].fields.logo.fields.description}
+              width={values[0].fields.logo.fields.file.details.image.width}
+              height={values[0].fields.logo.fields.file.details.image.height}
             />
           </Link>
 
@@ -155,7 +163,7 @@ export function Header() {
             className={`${styles.navbar} ${isMenuOpened ? styles.open : ''}`}
           >
             <ul ref={ulRef} className="regular-text">
-              {sections.map((section) => {
+              {sections.map((section: string) => {
                 return (
                   <li
                     key={idFactory(section)}
