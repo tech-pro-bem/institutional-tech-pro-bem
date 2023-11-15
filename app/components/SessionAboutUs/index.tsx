@@ -8,7 +8,6 @@ interface OurValuesProps {
 }
 
 export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
-  console.log(values)
   return (
     <section className={styles.about}>
       {values.map((value: Tables<AboutValues>) => (

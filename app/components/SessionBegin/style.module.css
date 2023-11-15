@@ -11,9 +11,7 @@
 }
 
 .layout_begin img {
-  margin-top: 6rem;
-  /* margin-top: 3rem; */
-  /* sugerir alteração para design */
+  margin-top: 3rem;
   width: 100%;
   max-height: max(75vh, 320px);
   max-width: 400px;
