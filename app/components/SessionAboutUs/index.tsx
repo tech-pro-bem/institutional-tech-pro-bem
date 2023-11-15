@@ -4,7 +4,7 @@ import { AboutValues } from './types'
 import { Tables } from '@/app/protocols'
 
 interface OurValuesProps {
-  values: Tables<AboutValues>[] // Declara a propriedade values como um array de objetos Values
+  values: Tables<AboutValues>[]
 }
 
 export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
