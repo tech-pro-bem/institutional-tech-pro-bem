@@ -1,27 +1,30 @@
-// 'use client'
-
-import { Tables, Values } from '@/app/protocols'
-// import { getContentfulData } from '@/app/utils/getContentfulData'
+import { Tables } from '@/app/protocols'
 import Image from 'next/image'
-// import { useEffect, useState } from 'react'
 import style from './style.module.css'
 
+export interface Values {
+  title: string
+  description: string
+  symbol: {
+    fields: {
+      file: {
+        url: string
+        details: {
+          image: {
+            width: number
+            height: number
+          }
+        }
+      }
+    }
+  }
+}
+
 interface OurValuesProps {
-  values: Tables<Values>[] // Declara a propriedade values como um array de objetos Values
+  values: Tables<Values>[]
 }
 
 export const OurValues: React.FC<OurValuesProps> = async ({ values }) => {
-  // const [values, setValues] = useState<Tables<Values>[]>([])
-  // useEffect(() => {
-  //   async function getData() {
-  //     const data: Tables<Values>[] = await getContentfulData('ourValues')
-  //     setValues(data)
-  //   }
-  //   getData()
-  // }, [])
-
-  // const values: Tables<Values>[] = await getContentfulData('ourValues')
-
   return (
     <section className={`${style.main_box} container`}>
       <h3 className={`title title--small ${style.title}`}>Nossos Valores</h3>
