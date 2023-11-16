@@ -1,9 +1,7 @@
-// 'use client'
-
 import { Tables, Values } from '@/app/protocols'
-// import { getContentfulData } from '@/app/utils/getContentfulData'
+
 import Image from 'next/image'
-// import { useEffect, useState } from 'react'
+
 import style from './style.module.css'
 
 interface OurValuesProps {
@@ -11,17 +9,6 @@ interface OurValuesProps {
 }
 
 export const OurValues: React.FC<OurValuesProps> = async ({ values }) => {
-  // const [values, setValues] = useState<Tables<Values>[]>([])
-  // useEffect(() => {
-  //   async function getData() {
-  //     const data: Tables<Values>[] = await getContentfulData('ourValues')
-  //     setValues(data)
-  //   }
-  //   getData()
-  // }, [])
-
-  // const values: Tables<Values>[] = await getContentfulData('ourValues')
-
   return (
     <section className={`${style.main_box} container`}>
       <h3 className={`title title--small ${style.title}`}>Nossos Valores</h3>
