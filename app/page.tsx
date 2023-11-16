@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { getContentfulData } from './utils/getContentfulData'
+import { Depoiments } from './components/Depoiments'
 
 export default async function Home() {
   const promises = [
@@ -20,6 +21,7 @@ export default async function Home() {
         <SessionBegin />
         <SessionAboutUs />
         <OurValues values={ourValues} />
+        <Depoiments />
       </main>
     </>
   )
