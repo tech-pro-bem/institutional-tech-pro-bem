@@ -45,7 +45,7 @@ describe('Mobile - session about us', () => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
       expect(larguraElemento).to.be.equal(312) // 1920 ± 2
-      // expect(alturaElemento).to.be.equal(305)
+      expect(alturaElemento).to.be.equal(284) // deveria ser 305 de acordo com o figma, porem tem uma linha a mais depois do texto
     })
     cy.get('[class^="style_text__block_2"]').should('have.css', 'gap', '16px')
   })

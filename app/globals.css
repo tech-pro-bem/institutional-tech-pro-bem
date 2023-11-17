@@ -13,3 +13,7 @@
     scroll-margin-top: 6rem;
   }
 }
+
+main {
+  background-color: var(--neutral-gray);
+}

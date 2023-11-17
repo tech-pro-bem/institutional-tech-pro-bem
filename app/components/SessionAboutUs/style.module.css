@@ -1,8 +1,9 @@
 .about {
+  --paddingTop: 4.75rem;
   background: var(--gradiente-light);
-  margin-top: -0.75rem;
+  margin-top: calc(var(--paddingTop) / -2);
   padding-bottom: 20rem;
-  padding-top: 3.75rem;
+  padding-top: var(--paddingTop);
 }
 
 .layout_about {
@@ -29,7 +30,7 @@
 
 @media (min-width: 48em) {
   .about {
-    margin-top: -2.5rem;
+    margin-top: 0;
   }
 
   .layout_about {
@@ -61,7 +62,7 @@
 }
 @media (min-width: 80em) {
   .about {
-    margin-top: -6.5rem;
+    margin-top: 0;
     padding-bottom: 14.5rem;
     padding-top: 8.125rem;
   }

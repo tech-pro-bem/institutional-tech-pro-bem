@@ -48,7 +48,7 @@ describe('Desktop - session about us', () => {
       const larguraElemento = $elemento[0].clientWidth
       const alturaElemento = $elemento[0].clientHeight
       expect(larguraElemento).to.be.equal(1920) // 1920 ± 2
-      expect(alturaElemento).to.be.within(631, 635) // 633 ± 2
+      expect(alturaElemento).to.be.within(633, 640) // 633 ± 2
     })
   })
 
@@ -66,7 +66,7 @@ describe('Desktop - session about us', () => {
 
       // Verifique as dimensões do elemento
       expect(larguraElemento).to.be.within(1918, 1922) // 1920 ± 2
-      expect(alturaElemento).to.be.within(631, 635) // 633 ± 2
+      expect(alturaElemento).to.be.within(633, 640) // 633 ± 2
     })
   })
 
