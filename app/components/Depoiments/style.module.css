@@ -23,6 +23,8 @@
 }
 
 .card img {
+  /* como adionicar o filtro? */
+  /* filter: hue-rotate(230.29deg); */
   background-color: rgb(226, 209, 255); /* Cor de cinza desejada */
   opacity: 0.5; /* Opacidade da cor cinza (0 a 1) */
   border-radius: 100%;
@@ -112,6 +114,16 @@
     grid-row: 1 / span 2; /* Mantendo grid-row para posicionar nas linhas */
   }
   .card:nth-child(5) {
-    background-color: green;
+    display: block;
+    background-color: transparent;
+    margin: auto;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .card:nth-child(5) > img {
+    border-radius: 0;
+    opacity: 1;
+    background-color: transparent;
   }
 }
