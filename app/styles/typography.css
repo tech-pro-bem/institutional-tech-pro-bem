@@ -1,5 +1,6 @@
 :root {
   /* Font sizes */
+  --fs-03: 0.875rem; /*14px */
   --fs-4: 1rem; /* 16px */
   --fs-5: 1.125rem; /* 18px */
   --fs-6: 1.25rem; /* 20px */
@@ -41,6 +42,12 @@
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
   line-height: 1.35;
+}
+
+.text2 {
+  font-size: var(--fs-03);
+  font-weight: var(--fw-400);
+  line-height: 1.25;
 }
 
 @media (min-width: 48em) {

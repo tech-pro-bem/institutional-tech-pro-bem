@@ -21,8 +21,8 @@ export const Depoiments = () => {
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
               <div>
-                <h2>Nome</h2>
-                <h3>cargo</h3>
+                <p className="text2">Mirelle Lucena</p>
+                <p className="text2">Product Owner</p>
               </div>
             </div>
           </div>
@@ -36,8 +36,8 @@ export const Depoiments = () => {
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
               <div>
-                <h2>Nome</h2>
-                <h3>cargo</h3>
+                <p className="text2">Nome Completo</p>
+                <p className="text2">Product Owner</p>
               </div>
             </div>
           </div>
@@ -51,8 +51,8 @@ export const Depoiments = () => {
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
               <div>
-                <h2>Nome</h2>
-                <h3>cargo</h3>
+                <p className="text2">Nome Completo</p>
+                <p className="text2">Product Owner</p>
               </div>
             </div>
           </div>
@@ -64,17 +64,14 @@ export const Depoiments = () => {
               neque hic ratione!
             </p>
             <div>
-              <div className={style.filtro}>
-                <Image src={imgVoluntario} alt="imagem do voluntario" />
-                <div className={style.overlay}></div>
+              <Image src={imgVoluntario} alt="imagem do voluntario" />
+              <div>
+                <p className="text2">Nome Completo</p>
+                <p className="text2">Product Owner</p>
               </div>
+            </div>
+          </div>
 
-              <div>
-                <h2>Nome</h2>
-                <h3>cargo</h3>
-              </div>
-            </div>
-          </div>
           <div className={style.card}>
             <Image src={logo} alt="logo" />
           </div>

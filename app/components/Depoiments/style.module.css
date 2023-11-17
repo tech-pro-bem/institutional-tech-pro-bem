@@ -66,10 +66,27 @@
     display: flex;
   }
 
+  .card > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card img {
+    width: 120px;
+  }
+
   .card:nth-child(odd) {
     flex-direction: column-reverse;
     justify-content: start;
     gap: 1.5rem;
+  }
+
+  .card:nth-child(even) > div {
+    min-width: 120px;
+  }
+
+  .card:nth-child(even) > p {
+    width: 100%;
   }
 
   /* Estilos de fundo para os elementos pares */
