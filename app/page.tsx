@@ -25,7 +25,7 @@ export default async function Home() {
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
-        <Footer values={footer} />
+        <Footer values={footer.entries} />
       </main>
     </>
   )
