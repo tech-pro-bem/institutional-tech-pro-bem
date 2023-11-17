@@ -13,65 +13,69 @@ export const Depoiments = () => {
         <div className={style.grid}>
           <div className={style.card}>
             <p className="regular-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              provident esse sunt id impedit tempore, quam, quia perferendis ab,
-              animi magnam sed maxime iure quibusdam architecto voluptatibus
-              neque hic ratione!
+              “Ingressar na Tech Pro Bem foi um divisor de águas para mim. O
+              voluntariado surgiu em um momento que estava precisando{' '}
+              <strong>
+                colocar muito do que tinha de conhecimento teórico em prática,
+              </strong>{' '}
+              estava buscando uma oportunidade para melhorar minha comunicação
+              em time e ter cases práticos. Foi um estímulo e um motivador
+              enquanto ainda não estava inserida no mercado de trabalho.”
             </p>
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
-              <div>
-                <p className="text2">Mirelle Lucena</p>
-                <p className="text2">Product Owner</p>
-              </div>
+              <p className="text2">Mirelle Lucena</p>
+              <p className={`text2 ${style.department}`}>Product Owner</p>
             </div>
           </div>
           <div className={style.card}>
             <p className="regular-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              provident esse sunt id impedit tempore, quam, quia perferendis ab,
-              animi magnam sed maxime iure quibusdam architecto voluptatibus
-              neque hic ratione!
+              “O trabalho voluntário na Tech Pro Bem está sendo enriquecedor por
+              me permitir colocar em prática os estudos em UX/UI Design,
+              trabalhar em equipe e ainda ajudar projetos sociais incriveis.
+              <strong>
+                {' '}
+                Considero uma etapa fundamental na minha transição de carreira e
+                também no meu crescimento pessoal.{' '}
+              </strong>
+              Juntos, unimos forças e fazemos o bem!”
             </p>
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
-              <div>
-                <p className="text2">Nome Completo</p>
-                <p className="text2">Product Owner</p>
-              </div>
+              <p className="text2">Mirelle Lucena</p>
+              <p className={`text2 ${style.department}`}>Product Owner</p>
             </div>
           </div>
           <div className={style.card}>
             <p className="regular-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              provident esse sunt id impedit tempore, quam, quia perferendis ab,
-              animi magnam sed maxime iure quibusdam architecto voluptatibus
-              neque hic ratione!
+              “A Tech contribuiu para que meu conhecimento teórico se
+              transformasse em prática.
+              <strong>
+                Pude ter contato com uma equipe real e com profissionais da área{' '}
+              </strong>
+              ao atuar num time ágil como QA Jr voluntária. Desenvolvi muito
+              minhas habilidades analíticas e de comunicação. Sou muito grata a
+              toda equipe por me proporcionar crescer como pessoa e como
+              profissional. Estou muito feliz e grata por todo aprendizado.” .”
             </p>
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
-              <div>
-                <p className="text2">Nome Completo</p>
-                <p className="text2">Product Owner</p>
-              </div>
+              <p className="text2">Mirelle Lucena</p>
+              <p className={`text2 ${style.department}`}>Product Owner</p>
             </div>
           </div>
           <div className={style.card}>
             <p className="regular-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              provident esse sunt id impedit tempore, quam, quia perferendis ab,
-              animi magnam sed maxime iure quibusdam architecto voluptatibus
-              neque hic ratione!
+              “Ser voluntário na Tech Pro Bem é um aprendizado incomparável!
+              <strong>Nenhum curso no mundo supera essa experiência</strong>
+              .”
             </p>
             <div>
               <Image src={imgVoluntario} alt="imagem do voluntario" />
-              <div>
-                <p className="text2">Nome Completo</p>
-                <p className="text2">Product Owner</p>
-              </div>
+              <p className="text2">Mirelle Lucena</p>
+              <p className={`text2 ${style.department}`}>Product Owner</p>
             </div>
           </div>
-
           <div className={style.card}>
             <Image src={logo} alt="logo" />
           </div>
