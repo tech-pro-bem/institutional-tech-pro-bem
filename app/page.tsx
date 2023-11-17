@@ -7,20 +7,22 @@ import { Depoiments } from './components/Depoiments'
 
 export default async function Home() {
   const promises = [
-    // getContentfulData('header'),
-    // getContentfulData('begin'),
-    // getContentfulData('about'),
+    getContentfulData('header'),
+    getContentfulData('begin'),
+    getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
   ]
 
-  const [ourValues] = await Promise.all(promises)
+  const [headerValues, beginValues, aboutValues, ourValues] =
+    await Promise.all(promises)
+
   return (
     <>
-      <Header />
+      <Header values={headerValues.entries} />
       <main>
-        <SessionBegin />
-        <SessionAboutUs />
-        <OurValues values={ourValues} />
+        <SessionBegin values={beginValues.entries} />
+        <SessionAboutUs values={aboutValues.entries} />
+        <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
         <Depoiments />
       </main>
     </>
