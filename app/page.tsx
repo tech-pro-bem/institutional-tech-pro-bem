@@ -17,11 +17,11 @@ export default async function Home() {
 
   return (
     <>
-      <Header values={headerValues} />
+      <Header values={headerValues.entries} />
       <main>
-        <SessionBegin values={beginValues} />
-        <SessionAboutUs values={aboutValues} />
-        <OurValues values={ourValues} />
+        <SessionBegin values={beginValues.entries} />
+        <SessionAboutUs values={aboutValues.entries} />
+        <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
       </main>
     </>
   )

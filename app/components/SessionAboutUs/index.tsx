@@ -8,6 +8,11 @@ interface OurValuesProps {
 }
 
 export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
+  const paragraphs = values[0].fields.about.split('\n')
+  const howItWorks = values[0].fields.howItWorks.replace(
+    /__(.*?)__/g,
+    '<strong>$1</strong>',
+  )
   return (
     <section className={styles.about}>
       {values.map((value: Tables<AboutValues>) => (
@@ -20,13 +25,11 @@ export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
           </h2>
           <div className={styles.text}>
             <div className={styles.text__block_1}>
-              {value.fields.about
-                .split('\n')
-                .map((value: string, index: number) => (
-                  <p key={index} className="regular-text">
-                    {value}
-                  </p>
-                ))}
+              {paragraphs.map((value: string, index: number) => (
+                <p key={index} className="regular-text">
+                  {value}
+                </p>
+              ))}
             </div>
             <div className={styles.text__block_2}>
               <h3 className="title title--small">
@@ -35,10 +38,7 @@ export const SessionAboutUs: React.FC<OurValuesProps> = async ({ values }) => {
               <p
                 className="regular-text"
                 dangerouslySetInnerHTML={{
-                  __html: value.fields.howItWorks.replace(
-                    /__(.*?)__/g,
-                    '<strong>$1</strong>',
-                  ),
+                  __html: howItWorks,
                 }}
               />
             </div>

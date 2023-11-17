@@ -6,12 +6,16 @@ import style from './style.module.css'
 
 interface OurValuesProps {
   values: Tables<Values>[] // Declara a propriedade values como um array de objetos Values
+  tableName: string
 }
 
-export const OurValues: React.FC<OurValuesProps> = async ({ values }) => {
+export const OurValues: React.FC<OurValuesProps> = async ({
+  values,
+  tableName,
+}) => {
   return (
     <section className={`${style.main_box} container`}>
-      <h3 className={`title title--small ${style.title}`}>Nossos Valores</h3>
+      <h3 className={`title title--small ${style.title}`}>{tableName}</h3>
       <div className={style.values_content}>
         {values?.map((value: Tables<Values>) => (
           <div key={value.fields.title} className={style.value}>
