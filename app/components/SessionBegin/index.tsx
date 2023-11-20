@@ -1,25 +1,32 @@
 import Image from 'next/image'
-import inicioLogo from '../../../public/inicio.svg'
 import styles from './style.module.css'
+import { BeginValues } from './types'
+import { Tables } from '@/app/protocols'
 
-export function SessionBegin() {
+interface BeginProps {
+  values: Tables<BeginValues>[]
+}
+
+export const SessionBegin: React.FC<BeginProps> = async ({ values }) => {
   return (
     <section id="inicio" className={styles.begin}>
-      <div className={`${styles.layout_begin} container`}>
-        <div className={styles.text}>
-          <h1 className={`${styles.title} title--big`}>
-            Impulsionamos pessoas, carreiras e projetos sociais
-          </h1>
-          <p className={styles.description}>
-            Somos uma comunidade de profissionais voluntários e acreditamos que
-            a tecnologia é um meio poderoso para transformar vidas.
-          </p>
+      {values.map((value: Tables<BeginValues>) => (
+        <div
+          className={`${styles.layout_begin} container`}
+          key={value.fields.id}
+        >
+          <div className={styles.text}>
+            <h1 className="title--big">{value.fields.title}</h1>
+            <p className={styles.description}>{value.fields.about}</p>
+          </div>
+          <Image
+            src={`https:${value.fields.image.fields.file.url}`}
+            alt={value.fields.image.fields.description}
+            width={value.fields.image.fields.file.details.image.width}
+            height={value.fields.image.fields.file.details.image.height}
+          />
         </div>
-        <Image
-          src={inicioLogo}
-          alt="Ilustração com tema de cores monocromático com base na cor lilás de uma equipe três pessoas em um cenário abstrato representando um espaço de trabalho de construção de uma página web. A mulher pinta com um rolo de tinta a parede enquanto dois homens conversam, um com uma placa representando uma linguagem de código e o outro com um laptop no colo."
-        />
-      </div>
+      ))}
     </section>
   )
 }

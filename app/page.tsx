@@ -7,22 +7,24 @@ import { OurImpact } from './components/OurImpactSection'
 
 export default async function Home() {
   const promises = [
-    // getContentfulData('header'),
-    // getContentfulData('begin'),
-    // getContentfulData('about'),
+    getContentfulData('header'),
+    getContentfulData('begin'),
+    getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
     getContentfulData('ourImpact'),
   ]
 
-  const [ourValues, ourImpact] = await Promise.all(promises)
+  const [headerValues, beginValues, aboutValues, ourValues, ourImpact] =
+    await Promise.all(promises)
+
   return (
     <>
-      <Header />
+      <Header values={headerValues.entries} />
       <main>
-        <SessionBegin />
-        <SessionAboutUs />
-        <OurValues values={ourValues} />
-        <OurImpact values={ourImpact} />
+        <SessionBegin values={beginValues.entries} />
+        <SessionAboutUs values={aboutValues.entries} />
+        <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
+        <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
       </main>
     </>
   )

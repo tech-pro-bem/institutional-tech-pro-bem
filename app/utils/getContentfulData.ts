@@ -11,11 +11,14 @@ export async function getContentfulData(table: string) {
         : 'master',
   })
 
-  const res = await client.getEntries({
+  const getEntries = await client.getEntries({
     content_type: table,
   })
 
-  const results: Tables<unknown>[] = res.items
+  const getTable = await client.getContentType(table)
+  const tableName = getTable.name
 
-  return results
+  const entries: Tables<unknown>[] = getEntries.items
+
+  return { entries, tableName }
 }
