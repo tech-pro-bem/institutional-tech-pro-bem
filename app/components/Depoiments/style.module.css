@@ -27,7 +27,7 @@
   border-radius: 1.5rem;
   padding: 2px;
   background: var(--gradiente-light);
-  -webkit-mask:
+  mask:
     linear-gradient(var(--neutral-white) 0 0) content-box,
     linear-gradient(var(--neutral-white) 0 0);
   -webkit-mask-composite: xor;
@@ -41,8 +41,9 @@
 .card img {
   /* como adionicar o filtro? */
   /* filter: hue-rotate(230.29deg); */
-  background-color: rgb(226, 209, 255); /* Cor de cinza desejada */
-  opacity: 0.5; /* Opacidade da cor cinza (0 a 1) */
+  background-color: #e2d1ff;
+  background-blend-mode: color;
+  opacity: 0.5;
   border-radius: 100%;
   width: 3.75rem;
 }
