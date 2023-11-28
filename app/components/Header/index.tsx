@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
             type="button"
             aria-expanded={isMenuOpened ? 'true' : 'false'}
             aria-controls="menu"
-            aria-label={isMenuOpened ? 'abrir menu' : 'fechar menu'}
+            aria-label={isMenuOpened ? 'fechar menu' : 'abrir menu'}
           >
             <div
               className={`${styles.hamburguerIcon} ${
