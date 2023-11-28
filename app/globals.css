@@ -8,6 +8,10 @@
   scroll-margin-top: 4rem;
 }
 
+.overflow_y_hidden {
+  overflow-y: hidden;
+}
+
 @media (min-width: 80em) {
   .scrollMarginTop {
     scroll-margin-top: 6rem;

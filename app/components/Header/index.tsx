@@ -124,6 +124,12 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
     }
   }, [activeId])
 
+  // useEffect(() => {
+  //   if (isMenuOpened) {
+  //     document.body.classList.toggle('overflow_y_hidden')
+  //   }
+  // }, [isMenuOpened])
+
   return (
     <>
       <header
@@ -142,7 +148,10 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
 
           <button
             className={styles.menuButton}
-            onClick={() => setIsMenuOpened(!isMenuOpened)}
+            onClick={() => {
+              setIsMenuOpened(!isMenuOpened)
+              document.body.classList.toggle('overflow_y_hidden')
+            }}
             type="button"
             aria-expanded={isMenuOpened ? 'true' : 'false'}
             aria-controls="menu"
@@ -174,7 +183,10 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
                   >
                     <Link
                       href={`#${idFactory(section)}`}
-                      onClick={() => setIsMenuOpened(false)}
+                      onClick={() => {
+                        setIsMenuOpened(false)
+                        document.body.classList.toggle('overflow_y_hidden')
+                      }}
                       tabIndex={screenWidth >= 1280 || isMenuOpened ? 0 : -1}
                     >
                       <span>{section}</span>
@@ -194,7 +206,10 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
 
             {isMenuOpened && (
               <div
-                onClick={() => setIsMenuOpened(false)}
+                onClick={() => {
+                  setIsMenuOpened(false)
+                  document.body.classList.toggle('overflow_y_hidden')
+                }}
                 className={styles.opacityMenu}
               ></div>
             )}
