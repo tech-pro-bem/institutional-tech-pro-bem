@@ -124,12 +124,6 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
     }
   }, [activeId])
 
-  // useEffect(() => {
-  //   if (isMenuOpened) {
-  //     document.body.classList.toggle('overflow_y_hidden')
-  //   }
-  // }, [isMenuOpened])
-
   return (
     <>
       <header
