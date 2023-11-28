@@ -17,6 +17,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 2;
 }
 
 .headerContainer {
@@ -181,6 +182,9 @@
 }
 
 @media (min-width: 80em) {
+  .header::before {
+    z-index: 0;
+  }
   .navbar {
     overflow-y: hidden;
   }
