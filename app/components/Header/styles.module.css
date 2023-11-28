@@ -33,6 +33,7 @@
 .logo {
   max-height: 2rem;
   width: auto;
+  z-index: 2;
 }
 
 /* Hamburguer Icon */
@@ -40,6 +41,7 @@
 .menuButton {
   background-color: transparent;
   border: none;
+  z-index: 2;
 }
 
 .hamburguerIcon {
@@ -102,8 +104,9 @@
   top: -100%;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
   transition: top 0.5s ease-in-out;
+  overflow-y: scroll;
 }
 
 .navbar.open {
@@ -164,6 +167,7 @@
   height: 100%;
   background-color: var(--neutral-black);
   opacity: 20%;
+  position: fixed;
 }
 
 @media (min-width: 40em) {

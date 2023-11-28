@@ -197,18 +197,17 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
                 }}
               ></div>
             </ul>
-
-            {isMenuOpened && (
-              <div
-                onClick={() => {
-                  setIsMenuOpened(false)
-                  document.body.classList.toggle('overflow_y_hidden')
-                }}
-                className={styles.opacityMenu}
-              ></div>
-            )}
           </nav>
         </div>
+        {isMenuOpened && (
+          <div
+            onClick={() => {
+              setIsMenuOpened(false)
+              document.body.classList.toggle('overflow_y_hidden')
+            }}
+            className={styles.opacityMenu}
+          ></div>
+        )}
       </header>
     </>
   )
