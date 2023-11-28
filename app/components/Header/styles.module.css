@@ -181,6 +181,9 @@
 }
 
 @media (min-width: 80em) {
+  .navbar {
+    overflow-y: hidden;
+  }
   .header.hasShadow {
     box-shadow: var(--shadow-light);
   }
