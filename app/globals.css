@@ -16,6 +16,10 @@
   .scrollMarginTop {
     scroll-margin-top: 6rem;
   }
+
+  .overflow_y_hidden {
+    overflow-y: auto;
+  }
 }
 
 main {

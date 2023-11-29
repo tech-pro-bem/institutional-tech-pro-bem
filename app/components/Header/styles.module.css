@@ -101,18 +101,23 @@
 /* Menu Navbar */
 
 .navbar {
-  position: fixed;
-  top: -100%;
+  position: absolute;
+  /* top: -100%; */
+  bottom: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
-  transition: top 0.5s ease-in-out;
-  overflow-y: scroll;
+
+  width: 100%;
+  max-height: calc(100vh - 4rem);
+
+  transition: transform 0.5s ease-in-out;
+  overflow-y: auto;
 }
 
 .navbar.open {
-  top: 4rem;
-  bottom: 0;
+  /* top: 4rem;
+  bottom: 0; */
+  transform: translateY(100%);
 }
 
 .navbar ul {
@@ -164,11 +169,15 @@
 }
 
 .opacityMenu {
+  position: fixed;
+  z-index: 1;
+
   width: 100%;
   height: 100%;
+
   background-color: var(--neutral-black);
+
   opacity: 20%;
-  position: fixed;
 }
 
 @media (min-width: 40em) {
@@ -215,6 +224,14 @@
     z-index: 0;
 
     background-color: var(--neutral-white);
+
+    transition: none;
+  }
+
+  .navbar.open {
+    /* top: 4rem;
+  bottom: 0; */
+    transform: none;
   }
 
   .navbar ul {
