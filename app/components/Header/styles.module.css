@@ -103,11 +103,12 @@
 .navbar {
   position: absolute;
   /* top: -100%; */
+  /* left: 0; */
+  /* width: 100%; */
   bottom: 0;
-  left: 0;
+
   z-index: 1;
 
-  width: 100%;
   max-height: calc(100vh - 4rem);
 
   transition: transform 0.5s ease-in-out;
@@ -117,6 +118,8 @@
 .navbar.open {
   /* top: 4rem;
   bottom: 0; */
+  left: calc(((100 - 86.75) / 2) * -1vw);
+  right: calc(((100 - 86.75) / 2) * -1vw);
   transform: translateY(100%);
 }
 
