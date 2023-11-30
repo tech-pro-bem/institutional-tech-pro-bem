@@ -2,10 +2,6 @@ import styles from './style.module.css'
 
 import Image from 'next/image'
 
-import InstagramIcon from '../../../public/InstagramIcon.svg'
-import LinkedinIcon from '../../../public/LinkedinIcon.svg'
-import MailIcon from '../../../public/MailIcon.svg'
-
 import { Tables } from '@/app/protocols'
 import { idFactory } from '@/app/utils/idFactory'
 import { FooterValues } from './types'
@@ -34,8 +30,14 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
               <address>
                 <p className={styles.infoField}>
                   <Image
-                    src={MailIcon}
-                    alt="Ícone de um envelope representando um e-mail"
+                    src={`https:${value.fields.MailIcon.fields.file.url}`}
+                    width={
+                      value.fields.MailIcon.fields.file.details.image.width
+                    }
+                    height={
+                      value.fields.MailIcon.fields.file.details.image.height
+                    }
+                    alt={value.fields.MailIcon.fields.description}
                   />
                   {value.fields.emailTech}
                 </p>
@@ -45,7 +47,16 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                   rel="noopener"
                   className={styles.infoField}
                 >
-                  <Image src={LinkedinIcon} alt="Ícone do LinkedIn" />
+                  <Image
+                    src={`https:${value.fields.LinkedInIcon.fields.file.url}`}
+                    width={
+                      value.fields.LinkedInIcon.fields.file.details.image.width
+                    }
+                    height={
+                      value.fields.LinkedInIcon.fields.file.details.image.height
+                    }
+                    alt={value.fields.LinkedInIcon.fields.description}
+                  />
                   {value.fields.linkedinTech}
                 </a>
                 <a
@@ -54,8 +65,18 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                   rel="noopener"
                   className={styles.infoField}
                 >
-                  <Image src={InstagramIcon} alt="Ícone do Instagram" />@
-                  {value.fields.instagramTech}
+                  <Image
+                    src={`https:${value.fields.InstagramIcon.fields.file.url}`}
+                    width={
+                      value.fields.InstagramIcon.fields.file.details.image.width
+                    }
+                    height={
+                      value.fields.InstagramIcon.fields.file.details.image
+                        .height
+                    }
+                    alt={value.fields.InstagramIcon.fields.description}
+                  />
+                  @{value.fields.instagramTech}
                 </a>
               </address>
             </div>
@@ -70,8 +91,14 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
               <address>
                 <p className={styles.infoField}>
                   <Image
-                    src={MailIcon}
-                    alt="Ícone de um envelope representando um e-mail"
+                    src={`https:${value.fields.MailIcon.fields.file.url}`}
+                    width={
+                      value.fields.MailIcon.fields.file.details.image.width
+                    }
+                    height={
+                      value.fields.MailIcon.fields.file.details.image.height
+                    }
+                    alt={value.fields.MailIcon.fields.description}
                   />
                   {value.fields.emailPartnership}
                 </p>
