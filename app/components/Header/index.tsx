@@ -142,10 +142,14 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
 
           <button
             className={styles.menuButton}
-            onClick={() => setIsMenuOpened(!isMenuOpened)}
+            onClick={() => {
+              setIsMenuOpened(!isMenuOpened)
+              document.body.classList.toggle('overflow_y_hidden')
+            }}
             type="button"
             aria-expanded={isMenuOpened ? 'true' : 'false'}
             aria-controls="menu"
+            aria-label={isMenuOpened ? 'fechar menu' : 'abrir menu'}
           >
             <div
               className={`${styles.hamburguerIcon} ${
@@ -174,7 +178,10 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
                   >
                     <Link
                       href={`#${idFactory(section)}`}
-                      onClick={() => setIsMenuOpened(false)}
+                      onClick={() => {
+                        setIsMenuOpened(false)
+                        document.body.classList.toggle('overflow_y_hidden')
+                      }}
                       tabIndex={screenWidth >= 1280 || isMenuOpened ? 0 : -1}
                     >
                       <span>{section}</span>
@@ -191,16 +198,18 @@ export const Header: React.FC<HeaderProps> = ({ values }) => {
                 }}
               ></div>
             </ul>
-
-            {isMenuOpened && (
-              <div
-                onClick={() => setIsMenuOpened(false)}
-                className={styles.opacityMenu}
-              ></div>
-            )}
           </nav>
         </div>
       </header>
+      {isMenuOpened && (
+        <div
+          onClick={() => {
+            setIsMenuOpened(false)
+            document.body.classList.toggle('overflow_y_hidden')
+          }}
+          className={styles.opacityMenu}
+        ></div>
+      )}
     </>
   )
 }
