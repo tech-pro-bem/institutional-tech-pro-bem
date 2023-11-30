@@ -1,7 +1,11 @@
+:root {
+  --container-width: 86.75;
+}
+
 .container {
   max-width: 73.125rem;
   margin-inline: auto;
-  width: 86.75%;
+  width: calc(var(--container-width) * 1%);
 }
 
 .scrollMarginTop {
