@@ -11,6 +11,15 @@
   box-shadow: var(--shadow-medium);
 }
 
+.header::before {
+  content: '';
+  background-color: var(--neutral-white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
 .headerContainer {
   position: relative;
 
@@ -25,6 +34,7 @@
 .logo {
   max-height: 2rem;
   width: auto;
+  z-index: 2;
 }
 
 /* Hamburguer Icon */
@@ -32,6 +42,7 @@
 .menuButton {
   background-color: transparent;
   border: none;
+  z-index: 2;
 }
 
 .hamburguerIcon {
@@ -88,19 +99,26 @@
 }
 
 /* Menu Navbar */
-
 .navbar {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  transition: top 0.5s ease-in-out;
+  position: absolute;
+  --position: calc(
+    ((100 / var(--container-width)) * ((100 - var(--container-width)) / 2)) *
+      -1%
+  );
+  left: var(--position);
+  right: var(--position);
+  bottom: 1px;
+
+  z-index: 1;
+
+  max-height: calc(100vh - 4rem);
+
+  transition: transform 0.5s ease-in-out;
+  overflow-y: auto;
 }
 
 .navbar.open {
-  top: 4rem;
-  bottom: 0;
+  transform: translateY(100%);
 }
 
 .navbar ul {
@@ -152,9 +170,14 @@
 }
 
 .opacityMenu {
+  position: fixed;
+  z-index: 1;
+
   width: 100%;
   height: 100%;
+
   background-color: var(--neutral-black);
+
   opacity: 20%;
 }
 
@@ -169,6 +192,12 @@
 }
 
 @media (min-width: 80em) {
+  .header::before {
+    z-index: 0;
+  }
+  .navbar {
+    overflow-y: hidden;
+  }
   .header.hasShadow {
     box-shadow: var(--shadow-light);
   }
@@ -187,7 +216,6 @@
   }
 
   /* Menu Navbar */
-
   .navbar {
     position: initial;
     width: fit-content;
@@ -196,6 +224,12 @@
     z-index: 0;
 
     background-color: var(--neutral-white);
+
+    transition: none;
+  }
+
+  .navbar.open {
+    transform: none;
   }
 
   .navbar ul {
