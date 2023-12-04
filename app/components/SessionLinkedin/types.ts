@@ -18,7 +18,7 @@ export interface LinkedinValues {
       }
     }
   }
-
+  linkLinkedIn: string
   image: {
     fields: {
       title: string
