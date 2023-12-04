@@ -1,0 +1,110 @@
+.section__container {
+
+    /* Utilizado para da espaço entre sessoes e dar a cor de fundo */
+    margin-top: 3rem;
+    background: var(--gradiente-light);
+
+}
+
+.section__container_linkedin {
+    max-width: 19.5rem;
+    padding-top: 2rem;
+    border-radius: 0.5rem;
+
+    background-color: var(--neutral-white);
+    box-shadow: var(--shadow-light);
+
+    transform: translateY(-16rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__container_text {
+    max-width: 15.5rem;
+
+}
+.section__container_text p {
+    margin-top: 1rem;
+}
+
+.section__container_text strong {
+    font-weight: var(--fw-700);
+}
+
+
+.link {
+    display: flex;
+
+    max-width: 12.1875rem;
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+
+    margin-top: 2rem;
+
+    border: 1px solid var(--primary-medium);
+    border-radius: 0.25rem;
+}
+
+
+.link a {
+    color: var(--primary-medium);
+
+    font-size: 0.875rem;
+    padding-right: 0.2rem;
+}
+
+.image__logo {
+    margin-top: 4rem;
+    margin-bottom: -2.375rem;
+
+    max-width: 17.5rem;
+
+}
+
+@media (min-width: 80em) {
+
+    .section__container {
+        margin-top: 12rem; 
+    }
+    .section__container_linkedin {
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        padding: 0;
+        padding-top: 1rem;
+
+        max-width: 70.875rem;
+
+        gap: 10rem;
+        transform: translateY(-10rem);
+    }
+
+    .section__container_text {
+        max-width: 24.1875rem;
+    }
+
+    .link {
+        max-width: 14.1875rem;
+        margin-top: 3rem;
+    }
+
+    .link a {
+        color: var(--primary-dark);
+        font-weight: var(--fw-600);
+        font-size: var(--fs-4);
+        line-height: 1.35;
+        margin-bottom: 0;
+    }
+
+    .link img {
+        width: 1.375rem;
+    }
+    
+    .image__logo {
+        margin-top: 3rem;
+        margin-bottom: -3.625rem;
+    
+        max-width: 24.75rem;
+    }
+}

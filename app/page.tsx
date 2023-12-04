@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { getContentfulData } from './utils/getContentfulData'
+import { Linkedin } from './components/Linkedin'
 
 export default async function Home() {
   const promises = [
@@ -22,6 +23,7 @@ export default async function Home() {
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
+        <Linkedin />
       </main>
     </>
   )
