@@ -17,7 +17,7 @@
     max-width: 15.5rem;
 
 }
-.section__container_text p {
+.text_paragraph {
     margin-top: 1rem;
 }
 
@@ -35,7 +35,7 @@
 }
 
 
-.link a {
+.link_linkedin {
     color: var(--primary-medium);
 
     font-size: 0.875rem;
@@ -58,9 +58,6 @@
         flex-direction: row-reverse;
         justify-content: center;
 
-        padding: 0;
-        padding-top: 1rem;
-
         max-width: 40rem;
 
 
@@ -73,10 +70,7 @@
 @media (min-width: 80em) {
 
     .section__container_linkedin {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-
+       
         padding: 0;
         padding-top: 1rem;
 
@@ -95,7 +89,7 @@
         margin-top: 3rem;
     }
 
-    .link a {
+    .link_linkedin {
         color: var(--primary-dark);
         font-weight: var(--fw-600);
         font-size: var(--fs-4);

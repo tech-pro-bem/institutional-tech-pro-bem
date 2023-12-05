@@ -15,39 +15,41 @@ export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
   )
 
   return (
-    <section
-      id="linkedin"
-      className={`${style.section__container_linkedin} container`}
-    >
-      {values.map((value: Tables<LinkedinValues>) => (
-        <div className={style.section__container_text} key={value.fields.id}>
-          <h2 className="title">{value.fields.title}</h2>
-          <p
-            className="regular-text"
-            dangerouslySetInnerHTML={{
-              __html: howItWorks,
-            }}
-          />
-          <div className={style.link}>
-            <Link href={`https://${value.fields.linkLinkedIn}`}>
-              {value.fields.buttonText}
-            </Link>
+    <section id="linkedin">
+      <div className={`${style.section__container_linkedin} container`}>
+        {values.map((value: Tables<LinkedinValues>) => (
+          <div className={style.section__container_text} key={value.fields.id}>
+            <h2 className="title">{value.fields.title}</h2>
+            <p
+              className={`${style.text_paragraph} regular-text`}
+              dangerouslySetInnerHTML={{
+                __html: howItWorks,
+              }}
+            />
+            <div className={style.link}>
+              <Link
+                href={`https://${value.fields.linkLinkedIn}`}
+                className={style.link_linkedin}
+              >
+                {value.fields.buttonText}
+              </Link>
+              <Image
+                src={`https:${value.fields.arrow.fields.file.url}`}
+                alt={value.fields.arrow.title}
+                width={value.fields.arrow.fields.file.details.image.width}
+                height={value.fields.arrow.fields.file.details.image.height}
+              />
+            </div>
             <Image
-              src={`https:${value.fields.arrow.fields.file.url}`}
-              alt={value.fields.arrow.title}
-              width={value.fields.arrow.fields.file.details.image.width}
-              height={value.fields.arrow.fields.file.details.image.height}
+              className={style.image__logo}
+              src={`https:${value.fields.image.fields.file.url}`}
+              alt={value.fields.image.title}
+              width={value.fields.image.fields.file.details.image.width}
+              height={value.fields.image.fields.file.details.image.height}
             />
           </div>
-          <Image
-            className={style.image__logo}
-            src={`https:${value.fields.image.fields.file.url}`}
-            alt={value.fields.image.title}
-            width={value.fields.image.fields.file.details.image.width}
-            height={value.fields.image.fields.file.details.image.height}
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   )
 }
