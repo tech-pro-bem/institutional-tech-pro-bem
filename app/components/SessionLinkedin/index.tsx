@@ -9,7 +9,7 @@ interface LinkedinProps {
 }
 
 export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
-  const howItWorks = values[0].fields.description.replace(
+  const description = values[0].fields.description.replace(
     /__(.*?)__/g,
     '<strong>$1</strong>',
   )
@@ -26,7 +26,7 @@ export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
             <p
               className={`${style.text_paragraph} regular-text`}
               dangerouslySetInnerHTML={{
-                __html: howItWorks,
+                __html: description,
               }}
             />
             <div className={style.link}>

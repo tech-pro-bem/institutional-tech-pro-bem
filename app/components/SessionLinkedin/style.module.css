@@ -1,6 +1,6 @@
 .section__container {
     margin-top: 2rem;
-   
+    
 }
 
 
@@ -24,6 +24,7 @@
 
 .section__container_text {
     max-width: 15.5rem;
+    width: 100%;
 
 }
 .text_paragraph {
@@ -41,6 +42,8 @@
 
     border: 1px solid var(--primary-medium);
     border-radius: 0.25rem;
+
+    
 }
 
 
@@ -49,18 +52,21 @@
 
     font-size: 0.875rem;
     padding-right: 0.2rem;
+
+    width: 100%;
 }
 
 .image__logo {
-    margin-top: 4rem;
-    margin-bottom: -2.375rem;
-    padding-right: 2rem;
+    padding-top: 2.5rem;
+    transform: translateY(2.375rem);
+    padding-right: 1.5rem;
 
     align-items: center;
 
     max-width: 17.5rem;
     max-height: max(75vh, 320px);
 
+    width: 100%;
 }
 
 @media (min-width: 48em) {
@@ -71,18 +77,17 @@
         min-width: 18rem;
         max-width: 40rem;
 
-
         transform: translateY(-10rem);
     }
 
     .image__logo {
         margin-bottom: 0;
 
-    
         align-items: center;
 
         min-width: 17.5rem;
         max-width: 24.75rem;
+
         transform: translateY(2rem);
     
     }
@@ -95,23 +100,20 @@
     .section__container_linkedin {
        
         padding: 0;
-        padding-top: 1rem;
-
         max-width: 70.875rem;
 
         gap: 7.5rem;
-        transform: translateY(-10rem);
+        padding-top: 0;
 
-        margin-top: 4rem;
     }
 
     .section__container_text {
         max-width: 24.1875rem;
+        
     }
 
     .link {
         max-width: 14.1875rem;
-        /* margin-top: 3rem; */
     }
 
     .link_linkedin {
@@ -126,7 +128,8 @@
     }
     
     .image__logo {
-        /* margin-top: 3rem; */
+        padding-top: 0;
+        
         transform: translateY(3.625rem);
     
         max-width: 24.75rem;
