@@ -1,7 +1,15 @@
+.section__container {
+    margin-top: 2rem;
+   
+}
+
+
 .section__container_linkedin {
     max-width: 19.5rem;
-    padding-top: 2rem;
+    padding-block: 2rem 3rem;
+    padding-inline: 3.5rem;
     border-radius: 0.5rem;
+
 
     background-color: var(--neutral-white);
     box-shadow: var(--shadow-light);
@@ -11,6 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
 }
 
 .section__container_text {
@@ -50,6 +60,7 @@
     align-items: center;
 
     max-width: 17.5rem;
+    max-height: max(75vh, 320px);
 
 }
 
@@ -58,10 +69,23 @@
         flex-direction: row-reverse;
         justify-content: center;
 
+        min-width: 18rem;
         max-width: 40rem;
 
 
         transform: translateY(-10rem);
+    }
+
+    .image__logo {
+        margin-bottom: 0;
+        padding-right: 2rem;
+    
+        align-items: center;
+
+        min-width: 17.5rem;
+        max-width: 24.75rem;
+        
+    
     }
 
 }
@@ -78,6 +102,8 @@
 
         gap: 10rem;
         transform: translateY(-10rem);
+
+        margin-top: 4rem;
     }
 
     .section__container_text {
