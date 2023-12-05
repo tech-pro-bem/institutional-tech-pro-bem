@@ -6,8 +6,7 @@
 
 .section__container_linkedin {
     max-width: 19.5rem;
-    padding-block: 2rem 3rem;
-    padding-inline: 3.5rem;
+    padding-top: 2rem;
     border-radius: 0.5rem;
 
 
@@ -78,13 +77,13 @@
 
     .image__logo {
         margin-bottom: 0;
-        padding-right: 2rem;
+
     
         align-items: center;
 
         min-width: 17.5rem;
         max-width: 24.75rem;
-        
+        transform: translateY(2rem);
     
     }
 
@@ -100,7 +99,7 @@
 
         max-width: 70.875rem;
 
-        gap: 10rem;
+        gap: 7.5rem;
         transform: translateY(-10rem);
 
         margin-top: 4rem;
@@ -112,7 +111,7 @@
 
     .link {
         max-width: 14.1875rem;
-        margin-top: 3rem;
+        /* margin-top: 3rem; */
     }
 
     .link_linkedin {
@@ -120,7 +119,6 @@
         font-weight: var(--fw-600);
         font-size: var(--fs-4);
         line-height: 1.35;
-        margin-bottom: 0;
     }
 
     .link img {
@@ -128,8 +126,8 @@
     }
     
     .image__logo {
-        margin-top: 3rem;
-        margin-bottom: -3.625rem;
+        /* margin-top: 3rem; */
+        transform: translateY(3.625rem);
     
         max-width: 24.75rem;
     }
