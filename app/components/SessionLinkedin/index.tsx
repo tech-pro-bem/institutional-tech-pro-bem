@@ -31,7 +31,7 @@ export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
             />
             <div className={style.link}>
               <Link
-                href={`https:${value.fields.linkLinkedIn}`}
+                href={value.fields.linkLinkedIn}
                 className={style.link_linkedin}
               >
                 {value.fields.buttonText}
