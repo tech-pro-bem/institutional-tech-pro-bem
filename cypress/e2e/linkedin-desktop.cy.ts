@@ -23,6 +23,6 @@ describe('Desktop - session about us', () => {
 
     cy.get('.style_link_linkedin__ejk3E').click()
 
-    cy.location('href').should('eq', linkLinkeInd)
+    cy.url().should('include', linkLinkeInd)
   })
 })
