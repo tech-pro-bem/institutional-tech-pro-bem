@@ -3,7 +3,7 @@
   top: 0;
 
   background-color: var(--neutral-white);
-  z-index: 2;
+  z-index: 3;
   transition: box-shadow 0.5s ease;
 }
 
@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .headerContainer {
@@ -34,7 +34,7 @@
 .logo {
   max-height: 2rem;
   width: auto;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Hamburguer Icon */
@@ -42,7 +42,7 @@
 .menuButton {
   background-color: transparent;
   border: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hamburguerIcon {
@@ -109,7 +109,7 @@
   right: var(--position);
   bottom: 1px;
 
-  z-index: 1;
+  z-index: 2;
 
   max-height: calc(100vh - 4rem);
 
@@ -171,7 +171,7 @@
 
 .opacityMenu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 
   width: 100%;
   height: 100%;

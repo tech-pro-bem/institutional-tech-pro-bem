@@ -18,6 +18,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1.635rem;
+
+  z-index: 1;
+  position: relative;
 }
 
 .section__container_text {
@@ -97,10 +100,6 @@
 @media (min-width: 80em) {
   .section__container_linkedin {
     padding: 0;
-    max-width: 70.875rem;
-
-    /* gap: 7.5rem; */
-    padding-top: 0;
   }
 
   .section__container_text {
