@@ -1,126 +1,31 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html,
-body {
-	height: 100%;
-}
-
-body {
-	-webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-div {
-	font-size: inherit;
-	font-weight: normal;
-	text-wrap: balance;
-	text-size-adjust: auto;
-	overflow-wrap: break-word;
-	vertical-align: baseline;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-iframe {
-	border: 0;
-}
-
 :root {
-	/* Primary colors */
-	--primary-dark: #8742ff;
-	--primary-extra-light: #e2d1ff;
-
-	/* Neutral colors */
-	--neutral-black: #030302;
-	--neutral-gray-darkest: #575452;
-	--neutral-white: #fdfcfc;
-	--neutral-gray: #f5f3f2;
-
-	/* Font sizes */
-	--fs-4: 1rem; /* 16px */
-	--fs-5: 1.125rem; /* 18px */
-	--fs-9: 2.5rem; /* 40px */
-	--fs-10: 3.5rem; /* 56px */
-
-	/* Font Weight */
-	--fw-300: 300;
-	--fw-400: 400;
-
-	/* Shadows */
-	--shadow-light: 0px 4px 16px 0px rgba(87, 84, 82, 0.1);
-	--shadow-medium: 0px 8px 24px 0px rgba(87, 84, 82, 0.12);
-}
-
-.h1 {
-	font-size: var(--fs-9);
-	font-weight: var(--fw-300);
-
-	line-height: 3rem;
-
-	opacity: 0.87;
-}
-
-.body1 {
-	font-size: var(--fs-4);
-	font-weight: var(--fw-400);
-	line-height: 1.35;
-}
-
-@media (min-width: 48em) and (max-width: 79.9375em) {
-	.h1 {
-		line-height: 2.8rem;
-		font-size: var(--fs-9);
-	}
-}
-
-@media (min-width: 80em) {
-	.h1 {
-		line-height: 3.8rem;
-		font-size: var(--fs-10);
-	}
-	.body1 {
-		font-size: var(--fs-5);
-	}
+  --container-width: 86.75;
 }
 
 .container {
-	max-width: 1170px;
-	margin-inline: auto;
-	width: 86.75%;
+  max-width: 73.125rem;
+  margin-inline: auto;
+  width: calc(var(--container-width) * 1%);
+}
+
+.scrollMarginTop {
+  scroll-margin-top: 4rem;
+}
+
+.overflow_y_hidden {
+  overflow-y: hidden;
+}
+
+@media (min-width: 80em) {
+  .scrollMarginTop {
+    scroll-margin-top: 6rem;
+  }
+
+  .overflow_y_hidden {
+    overflow-y: auto;
+  }
+}
+
+main {
+  background-color: var(--neutral-gray);
 }

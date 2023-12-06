@@ -16,6 +16,7 @@
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "contentful": "^10.6.5",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
+    "cypress": "^13.3.3",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1"
   }
