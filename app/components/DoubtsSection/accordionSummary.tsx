@@ -32,7 +32,7 @@ export const FAQAccordionSummary: React.FC<{
           sx={{
             backgroundColor: 'transparent',
             boxShadow: 'none',
-            padding: 'inherit',
+            padding: 'none',
           }}
         >
           <AccordionSummary
