@@ -25,6 +25,7 @@
   padding-inline: 0.25rem;
   padding-block: 0.75rem;
   
+  font-weight: var(--fw-700);
   color: var(--neutral-gray-dark);
 }
 
