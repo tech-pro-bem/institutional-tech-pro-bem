@@ -29,6 +29,10 @@ export const FAQAccordionSummary: React.FC<{
           expanded={expandedAccordions[i.fields.question] || false}
           onChange={() => handleAccordionChange(i.fields.question)}
           className={`${style.accordion__box}`}
+          sx={{
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+          }}
         >
           <AccordionSummary
             expandIcon={
