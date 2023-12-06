@@ -1,11 +1,3 @@
-.MuiTabs-root,
-.MuiTab-root,
-.MuiAccordion-root,
-.MuiAccordionSummary-root,
-.MuiAccordionDetails-root {
-  all: unset;
-}
-
 .doubts__section {
   padding-top: 4.5rem;
   padding-bottom: 8rem;
@@ -27,6 +19,8 @@
   margin-bottom: 1rem;
 
   border-bottom: 1px solid var(--neutral-gray-medium);
+
+  overflow-x: visible;
 }
 
 .tab__box{
@@ -55,6 +49,9 @@
   }
   .doubts__description {
     margin-bottom: 3rem;
+  }
+  .tabs__box { 
+    overflow-x: hidden;
   }
   .tab__box {
     padding-inline: 2rem;

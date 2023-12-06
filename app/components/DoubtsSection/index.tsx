@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
-import style from './style.module.css'
 import { Tables } from '@/app/protocols'
 import { DoubtsContentType, DoubtsType } from './types'
 import { Tab, Tabs } from '@mui/material'
 import { FAQAccordionSummary } from './accordionSummary'
+import style from './style.module.css'
 
 interface DoubtsProps {
   values: Tables<DoubtsType>[]

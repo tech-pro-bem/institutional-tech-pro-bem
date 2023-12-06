@@ -1,6 +1,6 @@
 import React from 'react'
-import style from './accordionDetails.module.css'
 import { AccordionDetails } from '@mui/material'
+import style from './accordionDetails.module.css'
 
 export const FAQAccordionDetails: React.FC<{ answer: string }> = ({
   answer,
