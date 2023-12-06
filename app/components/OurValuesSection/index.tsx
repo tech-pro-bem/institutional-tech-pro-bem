@@ -1,8 +1,28 @@
-import { Tables, Values } from '@/app/protocols'
+// 'use client'
 
+import { Tables } from '@/app/protocols'
+// import { getContentfulData } from '@/app/utils/getContentfulData'
 import Image from 'next/image'
 
 import style from './style.module.css'
+
+export interface Values {
+  title: string
+  description: string
+  symbol: {
+    fields: {
+      file: {
+        url: string
+        details: {
+          image: {
+            width: number
+            height: number
+          }
+        }
+      }
+    }
+  }
+}
 
 interface OurValuesProps {
   values: Tables<Values>[] // Declara a propriedade values como um array de objetos Values

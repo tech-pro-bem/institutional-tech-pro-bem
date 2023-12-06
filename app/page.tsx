@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { getContentfulData } from './utils/getContentfulData'
+import { OurImpact } from './components/OurImpactSection'
 
 export default async function Home() {
   const promises = [
@@ -10,9 +11,10 @@ export default async function Home() {
     getContentfulData('begin'),
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
+    getContentfulData('ourImpact'),
   ]
 
-  const [headerValues, beginValues, aboutValues, ourValues] =
+  const [headerValues, beginValues, aboutValues, ourValues, ourImpact] =
     await Promise.all(promises)
 
   return (
@@ -22,6 +24,7 @@ export default async function Home() {
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
+        <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
       </main>
     </>
   )
