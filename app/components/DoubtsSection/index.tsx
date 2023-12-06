@@ -42,10 +42,8 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
             className={`${style.tab__box} regular-text`}
             sx={{
               textTransform: 'none',
-              fontSize: 'inherit',
               fontFamily: 'inherit',
-              height: 'inherit',
-              width: 'inherit',
+              fontWeight: 700,
               '&.Mui-selected': { color: '#8742ff' },
             }}
             onClick={() => setFAQ(i.fields.faq)}
