@@ -32,6 +32,13 @@ export const FAQAccordionSummary: React.FC<{
           sx={{
             backgroundColor: 'transparent',
             boxShadow: 'none',
+            padding: 'none',
+            '&.MuiAccordionSummary-root': {
+              paddingTop: '1rem',
+            },
+            '&.MuiCollapse-root': {
+              paddingTop: '1rem',
+            },
           }}
         >
           <AccordionSummary
