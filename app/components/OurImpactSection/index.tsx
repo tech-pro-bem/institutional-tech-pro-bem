@@ -1,10 +1,6 @@
 import { Tables } from '@/app/protocols'
 import style from './style.module.css'
-
-export interface Impact {
-  result: string
-  description: string
-}
+import { Impact } from './types'
 
 interface OurImpactProps {
   values: Tables<Impact>[]
