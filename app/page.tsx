@@ -1,8 +1,28 @@
+import { OurValues } from './components/OurValuesSection'
+import { Header } from './components/Header'
+import { SessionBegin } from './components/SessionBegin'
+import { SessionAboutUs } from './components/SessionAboutUs'
+import { getContentfulData } from './utils/getContentfulData'
 
-export default function Home() {
+export default async function Home() {
+  const promises = [
+    getContentfulData('header'),
+    getContentfulData('begin'),
+    getContentfulData('aboutUs'),
+    getContentfulData('ourValues'),
+  ]
+
+  const [headerValues, beginValues, aboutValues, ourValues] =
+    await Promise.all(promises)
+
   return (
-    <main>
-      Em construção...
-    </main>
+    <>
+      <Header values={headerValues.entries} />
+      <main>
+        <SessionBegin values={beginValues.entries} />
+        <SessionAboutUs values={aboutValues.entries} />
+        <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
+      </main>
+    </>
   )
 }

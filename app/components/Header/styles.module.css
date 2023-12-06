@@ -1,0 +1,292 @@
+.header {
+  position: sticky;
+  top: 0;
+
+  background-color: var(--neutral-white);
+  z-index: 2;
+  transition: box-shadow 0.5s ease;
+}
+
+.header.hasShadow {
+  box-shadow: var(--shadow-medium);
+}
+
+.header::before {
+  content: '';
+  background-color: var(--neutral-white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.headerContainer {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 120rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  max-height: 2rem;
+  width: auto;
+  z-index: 2;
+}
+
+/* Hamburguer Icon */
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+}
+
+.hamburguerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0.5rem 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburguerIcon span {
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  background: var(--neutral-gray-darkest);
+  border-radius: 0.5rem;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburguerIcon.closeIcon {
+  padding: 0.4rem 0.3rem;
+}
+
+.hamburguerIcon span:nth-child(1) {
+  transform-origin: left center;
+}
+
+.hamburguerIcon span:nth-child(2) {
+  transform-origin: left center;
+}
+
+.hamburguerIcon span:nth-child(3) {
+  transform-origin: left center;
+}
+
+.closeIcon span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.closeIcon span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.closeIcon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Menu Navbar */
+.navbar {
+  position: absolute;
+  --position: calc(
+    ((100 / var(--container-width)) * ((100 - var(--container-width)) / 2)) *
+      -1%
+  );
+  left: var(--position);
+  right: var(--position);
+  bottom: 1px;
+
+  z-index: 1;
+
+  max-height: calc(100vh - 4rem);
+
+  transition: transform 0.5s ease-in-out;
+  overflow-y: auto;
+}
+
+.navbar.open {
+  transform: translateY(100%);
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--neutral-white);
+}
+
+.navbar li {
+  position: relative;
+
+  width: 100%;
+  list-style-type: none;
+
+  color: var(--neutral-black);
+  text-align: center;
+
+  user-select: none;
+}
+
+.navbar li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: default;
+}
+
+.navbar li a:active {
+  background-color: var(--primary-extra-light);
+}
+
+.navbar li.activeLink a {
+  color: var(--primary-dark);
+  padding-bottom: 0.5rem;
+}
+
+.navbar li.activeLink a span {
+  border-bottom: 2px solid var(--primary-medium);
+  padding-bottom: 0.5rem;
+}
+
+.navbar ul:first-child {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.opacityMenu {
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--neutral-black);
+
+  opacity: 20%;
+}
+
+@media (min-width: 40em) {
+  .navbar li:hover {
+    background-color: var(--primary-extra-light);
+  }
+
+  .navbar li a {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 80em) {
+  .header::before {
+    z-index: 0;
+  }
+  .navbar {
+    overflow-y: hidden;
+  }
+  .header.hasShadow {
+    box-shadow: var(--shadow-light);
+  }
+
+  .headerContainer {
+    padding: 1.5rem 0;
+    width: 94.2%;
+  }
+
+  .logo {
+    max-height: 3rem;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  /* Menu Navbar */
+  .navbar {
+    position: initial;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+
+    background-color: var(--neutral-white);
+
+    transition: none;
+  }
+
+  .navbar.open {
+    transform: none;
+  }
+
+  .navbar ul {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .navbar li {
+    padding: 0;
+    width: fit-content;
+    list-style-type: none;
+  }
+
+  .navbar li a {
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .navbar li.activeLink a {
+    padding-bottom: 0;
+  }
+
+  .navbar li.activeLink a span {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .indicator {
+    display: none;
+    /* TODO - foi identificado um bug na mudança de tela de 1279px para 1280px, por isso foi aplicado display none, rever transição de width quando todas as sessões estiverem disponeis .*/
+    position: absolute;
+    bottom: -0.5rem;
+    height: 2px;
+    background-color: var(--primary-medium);
+
+    transition:
+      width 0.5s ease,
+      left 0.5s ease;
+  }
+
+  .navbar li:hover {
+    color: var(--primary-dark);
+    background-color: var(--neutral-white);
+  }
+
+  .navbar li a:active {
+    background-color: var(--neutral-white);
+  }
+
+  .navbar ul:first-child {
+    padding-top: 0;
+    padding-bottom: 0rem;
+  }
+
+  .opacityMenu {
+    display: none;
+  }
+}
