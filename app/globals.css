@@ -1,16 +1,28 @@
+:root {
+  --container-width: 86.75;
+}
+
 .container {
   max-width: 73.125rem;
   margin-inline: auto;
-  width: 86.75%;
+  width: calc(var(--container-width) * 1%);
 }
 
 .scrollMarginTop {
   scroll-margin-top: 4rem;
 }
 
+.overflow_y_hidden {
+  overflow-y: hidden;
+}
+
 @media (min-width: 80em) {
   .scrollMarginTop {
     scroll-margin-top: 6rem;
+  }
+
+  .overflow_y_hidden {
+    overflow-y: auto;
   }
 }
 
