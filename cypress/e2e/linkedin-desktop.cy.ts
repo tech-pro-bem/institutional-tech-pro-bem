@@ -1,4 +1,4 @@
-describe('Desktop - session about us', () => {
+describe('Desktop - session Linkedin', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
     cy.viewport(1935, 1080)
@@ -19,10 +19,8 @@ describe('Desktop - session about us', () => {
       .should('exist')
   })
   it('deve seguir o link do linkedin', () => {
-    const linkLinkeInd = 'https://www.linkedin.com/company/techprobem/'
-
     cy.get('.style_link_linkedin__ejk3E').click()
 
-    cy.url().should('include', linkLinkeInd)
+    cy.location('href').should('eq', 'www.linkedin.com/company/techprobem/')
   })
 })
