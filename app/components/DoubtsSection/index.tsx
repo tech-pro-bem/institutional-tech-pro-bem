@@ -39,7 +39,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
           <Tab
             key={i.fields.category}
             label={i.fields.category}
-            className={`${style.tab__box} regular-text`}
+            className={`regular-text ${style.tab__box}`}
             sx={{
               textTransform: 'none',
               fontWeight: 700,
