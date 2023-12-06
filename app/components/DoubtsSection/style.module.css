@@ -1,3 +1,11 @@
+.MuiTabs-root,
+.MuiTab-root,
+.MuiAccordion-root,
+.MuiAccordionSummary-root,
+.MuiAccordionDetails-root {
+  all: unset;
+}
+
 .doubts__section {
   padding-top: 4.5rem;
   padding-bottom: 8rem;
