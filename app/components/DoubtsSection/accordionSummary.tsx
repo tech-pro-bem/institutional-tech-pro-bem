@@ -32,7 +32,6 @@ export const FAQAccordionSummary: React.FC<{
           sx={{
             backgroundColor: 'transparent',
             boxShadow: 'none',
-            padding: 'none',
           }}
         >
           <AccordionSummary
