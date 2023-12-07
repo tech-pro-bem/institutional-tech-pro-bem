@@ -49,7 +49,7 @@
     margin-bottom: 3rem;
   }
   .tab__box {
-    padding-inline: 2rem;
-    padding-block: 1rem;
+    padding-inline: 2rem !important;
+    padding-block: 1rem !important;
   }
 }

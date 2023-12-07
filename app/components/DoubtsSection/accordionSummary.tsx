@@ -15,7 +15,6 @@ export const FAQAccordionSummary: React.FC<{
 }> = ({ item, expandedAccordions, setExpandedAccordions }) => {
   const handleAccordionChange = (question: string) => {
     setExpandedAccordions((prevExpanded) => ({
-      ...prevExpanded, // basta remover essa linha para somente um accordion abrir por vez
       [question]: !prevExpanded[question],
     }))
   }
@@ -48,13 +47,7 @@ export const FAQAccordionSummary: React.FC<{
                 sx={{ color: '#030302', fontSize: '1.5rem' }}
               />
             }
-            className={`${
-              expandedAccordions[i.fields.question]
-                ? 'regular-text'
-                : 'regular-text--small'
-            }
-              ${style.accordion_summary__box}
-              `}
+            className={`regular-text ${style.accordion_summary__box}`}
           >
             <span className={style.question__box}>
               {expandedAccordions[i.fields.question] ? (
