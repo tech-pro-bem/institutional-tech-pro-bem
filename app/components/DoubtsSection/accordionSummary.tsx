@@ -15,7 +15,7 @@ export const FAQAccordionSummary: React.FC<{
 }> = ({ item, expandedAccordions, setExpandedAccordions }) => {
   const handleAccordionChange = (question: string) => {
     setExpandedAccordions((prevExpanded) => ({
-      ...prevExpanded,
+      ...prevExpanded, // basta remover essa linha para somente um accordion abrir por vez
       [question]: !prevExpanded[question],
     }))
   }

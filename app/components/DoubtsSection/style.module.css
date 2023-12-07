@@ -19,19 +19,17 @@
   margin-bottom: 1rem;
 
   border-bottom: 1px solid var(--neutral-gray-medium);
-
-  overflow-x: visible;
 }
 
 .tab__box{
-  max-height: min-content;
-  max-width: 33%;
+  max-height: min-content !important;
+  max-width: 33% !important;
   
-  padding-inline: 0.25rem;
-  padding-block: 0.75rem;
+  padding-inline: 0.25rem !important;
+  padding-block: 0.75rem !important;
   
-  font-weight: var(--fw-700);
-  color: var(--neutral-gray-dark);
+  font-weight: var(--fw-700) !important;
+  color: var(--neutral-gray-dark) !important;
 }
 
 .tab__box:first-child {
@@ -49,9 +47,6 @@
   }
   .doubts__description {
     margin-bottom: 3rem;
-  }
-  .tabs__box { 
-    overflow-x: hidden;
   }
   .tab__box {
     padding-inline: 2rem;

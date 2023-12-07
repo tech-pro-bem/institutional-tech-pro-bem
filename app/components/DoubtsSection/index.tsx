@@ -26,9 +26,9 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
       <h2 className={`title ${style.doubts__title}`}>
         {doubtsContent.fields.title}
       </h2>
-      <h4 className={`title--extra-small ${style.doubts__description}`}>
+      <h3 className={`title--extra-small ${style.doubts__description}`}>
         {doubtsContent.fields.description}
-      </h4>
+      </h3>
       <Tabs
         value={value}
         onChange={handleChange}
