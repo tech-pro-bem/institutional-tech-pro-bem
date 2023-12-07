@@ -47,6 +47,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
             sx={{
               textTransform: 'none',
               lineHeight: 'inherit',
+              fontSize: 'inherit',
               '&.Mui-selected': { color: '#8742ff' },
             }}
             onClick={() => setFAQ(i.fields.faq)}
