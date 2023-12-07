@@ -17,23 +17,23 @@
 }
 
 .accordion_summary__box{
-  padding-inline: 0;
-  padding-block: 1rem;
+  padding-inline: 0 !important;
+  padding-block: 1rem !important;
 }
 
 .accordion_summary__box>div {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .question__box{
-  margin-right: 3.5rem;
+  margin-right: 3.5rem !important;
 
   text-align: start;
 }
 
 @media screen and (min-width: 48em) {
   .accordion_summary__box {
-    padding-inline: 1rem;
-    padding-block: 1rem;
+    padding-inline: 1rem !important;
+    padding-block: 1rem !important;
   }
 }
