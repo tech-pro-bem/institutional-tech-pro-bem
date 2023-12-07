@@ -21,15 +21,20 @@
   border-bottom: 1px solid var(--neutral-gray-medium);
 }
 
+.tabs__box>div>div{
+  overflow-x: scroll;
+}
+
 .tab__box{
-  max-height: min-content !important;
+  max-height: min-content;
   max-width: 33% !important;
   
   padding-inline: 0.25rem !important;
   padding-block: 0.75rem !important;
   
   font-weight: var(--fw-700) !important;
-  color: var(--neutral-gray-dark) !important;
+  font-size: var(--fs-4) !important;
+  color: var(--neutral-gray-dark);
 }
 
 .tab__box:first-child {
@@ -40,7 +45,7 @@
   margin-right: auto;
 }
 
-@media screen and (min-width: 48em) {
+@media (min-width: 48em) {
   .doubts__section {
     padding-top: 7.813rem;
     padding-bottom: 8rem;
@@ -48,8 +53,13 @@
   .doubts__description {
     margin-bottom: 3rem;
   }
+  .tabs__box>div>div{
+    overflow-x: hidden;
+  }
   .tab__box {
     padding-inline: 2rem !important;
     padding-block: 1rem !important;
+
+    font-size: var(--fs-5) !important;
   }
 }

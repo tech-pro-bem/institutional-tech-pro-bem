@@ -32,7 +32,11 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
       <Tabs
         value={value}
         onChange={handleChange}
-        TabIndicatorProps={{ style: { backgroundColor: '#8742ff' } }}
+        TabIndicatorProps={{
+          style: {
+            backgroundColor: '#8742ff',
+          },
+        }}
         className={style.tabs__box}
       >
         {values.map((i: Tables<DoubtsType>) => (
@@ -42,7 +46,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
             className={`regular-text ${style.tab__box}`}
             sx={{
               textTransform: 'none',
-              fontWeight: 700,
+              lineHeight: 'inherit',
               '&.Mui-selected': { color: '#8742ff' },
             }}
             onClick={() => setFAQ(i.fields.faq)}

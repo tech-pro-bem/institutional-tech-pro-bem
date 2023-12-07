@@ -31,13 +31,6 @@ export const FAQAccordionSummary: React.FC<{
           sx={{
             backgroundColor: 'transparent',
             boxShadow: 'none',
-            padding: 'none',
-            '&.MuiAccordionSummary-root': {
-              paddingTop: '1rem',
-            },
-            '&.MuiCollapse-root': {
-              paddingTop: '1rem',
-            },
           }}
         >
           <AccordionSummary
@@ -47,9 +40,9 @@ export const FAQAccordionSummary: React.FC<{
                 sx={{ color: '#030302', fontSize: '1.5rem' }}
               />
             }
-            className={`regular-text ${style.accordion_summary__box}`}
+            className={style.accordion_summary__box}
           >
-            <span className={style.question__box}>
+            <span className={`regular-text ${style.question__box}`}>
               {expandedAccordions[i.fields.question] ? (
                 <strong>{i.fields.question}</strong>
               ) : (
