@@ -1,12 +1,9 @@
-.swiper {
-  height: 550px;
-  padding-inline: 50px;
+.slide {
+  background-color: red;
 }
 
-.slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.slide2 {
+  height: 600px;
 }
 
 .depoiments {
