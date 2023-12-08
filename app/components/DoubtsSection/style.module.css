@@ -58,7 +58,5 @@
   .tab__box {
     padding-inline: 2rem !important;
     padding-block: 1rem !important;
-
-    font-size: var(--fs-5) !important;
   }
 }

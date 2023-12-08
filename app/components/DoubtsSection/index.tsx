@@ -37,13 +37,13 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
             backgroundColor: '#8742ff',
           },
         }}
-        className={style.tabs__box}
+        className={`regular-text ${style.tabs__box}`}
       >
         {values.map((i: Tables<DoubtsType>) => (
           <Tab
             key={i.fields.category}
             label={i.fields.category}
-            className={`regular-text ${style.tab__box}`}
+            className={`${style.tab__box}`}
             sx={{
               textTransform: 'none',
               lineHeight: 'inherit',
