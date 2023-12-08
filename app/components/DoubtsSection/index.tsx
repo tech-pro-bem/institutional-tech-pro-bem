@@ -22,7 +22,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
   const doubtsContent = content[0]
 
   return (
-    <section id="dúvidas" className={`container ${style.doubts__section}`}>
+    <section id="duvidas" className={`container ${style.doubts__section}`}>
       <h2 className={`title ${style.doubts__title}`}>
         {doubtsContent.fields.title}
       </h2>
