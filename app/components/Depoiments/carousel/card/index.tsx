@@ -11,10 +11,11 @@ interface CardData {
 
 interface CardProps {
   depoiment: CardData
+  className: string
 }
-export const Card: React.FC<CardProps> = ({ depoiment }) => {
+export const Card: React.FC<CardProps> = ({ depoiment, className }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${className}`}>
       <Image src={imgVoluntario} alt="imagem do voluntario" />
       <p className="text2">{depoiment.nome}</p>
       <p className={`text2 ${styles.department}`}>{depoiment.cargo}</p>

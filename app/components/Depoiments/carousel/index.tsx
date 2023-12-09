@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import styles from './style.module.css'
-import Image from 'next/image'
-import imgVoluntario from '../../../../public/voluntario.png'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { Card } from './card'
@@ -15,11 +13,10 @@ interface CardData {
 }
 
 interface CarouselProps {
-  items: CardData[] // Substitua pelo tipo dos itens que deseja exibir no carousel
+  items: CardData[]
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
-  console.log(items[1])
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevIndex = (currentIndex - 1 + items.length) % items.length
@@ -37,19 +34,30 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       <div className={styles.carousel}>
         <Card
           depoiment={items[(currentIndex - 1 + items.length) % items.length]}
+          className={currentIndex !== prevIndex ? styles['slide-in-left'] : ''}
         />
         <div className={styles.previewItem}>
           <p onClick={handlePrev}>
             <ArrowBackIosIcon style={{ color: '#bdbab9' }} />
           </p>
         </div>
-        <Card depoiment={items[currentIndex]} />
+        <Card
+          depoiment={items[currentIndex]}
+          className={
+            currentIndex !== prevIndex && currentIndex !== nextIndex
+              ? styles['slide-in-right']
+              : ''
+          }
+        />
         <div className={styles.previewItem}>
           <p onClick={handleNext}>
             <ArrowForwardIosIcon style={{ color: '#bdbab9' }} />
           </p>
         </div>
-        <Card depoiment={items[(currentIndex + 1) % items.length]} />
+        <Card
+          depoiment={items[(currentIndex + 1) % items.length]}
+          className={currentIndex !== nextIndex ? styles['slide-in-right'] : ''}
+        />
       </div>
       <div className={styles.pagination}>
         {items.map((_, index) => (
