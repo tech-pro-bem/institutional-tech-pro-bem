@@ -24,6 +24,16 @@
   .overflow_y_hidden {
     overflow-y: auto;
   }
+  /* Classes para contole o navigation do Swiper */
+  .swiper-button-prev {
+    position: absolute !important;
+    left: 37rem !important;
+  }
+
+  .swiper-button-next {
+    position: absolute !important;
+    right: 37rem !important;
+  }
 }
 
 main {

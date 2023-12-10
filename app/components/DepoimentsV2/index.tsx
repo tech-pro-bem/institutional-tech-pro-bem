@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 import imgVoluntario from '../../../public/voluntario.png'
 
-export const Depoiments = () => {
+export const DepoimentsV2 = () => {
   return (
     <section className={`${style.depoiments}`}>
       <div className="container">
-        <h1 className={`title ${style.title}`}>Depoimentos</h1>
+        <h1 className={`title ${style.title}`}>Depoimentos Versão 2</h1>
         <h2 className="title-small">
           O que os voluntários que passaram pela Tech Pro Bem estão falando
         </h2>

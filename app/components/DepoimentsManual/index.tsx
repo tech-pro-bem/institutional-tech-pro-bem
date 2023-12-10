@@ -30,7 +30,7 @@ const items = [
   // Adicione URLs das imagens que deseja exibir
 ]
 
-export const Depoiments: React.FC = () => {
+export const DepoimentsManual: React.FC = () => {
   return (
     <div>
       <Carousel items={items} />

@@ -5,11 +5,11 @@ import Image from 'next/image'
 import imgVoluntario from '../../../public/voluntario.png'
 import logo from '../../../public/logo1.svg'
 
-export const Depoiments = () => {
+export const DepoimentsV1 = () => {
   return (
     <section className={`${style.depoiments}`}>
       <div className="container">
-        <h1 className={`title ${style.title}`}>Depoimentos</h1>
+        <h1 className={`title ${style.title}`}>Depoimentos Versão 1</h1>
         <div className={style.grid}>
           <div className={style.card}>
             <p className="regular-text">

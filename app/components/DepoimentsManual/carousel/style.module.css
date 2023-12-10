@@ -1,5 +1,11 @@
-.section {
-  padding-bottom: 3rem;
+.depoiments {
+  background-color: var(--neutral-white);
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
 }
 
 .carousel {
