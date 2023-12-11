@@ -41,18 +41,22 @@ const items = [
 
 function DepoimentsSwiper() {
   const [slidePerView, setSlidePerView] = useState(3)
+  const [showNavigation, setShowNavigation] = useState(true)
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setSlidePerView(1)
+      setShowNavigation(false)
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
       console.log(window.innerWidth >= 768 && window.innerWidth < 1280)
       console.log('é menor que 1280?', window.innerWidth < 1280)
       setSlidePerView(2)
+      setShowNavigation(true)
     }
     if (window.innerWidth >= 1280) {
       setSlidePerView(3)
+      setShowNavigation(true)
     }
   }
 
@@ -73,11 +77,9 @@ function DepoimentsSwiper() {
       <h1 className={`title ${style.title}`}>
         Depoimentos versão carousel com Swiper
       </h1>
-      <div className={style.left}></div>
-      <div className={style.right}></div>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        navigation
+        navigation={showNavigation}
         // scrollbar={{ draggable: true }}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
@@ -89,6 +91,8 @@ function DepoimentsSwiper() {
         initialSlide={0} // Define o slide inicial como o segundo slide (índice 1)
         className={style.swiper__slide}
       >
+        <div className={style.left}></div>
+        <div className={style.right}></div>
         {items.map((item, index) => (
           <SwiperSlide key={index}>
             <Card depoiment={item} />

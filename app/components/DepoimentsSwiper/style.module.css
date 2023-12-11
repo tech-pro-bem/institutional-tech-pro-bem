@@ -32,9 +32,15 @@
 } */
 
 @media (min-width: 48em) {
+  .depoiments {
+    padding-inline: 2rem;
+  }
   .left {
     width: 20%;
-    height: 67%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
     position: absolute;
     z-index: 2;
     background: linear-gradient(
@@ -46,9 +52,10 @@
 
   .right {
     width: 20%;
-    height: 67%;
+    height: 100%;
     position: absolute;
     right: 0;
+    top: 0;
     z-index: 2;
     background: linear-gradient(
       270deg,
