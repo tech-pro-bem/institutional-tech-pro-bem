@@ -16,6 +16,14 @@
   overflow-y: hidden;
 }
 
+.swiper-button-prev::after {
+  color: #bdbab9;
+}
+
+.swiper-button-next::after {
+  color: #bdbab9;
+}
+
 @media (min-width: 48em) {
   .swiper-button-prev {
     position: absolute !important;
