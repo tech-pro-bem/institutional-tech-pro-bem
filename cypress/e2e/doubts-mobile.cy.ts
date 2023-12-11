@@ -72,7 +72,7 @@ describe('Mobile - section doubts', () => {
     })
   })
 
-  it('should check padding of each accordion summary', () => {
+  it('should check padding and font-size of each accordion summary', () => {
     cy.get('[data-cy="accordion_summary"]').then(($accordion) => {
       for (let i = 0; i < $accordion.length; i++) {
         cy.wrap($accordion[i]).invoke('css', 'padding-block', '16px')
@@ -103,7 +103,7 @@ describe('Mobile - section doubts', () => {
     })
   })
 
-  it('should check padding of each accordion details', () => {
+  it('should check padding and font-size of each accordion details', () => {
     cy.get('[data-cy="accordion"]').each(($accordion, index) => {
       cy.wrap($accordion).click()
       cy.get('[data-cy="accordion_details"]')
