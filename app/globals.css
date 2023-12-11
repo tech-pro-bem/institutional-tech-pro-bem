@@ -24,6 +24,10 @@
   color: #bdbab9;
 }
 
+.swiper-pagination-bullet-active {
+  background: #817c79 !important;
+}
+
 @media (min-width: 48em) {
   .swiper-button-prev {
     position: absolute !important;
