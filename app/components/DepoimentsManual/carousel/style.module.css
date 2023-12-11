@@ -1,9 +1,13 @@
 .depoiments {
   background-color: var(--neutral-white);
   padding-top: 5rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
+.mobile_hidden {
+  display: none;
+}
 .title {
   margin-bottom: 2rem;
 }
@@ -144,4 +148,10 @@
 
 .slide-in-left {
   animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+@media (min-width: 48em) {
+  .mobile_hidden {
+    display: block;
+  }
 }

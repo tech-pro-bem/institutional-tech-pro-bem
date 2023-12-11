@@ -16,6 +16,18 @@
   overflow-y: hidden;
 }
 
+@media (min-width: 48em) {
+  .swiper-button-prev {
+    position: absolute !important;
+    left: 25% !important;
+  }
+
+  .swiper-button-next {
+    position: absolute !important;
+    right: 25% !important;
+  }
+}
+
 @media (min-width: 80em) {
   .scrollMarginTop {
     scroll-margin-top: 6rem;
@@ -24,18 +36,22 @@
   .overflow_y_hidden {
     overflow-y: auto;
   }
-  /* Classes para contole o navigation do Swiper */
+  /* Classes para contole o navigation do Swiper  */
   .swiper-button-prev {
-    position: absolute !important;
-    left: 37rem !important;
+    left: 32.5% !important;
   }
 
   .swiper-button-next {
-    position: absolute !important;
-    right: 37rem !important;
+    right: 32.5% !important;
   }
 }
 
 main {
   background-color: var(--neutral-gray);
+}
+
+.teste-dep {
+  height: 100px;
+  width: 100%;
+  background-color: #c1c1c1;
 }

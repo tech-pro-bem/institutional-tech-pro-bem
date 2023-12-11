@@ -32,17 +32,20 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <section className={`${styles.depoiments}`}>
       <div className="container">
-        <h1 className={`title ${styles.title}`}></h1>
         <h1 className={`title ${styles.title}`}>
           Depoimentos versão carousel manual
         </h1>
         <div className={styles.carousel}>
-          <Card
-            depoiment={items[(currentIndex - 1 + items.length) % items.length]}
-            className={
-              currentIndex !== prevIndex ? styles['slide-in-left'] : ''
-            }
-          />
+          <div className={styles.mobile_hidden}>
+            <Card
+              depoiment={
+                items[(currentIndex - 1 + items.length) % items.length]
+              }
+              className={
+                currentIndex !== prevIndex ? styles['slide-in-left'] : ''
+              }
+            />
+          </div>
           <div className={styles.previewItem}>
             <p onClick={handlePrev}>
               <ArrowBackIosIcon style={{ color: '#bdbab9' }} />
@@ -61,12 +64,14 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
               <ArrowForwardIosIcon style={{ color: '#bdbab9' }} />
             </p>
           </div>
-          <Card
-            depoiment={items[(currentIndex + 1) % items.length]}
-            className={
-              currentIndex !== nextIndex ? styles['slide-in-right'] : ''
-            }
-          />
+          <div className={styles.mobile_hidden}>
+            <Card
+              depoiment={items[(currentIndex + 1) % items.length]}
+              className={
+                currentIndex !== nextIndex ? styles['slide-in-right'] : ''
+              }
+            />
+          </div>
         </div>
         <div className={styles.pagination}>
           {items.map((_, index) => (

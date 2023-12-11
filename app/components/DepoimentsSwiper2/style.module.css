@@ -7,7 +7,6 @@
   background-color: var(--neutral-white);
   padding-top: 5rem;
   text-align: center;
-  height: 90vh;
 }
 
 .title {
@@ -19,6 +18,14 @@
   z-index: 3; */
   position: relative;
   padding: 3rem;
+}
+
+.swiper__slide .swiper-button-next {
+  background-color: teal !important;
+}
+
+.test-next {
+  background-color: teal !important;
 }
 
 /* .swiper__slide::after {
@@ -33,8 +40,8 @@
 
 @media (min-width: 48em) {
   .left {
-    width: 20%;
-    height: 67%;
+    width: 300px;
+    height: 400px;
     position: absolute;
     z-index: 2;
     background: linear-gradient(
@@ -45,8 +52,8 @@
   }
 
   .right {
-    width: 20%;
-    height: 67%;
+    width: 300px;
+    height: 400px;
     position: absolute;
     right: 0;
     z-index: 2;
@@ -55,17 +62,5 @@
       #ffffff 59.07%,
       rgba(253, 252, 252, 0.05) 100%
     );
-  }
-}
-
-@media (min-width: 80em) {
-  /* Classes para contole o navigation do Swiper  */
-  .swiper-button-prev {
-    left: 37rem !important;
-    background-color: red;
-  }
-
-  .swiper-button-next {
-    right: 37rem !important;
   }
 }
