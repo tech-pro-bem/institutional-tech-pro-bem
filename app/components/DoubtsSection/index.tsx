@@ -38,6 +38,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
           },
         }}
         className={`regular-text ${style.tabs__box}`}
+        data-cy="tabs_box"
       >
         {values.map((i: Tables<DoubtsType>) => (
           <Tab
@@ -51,6 +52,7 @@ export const DoubtsSection: React.FC<DoubtsProps> = ({ values, content }) => {
               '&.Mui-selected': { color: '#8742ff' },
             }}
             onClick={() => setFAQ(i.fields.faq)}
+            data-cy="tab_box"
           ></Tab>
         ))}
       </Tabs>

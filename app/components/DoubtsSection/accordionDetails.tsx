@@ -35,6 +35,7 @@ export const FAQAccordionDetails: React.FC<{ answer: string }> = ({
   return (
     <AccordionDetails
       className={`regular-text--small ${style.accordion_details__box}`}
+      data-cy="accordion_details"
     >
       {answers.map((i, index) => (
         <p

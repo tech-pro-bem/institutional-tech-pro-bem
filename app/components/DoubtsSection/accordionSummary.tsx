@@ -32,15 +32,18 @@ export const FAQAccordionSummary: React.FC<{
             backgroundColor: 'transparent',
             boxShadow: 'none',
           }}
+          data-cy="accordion"
         >
           <AccordionSummary
             expandIcon={
               <ExpandMore
                 className={style.expand__icon}
                 sx={{ color: '#030302', fontSize: '1.5rem' }}
+                data-cy="expand_icon"
               />
             }
             className={style.accordion_summary__box}
+            data-cy="accordion_summary"
           >
             <span className={`regular-text ${style.question__box}`}>
               {expandedAccordions[i.fields.question] ? (
