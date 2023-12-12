@@ -42,10 +42,12 @@ const items = [
 function DepoimentsSwiper() {
   const [slidePerView, setSlidePerView] = useState(3)
   const [showNavigation, setShowNavigation] = useState(true)
+  const [space, setSpace] = useState(80)
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setSlidePerView(1)
       setShowNavigation(false)
+      setSpace(80)
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
@@ -53,10 +55,12 @@ function DepoimentsSwiper() {
       console.log('é menor que 1280?', window.innerWidth < 1280)
       setSlidePerView(2)
       setShowNavigation(true)
+      setSpace(40)
     }
     if (window.innerWidth >= 1280) {
       setSlidePerView(3)
       setShowNavigation(true)
+      setSpace(80)
     }
   }
 
@@ -85,7 +89,7 @@ function DepoimentsSwiper() {
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
         centeredSlides={true} // Define centeredSlides como true para centralizar os slides
-        spaceBetween={80} // Espaço entre os slides (opcional)
+        spaceBetween={space} // Espaço entre os slides (opcional)
         slidesPerView={slidePerView} // Quantidade de slides visíveis ao mesmo tempo
         pagination={{ clickable: true }} // Configuração da paginação (opcional)
         loop={true} // Define o loop como verdadeiro para tornar o Swiper infinito
