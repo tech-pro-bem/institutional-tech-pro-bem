@@ -12,7 +12,6 @@ export default async function Home() {
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
     getContentfulData('testimonialsContent'),
-    getContentfulData('testimonials'),
   ]
 
   const [
@@ -21,7 +20,6 @@ export default async function Home() {
     aboutValues,
     ourValues,
     testimonialsContent,
-    testimonialsValues,
   ] = await Promise.all(promises)
 
   return (
@@ -31,10 +29,7 @@ export default async function Home() {
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
-        <Depoiments
-          content={testimonialsContent.entries}
-          values={testimonialsValues.entries}
-        />
+        <Depoiments values={testimonialsContent.entries} />
       </main>
     </>
   )

@@ -1,3 +1,5 @@
+import { Tables } from '@/app/protocols'
+
 export interface imageType {
   fields: {
     title: string
@@ -25,6 +27,7 @@ export interface testimonialsContentType {
   title: string
   description: string
   quotationMark: imageType
+  testimonials: Tables<testimonialsType>[]
 }
 
 // Seção Depoimentos - Título e subtítulo

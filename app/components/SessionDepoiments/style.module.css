@@ -65,15 +65,3 @@
     );
   }
 }
-
-@media (min-width: 80em) {
-  /* Classes para contole o navigation do Swiper  */
-  .swiper-button-prev {
-    left: 37rem !important;
-    background-color: red;
-  }
-
-  .swiper-button-next {
-    right: 37rem !important;
-  }
-}

@@ -15,12 +15,11 @@ import { Tables } from '@/app/protocols'
 import { testimonialsContentType, testimonialsType } from './types'
 
 interface DepoimentsProps {
-  content: Tables<testimonialsContentType>[]
-  values: Tables<testimonialsType>[]
+  values: Tables<testimonialsContentType>[]
 }
 
-export const Depoiments: React.FC<DepoimentsProps> = ({ content, values }) => {
-  const testimonialsContent = content[0].fields
+export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
+  const testimonialsContent = values[0].fields
   const [slidePerView, setSlidePerView] = useState(3)
   const [showNavigation, setShowNavigation] = useState(true)
   const [space, setSpace] = useState(80)
@@ -77,14 +76,16 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ content, values }) => {
       >
         <div className={style.left}></div>
         <div className={style.right}></div>
-        {values.map((item, index) => (
-          <SwiperSlide key={index}>
-            <Card
-              depoiment={item.fields}
-              quotationMark={testimonialsContent.quotationMark}
-            />
-          </SwiperSlide>
-        ))}
+        {testimonialsContent.testimonials.map(
+          (item: Tables<testimonialsType>, index: number) => (
+            <SwiperSlide key={index}>
+              <Card
+                depoiment={item.fields}
+                quotationMark={testimonialsContent.quotationMark}
+              />
+            </SwiperSlide>
+          ),
+        )}
       </Swiper>
     </section>
   )
