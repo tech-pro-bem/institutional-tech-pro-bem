@@ -34,15 +34,15 @@
 
 @media (min-width: 48em) {
   /* Classes para contole o navigation do Swiper  */
-  /* .swiper-button-prev {
+  .swiper-button-prev {
     position: absolute !important;
-    left: 25% !important;
+    left: 10% !important;
   }
 
   .swiper-button-next {
     position: absolute !important;
-    right: 25% !important;
-  } */
+    right: 10% !important;
+  }
 }
 
 @media (min-width: 80em) {
