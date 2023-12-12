@@ -74,9 +74,10 @@ function DepoimentsSwiper() {
   }, [])
   return (
     <section className={style.depoiments}>
-      <h1 className={`title ${style.title}`}>
-        Depoimentos versão carousel com Swiper
-      </h1>
+      <h1 className={`title ${style.title}`}>Depoimentos</h1>
+      <h2 className={`title--small`}>
+        O que os voluntários que passaram pela Tech Pro Bem estão falando
+      </h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation={showNavigation}
@@ -84,7 +85,7 @@ function DepoimentsSwiper() {
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
         centeredSlides={true} // Define centeredSlides como true para centralizar os slides
-        spaceBetween={60} // Espaço entre os slides (opcional)
+        spaceBetween={80} // Espaço entre os slides (opcional)
         slidesPerView={slidePerView} // Quantidade de slides visíveis ao mesmo tempo
         pagination={{ clickable: true }} // Configuração da paginação (opcional)
         loop={true} // Define o loop como verdadeiro para tornar o Swiper infinito
