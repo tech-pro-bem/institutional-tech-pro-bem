@@ -48,6 +48,21 @@
   margin-bottom: 20px;
 }
 
+.employee_mask {
+  --tamanho: 5.375rem;
+  content: '';
+  inset: 0;
+  width: var(--tamanho);
+  height: var(--tamanho);
+  border-radius: 100%;
+  top: calc(var(--tamanho) / -2);
+  position: absolute;
+  background-color: var(--primary-extra-light);
+  align-self: center;
+  margin-inline: auto;
+  mix-blend-mode: color;
+}
+
 .aspas {
   align-self: baseline;
 }

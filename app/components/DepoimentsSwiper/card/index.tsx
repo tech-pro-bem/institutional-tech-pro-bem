@@ -21,6 +21,7 @@ export const Card: React.FC<CardProps> = ({ depoiment }) => {
         src={imgVoluntario}
         alt="imagem do voluntario"
       />
+      <div className={styles.employee_mask}></div>
       <p className={`${styles.name} text2`}>{depoiment.nome}</p>
       <p className={`${styles.department} text2`}>{depoiment.cargo}</p>
       <Image className={styles.aspas} src={imgAspas} alt="aspas" />

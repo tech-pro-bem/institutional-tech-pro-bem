@@ -4,6 +4,7 @@ import style from './style.module.css'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
+import './swiper.css'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -17,7 +18,7 @@ const items = [
     nome: 'Mirelle Lucena',
     cargo: 'Product Owner',
     depoimento:
-      '“Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.”',
+      'Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.',
   },
   {
     nome: 'Roxane Nayara',
@@ -29,7 +30,7 @@ const items = [
     nome: 'Mirelle Lucena',
     cargo: 'Product Owner',
     depoimento:
-      '“Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.”',
+      'Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.',
   },
   {
     nome: 'Roxane Nayara',

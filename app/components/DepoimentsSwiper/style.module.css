@@ -18,7 +18,8 @@
   background-color: transparent;
   z-index: 3; */
   position: relative;
-  padding: 3rem;
+  padding-inline: 3rem;
+  padding-block: 5rem;
 }
 
 /* .swiper__slide::after {
@@ -45,7 +46,7 @@
     z-index: 2;
     background: linear-gradient(
       90deg,
-      #ffffff 59.07%,
+      var(--neutral-white) 59.07%,
       rgba(253, 252, 252, 0.05) 100%
     );
   }
@@ -59,7 +60,7 @@
     z-index: 2;
     background: linear-gradient(
       270deg,
-      #ffffff 59.07%,
+      var(--neutral-white) 59.07%,
       rgba(253, 252, 252, 0.05) 100%
     );
   }

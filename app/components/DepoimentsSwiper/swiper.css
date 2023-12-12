@@ -1,0 +1,28 @@
+.swiper-button-prev::after {
+  color: #bdbab9;
+}
+
+.swiper-button-next::after {
+  color: #bdbab9;
+}
+
+.swiper-pagination-bullet-active {
+  background: #817c79 !important;
+}
+
+.swiper-notification {
+  display: none !important;
+}
+
+@media (min-width: 48em) {
+  /* Classes para contole o navigation do Swiper  */
+  .swiper-button-prev {
+    position: absolute !important;
+    left: 10% !important;
+  }
+
+  .swiper-button-next {
+    position: absolute !important;
+    right: 10% !important;
+  }
+}

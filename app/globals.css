@@ -16,35 +16,6 @@
   overflow-y: hidden;
 }
 
-.swiper-button-prev::after {
-  color: #bdbab9;
-}
-
-.swiper-button-next::after {
-  color: #bdbab9;
-}
-
-.swiper-pagination-bullet-active {
-  background: #817c79 !important;
-}
-
-.swiper-notification {
-  display: none !important;
-}
-
-@media (min-width: 48em) {
-  /* Classes para contole o navigation do Swiper  */
-  .swiper-button-prev {
-    position: absolute !important;
-    left: 10% !important;
-  }
-
-  .swiper-button-next {
-    position: absolute !important;
-    right: 10% !important;
-  }
-}
-
 @media (min-width: 80em) {
   .scrollMarginTop {
     scroll-margin-top: 6rem;
@@ -53,22 +24,8 @@
   .overflow_y_hidden {
     overflow-y: auto;
   }
-  /* Classes para contole o navigation do Swiper  */
-  /* .swiper-button-prev {
-    left: 32.5% !important;
-  }
-
-  .swiper-button-next {
-    right: 32.5% !important;
-  } */
 }
 
 main {
   background-color: var(--neutral-gray);
-}
-
-.teste-dep {
-  height: 100px;
-  width: 100%;
-  background-color: #c1c1c1;
 }
