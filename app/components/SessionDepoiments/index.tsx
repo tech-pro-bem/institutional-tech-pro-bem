@@ -27,7 +27,7 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
     if (window.innerWidth < 768) {
       setSlidePerView(1)
       setShowNavigation(false)
-      setSpace(80)
+      setSpace(10)
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
