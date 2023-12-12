@@ -1,10 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
 import './swiper.css'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -12,35 +11,16 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import { Card } from './card'
+import { Tables } from '@/app/protocols'
+import { testimonialsContentType, testimonialsType } from './types'
 
-const items = [
-  {
-    nome: 'Mirelle Lucena',
-    cargo: 'Product Owner',
-    depoimento:
-      'Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.',
-  },
-  {
-    nome: 'Roxane Nayara',
-    cargo: 'Analista de Qualidade',
-    depoimento:
-      'A Tech contribuiu para que meu conhecimento teórico se transformasse em prática. Pude ter contato com uma equipe real e com profissionais da área ao atuar num time ágil como QA Jr voluntária. Desenvolvi muito minhas habilidades analíticas e de comunicação. Sou muito grata a toda equipe por me proporcionar crescer como pessoa e como profissional. Estou muito feliz e grata por todo aprendizado.',
-  },
-  {
-    nome: 'Mirelle Lucena',
-    cargo: 'Product Owner',
-    depoimento:
-      'Ingressar na Tech Pro Bem foi um divisor de águas para mim. O voluntariado surgiu em um momento que estava precisando colocar muito do que tinha de conhecimento teórico em prática, estava buscando uma oportunidade para melhorar minha comunicação em time e ter cases práticos. Foi um estímulo e um motivador enquanto ainda não estava inserida no mercado de trabalho.',
-  },
-  {
-    nome: 'Roxane Nayara',
-    cargo: 'Analista de Qualidade',
-    depoimento:
-      'A Tech contribuiu para que meu conhecimento teórico se transformasse em prática. Pude ter contato com uma equipe real e com profissionais da área ao atuar num time ágil como QA Jr voluntária.',
-  },
-]
+interface DepoimentsProps {
+  content: Tables<testimonialsContentType>[]
+  values: Tables<testimonialsType>[]
+}
 
-function DepoimentsSwiper() {
+export const Depoiments: React.FC<DepoimentsProps> = ({ content, values }) => {
+  const testimonialsContent = content[0].fields
   const [slidePerView, setSlidePerView] = useState(3)
   const [showNavigation, setShowNavigation] = useState(true)
   const [space, setSpace] = useState(80)
@@ -52,8 +32,6 @@ function DepoimentsSwiper() {
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
-      console.log(window.innerWidth >= 768 && window.innerWidth < 1280)
-      console.log('é menor que 1280?', window.innerWidth < 1280)
       setSlidePerView(2)
       setShowNavigation(true)
       setSpace(40)
@@ -79,9 +57,9 @@ function DepoimentsSwiper() {
   }, [])
   return (
     <section className={style.depoiments}>
-      <h1 className={`title ${style.title}`}>Depoimentos</h1>
+      <h1 className={`title ${style.title}`}>{testimonialsContent.title}</h1>
       <h2 className={`title--extra-small`}>
-        O que os voluntários que passaram pela Tech Pro Bem estão falando
+        {testimonialsContent.description}
       </h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -99,9 +77,12 @@ function DepoimentsSwiper() {
       >
         <div className={style.left}></div>
         <div className={style.right}></div>
-        {items.map((item, index) => (
+        {values.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card depoiment={item} />
+            <Card
+              depoiment={item.fields}
+              quotationMark={testimonialsContent.quotationMark}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -109,4 +90,4 @@ function DepoimentsSwiper() {
   )
 }
 
-export default DepoimentsSwiper
+export default Depoiments
