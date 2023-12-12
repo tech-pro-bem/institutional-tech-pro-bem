@@ -10,7 +10,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import { Card } from './card'
+import { Card } from './Card'
 import { Tables } from '@/app/protocols'
 import { testimonialsContentType, testimonialsType } from './types'
 
