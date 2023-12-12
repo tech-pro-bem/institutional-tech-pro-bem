@@ -1,10 +1,10 @@
 import { Tables } from '@/app/protocols'
 import React from 'react'
-import { FAQType } from './types'
+import { FAQType } from '../types'
 import { Accordion, AccordionSummary } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
-import { FAQAccordionDetails } from './accordionDetails'
-import style from './accordionSummary.module.css'
+import { FAQAccordionDetails } from '../AccordionDetails'
+import style from './style.module.css'
 
 export const FAQAccordionSummary: React.FC<{
   item: Tables<FAQType>[]
