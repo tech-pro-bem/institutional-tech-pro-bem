@@ -1,14 +1,24 @@
+.name {
+  margin: 0;
+}
+
+.department {
+  opacity: 0.6;
+}
+
 .card {
   border-radius: 1.5rem;
   background-color: var(--neutral-white);
-  padding-top: 48px;
-  padding-inline: 24px;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-inline: 2rem;
   box-shadow: var(--shadow-light);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 20rem;
+  width: 470px;
 }
 
 .card::before {
@@ -25,11 +35,11 @@
   mask-composite: exclude;
 }
 
-.card > p {
+/* .card > p {
   margin-bottom: 1rem;
-}
+} */
 
-.card img {
+.employee {
   --tamanho: 5.375rem;
   border-radius: 100%;
   width: var(--tamanho);
@@ -37,4 +47,12 @@
   position: absolute;
   top: calc(var(--tamanho) / -2);
   margin-bottom: 20px;
+}
+
+.aspas {
+  align-self: baseline;
+}
+
+.text_depoiment {
+  text-align: left;
 }

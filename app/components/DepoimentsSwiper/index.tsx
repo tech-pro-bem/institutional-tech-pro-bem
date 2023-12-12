@@ -84,7 +84,7 @@ function DepoimentsSwiper() {
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log('slide change')}
         centeredSlides={true} // Define centeredSlides como true para centralizar os slides
-        spaceBetween={80} // Espaço entre os slides (opcional)
+        spaceBetween={60} // Espaço entre os slides (opcional)
         slidesPerView={slidePerView} // Quantidade de slides visíveis ao mesmo tempo
         pagination={{ clickable: true }} // Configuração da paginação (opcional)
         loop={true} // Define o loop como verdadeiro para tornar o Swiper infinito

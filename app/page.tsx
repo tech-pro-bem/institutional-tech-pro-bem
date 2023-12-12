@@ -3,11 +3,11 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { getContentfulData } from './utils/getContentfulData'
-import { DepoimentsManual } from './components/DepoimentsManual'
+// import { DepoimentsManual } from './components/DepoimentsManual'
 import { DepoimentsV1 } from './components/DepoimentsV1'
 import { DepoimentsV2 } from './components/DepoimentsV2'
 import DepoimentsSwiper from './components/DepoimentsSwiper'
-import DepoimentsSwiper2 from './components/DepoimentsSwiper2'
+// import DepoimentsSwiper2 from './components/DepoimentsSwiper2'
 
 export default async function Home() {
   const promises = [
