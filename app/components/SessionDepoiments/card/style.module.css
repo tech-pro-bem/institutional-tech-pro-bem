@@ -49,7 +49,6 @@
 .employee_mask {
   --tamanho: 5.375rem;
   content: '';
-  inset: 0;
   width: var(--tamanho);
   height: var(--tamanho);
   border-radius: 100%;
