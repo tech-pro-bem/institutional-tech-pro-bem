@@ -75,7 +75,7 @@ function DepoimentsSwiper() {
   return (
     <section className={style.depoiments}>
       <h1 className={`title ${style.title}`}>Depoimentos</h1>
-      <h2 className={`title--small`}>
+      <h2 className={`title--extra-small`}>
         O que os voluntários que passaram pela Tech Pro Bem estão falando
       </h2>
       <Swiper
