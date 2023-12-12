@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import style from './style.module.css'
 import { LinkedinValues } from './types'
 import { Tables } from '@/app/protocols'
@@ -30,12 +29,14 @@ export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
               }}
             />
             <div className={style.link}>
-              <Link
+              <a
                 href={value.fields.linkLinkedIn}
                 className={style.link_linkedin}
+                target="_blank"
+                rel="noopener"
               >
                 {value.fields.buttonText}
-              </Link>
+              </a>
               <Image
                 src={`https:${value.fields.arrow.fields.file.url}`}
                 alt={value.fields.arrow.title}
