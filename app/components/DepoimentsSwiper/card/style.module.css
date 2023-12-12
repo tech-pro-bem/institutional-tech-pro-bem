@@ -18,7 +18,6 @@
   flex-direction: column;
   align-items: center;
   min-height: 20rem;
-  min-width: 310px;
 }
 
 .card::before {
@@ -55,4 +54,10 @@
 
 .text_depoiment {
   text-align: left;
+}
+
+@media (min-width: 768px) {
+  .card {
+    min-width: 310px;
+  }
 }
