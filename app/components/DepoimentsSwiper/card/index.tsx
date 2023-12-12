@@ -21,10 +21,10 @@ export const Card: React.FC<CardProps> = ({ depoiment }) => {
         src={imgVoluntario}
         alt="imagem do voluntario"
       />
-      <p className={`text2 ${styles.name}`}>{depoiment.nome}</p>
-      <p className={`text2 ${styles.department}`}>{depoiment.cargo}</p>
+      <p className={`${styles.name} text2`}>{depoiment.nome}</p>
+      <p className={`${styles.department} text2`}>{depoiment.cargo}</p>
       <Image className={styles.aspas} src={imgAspas} alt="aspas" />
-      <p className={`regular-text ${styles.text_depoiment}`}>
+      <p className={`${styles.text_depoiment} regular-text `}>
         {depoiment.depoimento}
       </p>
     </div>
