@@ -1,6 +1,6 @@
 describe('Teste- Header desktop', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
     cy.viewport(1935, 1080)
   })
 

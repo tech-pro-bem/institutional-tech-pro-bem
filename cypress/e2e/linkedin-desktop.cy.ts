@@ -1,6 +1,6 @@
 describe('Desktop - session Linkedin', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
     cy.viewport(1935, 1080)
   })
 
@@ -19,8 +19,14 @@ describe('Desktop - session Linkedin', () => {
       .should('exist')
   })
   it('deve seguir o link do linkedin', () => {
-    cy.get('.style_link_linkedin__ejk3E').click()
-
-    cy.location('href').should('eq', 'www.linkedin.com/company/techprobem/')
+    cy.get('.style_link_linkedin__ejk3E')
+      .invoke('attr', 'href')
+      .then(() => {
+        // Clique no link
+        cy.get('.style_link_linkedin__ejk3E').click()
+        cy.wait(2000)
+        // Aguarde até que a navegação seja concluída
+        cy.url().should('equal', 'https://www.linkedin.com/company/techprobem/')
+      })
   })
 })
