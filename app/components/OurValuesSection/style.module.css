@@ -1,5 +1,6 @@
 .main_box {
     max-width: 19.5rem;
+    margin-top: -17rem;
     padding-block: 2rem 3rem;
     padding-inline: 3.5rem;
     border-radius: 0.5rem;
@@ -8,8 +9,6 @@
     box-shadow: var(--shadow-light);
     
     text-align: center;
-
-    transform: translateY(-16rem);
 }
 
 .title {
@@ -51,8 +50,8 @@
 
 @media screen and (min-width: 80em) {
     .main_box {
+        margin-top: -8.938rem;
         max-width: 70.875rem;
-        transform: translateY(-10rem);
         padding: 2rem 3.5rem 3rem 3.5rem;
     }
     .title {

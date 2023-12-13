@@ -1,11 +1,11 @@
-import { Tables, Values } from '@/app/protocols'
-
+import { Tables } from '@/app/protocols'
 import Image from 'next/image'
 
 import style from './style.module.css'
+import { Values } from './types'
 
 interface OurValuesProps {
-  values: Tables<Values>[] // Declara a propriedade values como um array de objetos Values
+  values: Tables<Values>[]
   tableName: string
 }
 

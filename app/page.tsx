@@ -5,6 +5,7 @@ import { OurValues } from './components/OurValuesSection'
 import { Footer } from './components/Footer'
 
 import { getContentfulData } from './utils/getContentfulData'
+import { OurImpact } from './components/OurImpactSection'
 
 export default async function Home() {
   const promises = [
@@ -12,10 +13,11 @@ export default async function Home() {
     getContentfulData('begin'),
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
+    getContentfulData('ourImpact'),
     getContentfulData('footer'),
   ]
 
-  const [headerValues, beginValues, aboutValues, ourValues, footer] =
+  const [headerValues, beginValues, aboutValues, ourValues, ourImpact, footer] =
     await Promise.all(promises)
 
   return (
@@ -25,8 +27,9 @@ export default async function Home() {
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
-        <Footer values={footer.entries} />
+        <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
       </main>
+      <Footer values={footer.entries} />
     </>
   )
 }
