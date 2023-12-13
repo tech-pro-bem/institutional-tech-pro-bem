@@ -9,6 +9,7 @@
 
 .infoContainer {
   padding: 4rem 0;
+  gap: 3rem;
 }
 
 .infoContainer,
@@ -16,7 +17,6 @@
 .infoContainer address {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
 }
 
 .infoContainer div,
@@ -34,6 +34,9 @@
 }
 
 .infoSubtitle {
+  display: block;
+  margin-bottom: 0.5rem;
+
   color: var(--neutral-gray-darkest);
   text-wrap: wrap;
 }
@@ -42,8 +45,7 @@
   display: inline-flex;
   gap: 0.5rem;
 
-  font-style: normal;
-  line-height: 22px;
+  line-height: 1.375;
 }
 
 .infoField img {

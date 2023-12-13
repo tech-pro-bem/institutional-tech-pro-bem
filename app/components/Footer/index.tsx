@@ -21,12 +21,15 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
         >
           <div className={`${styles.infoContainer} container`}>
             <div>
-              <p className={`${styles.infoSubtitle} regular-text`}>
-                {value.fields.textTalk}
-              </p>
-              <h4 className="title title--extra-small">
-                {value.fields.inviteTalk}
-              </h4>
+              <h2>
+                <span className={`${styles.infoSubtitle} regular-text`}>
+                  {value.fields.textTalk}
+                </span>
+                <span className="title title--extra-small">
+                  {value.fields.inviteTalk}
+                </span>
+              </h2>
+
               <address>
                 <p className={styles.infoField}>
                   <Image
@@ -82,12 +85,15 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
             </div>
 
             <div>
-              <p className={`${styles.infoSubtitle} regular-text`}>
-                {value.fields.textPartnership}
-              </p>
-              <h4 className="title title--extra-small">
-                {value.fields.invitePartnership}
-              </h4>
+              <h2>
+                <span className={`${styles.infoSubtitle} regular-text`}>
+                  {value.fields.textPartnership}
+                </span>
+                <span className="title title--extra-small">
+                  {value.fields.invitePartnership}
+                </span>
+              </h2>
+
               <address>
                 <p className={styles.infoField}>
                   <Image
