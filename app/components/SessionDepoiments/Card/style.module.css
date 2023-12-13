@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.department {
+.office {
   opacity: 0.6;
 }
 
@@ -34,7 +34,7 @@
   mask-composite: exclude;
 }
 
-.employee {
+.voluntary_img {
   --tamanho: 5.375rem;
   border-radius: 100%;
   width: var(--tamanho);
@@ -46,7 +46,7 @@
   margin-bottom: 20px;
 }
 
-.employee_mask {
+.voluntary_img_filter {
   --tamanho: 5.375rem;
   content: '';
   width: var(--tamanho);
@@ -60,7 +60,7 @@
   mix-blend-mode: color;
 }
 
-.aspas {
+.quotation {
   align-self: baseline;
 }
 

@@ -15,17 +15,17 @@ export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
   return (
     <div className={`${styles.card} `}>
       <Image
-        className={styles.employee}
+        className={styles.voluntary_img}
         src={`https:${depoiment.image.fields.file.url}`}
         alt={depoiment.image.fields.description}
         width={depoiment.image.fields.file.details.image.width}
         height={depoiment.image.fields.file.details.image.height}
       />
-      <div className={styles.employee_mask}></div>
+      <div className={styles.voluntary_img_filter}></div>
       <p className={`${styles.name} text2`}>{depoiment.name}</p>
-      <p className={`${styles.department} text2`}>{depoiment.office}</p>
+      <p className={`${styles.office} text2`}>{depoiment.office}</p>
       <Image
-        className={styles.aspas}
+        className={styles.quotation}
         src={`https:${quotationMark.fields.file.url}`}
         alt={quotationMark.fields.description}
         width={quotationMark.fields.file.details.image.width}
