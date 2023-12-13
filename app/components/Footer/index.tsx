@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                     }
                     alt={value.fields.LinkedInIcon.fields.description}
                   />
-                  {value.fields.linkedinTech}
+                  <span>{value.fields.linkedinTech}</span>
                 </a>
                 <a
                   href={`https://www.instagram.com/${value.fields.instagramTech}`}
@@ -79,7 +79,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
                     }
                     alt={value.fields.InstagramIcon.fields.description}
                   />
-                  @{value.fields.instagramTech}
+                  <span>@{value.fields.instagramTech}</span>
                 </a>
               </address>
             </div>

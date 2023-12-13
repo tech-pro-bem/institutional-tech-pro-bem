@@ -24,9 +24,28 @@
   gap: 0.5rem;
 }
 
-.infoContainer a:hover,
-.infoContainer a:active {
-  text-decoration: underline;
+.infoContainer a span {
+  position: relative;
+  text-decoration: none;
+}
+
+.infoContainer a span:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--neutral-black);
+  transition: width 0.2s ease;
+}
+
+.infoContainer a span:hover:before {
+  width: 100%;
+}
+
+.infoContainer a:active span:before {
+  width: 100%;
 }
 
 .infoContainer a:visited {
