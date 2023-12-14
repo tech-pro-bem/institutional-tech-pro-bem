@@ -39,7 +39,7 @@
     z-index: 2;
     background: linear-gradient(
       90deg,
-      var(--neutral-white) 59.07%,
+      var(--neutral-white) 35%,
       rgba(253, 252, 252, 0.05) 100%
     );
   }
@@ -53,7 +53,7 @@
     z-index: 2;
     background: linear-gradient(
       270deg,
-      var(--neutral-white) 59.07%,
+      var(--neutral-white) 35%,
       rgba(253, 252, 252, 0.05) 100%
     );
   }
@@ -65,9 +65,19 @@
   }
   .left {
     width: 35%;
+    background: linear-gradient(
+      90deg,
+      var(--neutral-white) 59.07%,
+      rgba(253, 252, 252, 0.05) 100%
+    );
   }
 
   .right {
     width: 35%;
+    background: linear-gradient(
+      270deg,
+      var(--neutral-white) 59.07%,
+      rgba(253, 252, 252, 0.05) 100%
+    );
   }
 }

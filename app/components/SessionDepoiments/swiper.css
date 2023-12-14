@@ -26,6 +26,7 @@
   width: 0.75rem !important;
   height: 0.75rem !important;
   background: var(--neutral-gray-light) !important;
+  opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -49,12 +50,12 @@
   }
   .swiper-button-prev {
     position: absolute !important;
-    left: 10% !important;
+    left: 5% !important;
   }
 
   .swiper-button-next {
     position: absolute !important;
-    right: 10% !important;
+    right: 5% !important;
   }
 }
 

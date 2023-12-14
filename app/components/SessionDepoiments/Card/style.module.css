@@ -71,7 +71,7 @@
   text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .card {
     min-width: 310px;
   }
