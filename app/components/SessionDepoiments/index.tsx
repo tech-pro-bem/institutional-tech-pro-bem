@@ -20,14 +20,14 @@ interface DepoimentsProps {
 
 export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
   const testimonialsContent = values[0].fields
-  const [slidePerView, setSlidePerView] = useState(3)
+  const [slidePerView, setSlidePerView] = useState(4)
   const [showNavigation, setShowNavigation] = useState(true)
   const [space, setSpace] = useState(80)
   const handleResize = () => {
     if (window.innerWidth < 768) {
       setSlidePerView(1)
       setShowNavigation(false)
-      setSpace(10)
+      setSpace(30)
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
@@ -38,7 +38,7 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
     if (window.innerWidth >= 1280) {
       setSlidePerView(3)
       setShowNavigation(true)
-      setSpace(80)
+      setSpace(40)
     }
   }
 

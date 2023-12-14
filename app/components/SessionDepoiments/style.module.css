@@ -1,12 +1,12 @@
 .depoiments {
   background-color: var(--neutral-white);
-  padding-top: 5rem;
+  padding-top: 3.75rem;
   text-align: center;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 .swiper__slide {
   position: relative;
@@ -16,8 +16,19 @@
 
 @media (min-width: 48em) {
   .depoiments {
-    padding-inline: 2rem;
+    padding-top: 7.5rem;
+    padding-inline: 2.5rem;
+    padding-bottom: 5.375rem;
   }
+
+  .title {
+    margin-bottom: 1.25rem;
+  }
+
+  .swiper__slide {
+    padding-inline: 0;
+  }
+
   .left {
     width: 25%;
     height: 100%;
@@ -45,5 +56,18 @@
       var(--neutral-white) 59.07%,
       rgba(253, 252, 252, 0.05) 100%
     );
+  }
+}
+
+@media (min-width: 80em) {
+  .swiper__slide {
+    padding-inline: 10%;
+  }
+  .left {
+    width: 35%;
+  }
+
+  .right {
+    width: 35%;
   }
 }
