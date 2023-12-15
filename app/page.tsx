@@ -2,10 +2,11 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { OurValues } from './components/OurValuesSection'
+import { OurImpact } from './components/OurImpactSection'
+import { SessionLinkedin } from './components/SessionLinkedin'
 import { Footer } from './components/Footer'
 
 import { getContentfulData } from './utils/getContentfulData'
-import { OurImpact } from './components/OurImpactSection'
 
 export default async function Home() {
   const promises = [
@@ -14,11 +15,19 @@ export default async function Home() {
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
     getContentfulData('ourImpact'),
+    getContentfulData('linkedin'),
     getContentfulData('footer'),
   ]
 
-  const [headerValues, beginValues, aboutValues, ourValues, ourImpact, footer] =
-    await Promise.all(promises)
+  const [
+    headerValues,
+    beginValues,
+    aboutValues,
+    ourValues,
+    ourImpact,
+    linkedin,
+    footer,
+  ] = await Promise.all(promises)
 
   return (
     <>
@@ -28,6 +37,7 @@ export default async function Home() {
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
         <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
+        <SessionLinkedin values={linkedin.entries} />
       </main>
       <Footer values={footer.entries} />
     </>
