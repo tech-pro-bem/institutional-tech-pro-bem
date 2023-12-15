@@ -23,6 +23,8 @@
 
 .tabs__box > div > div {
   overflow-x: auto;
+
+  gap: 1rem;
 }
 
 .tab__box {
@@ -52,6 +54,9 @@
   }
   .doubts__description {
     margin-bottom: 3rem;
+  }
+  .tabs__box > div > div {
+    gap: 0;
   }
   .tab__box {
     padding-inline: 2rem !important;
