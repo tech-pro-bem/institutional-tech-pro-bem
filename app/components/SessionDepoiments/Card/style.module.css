@@ -7,6 +7,9 @@
 }
 
 .card {
+  --filter-size: 3.75rem;
+  --border-size: 0.25rem;
+  --image-size: calc(var(--filter-size) + (var(--border-size) * 2));
   border-radius: 1.5rem;
   background-color: var(--neutral-white);
   padding-top: 3rem;
@@ -36,24 +39,22 @@
 }
 
 .voluntary_img {
-  --size: 3.75rem;
   border-radius: 100%;
-  width: var(--size);
-  height: var(--size);
+  width: var(--image-size);
+  height: var(--image-size);
   object-fit: cover;
-  border: 0.25rem solid var(--neutral-white);
+  border: var(--border-size) solid var(--neutral-white);
   position: absolute;
-  top: calc(var(--size) / -2);
+  top: calc(var(--image-size) / -2);
   margin-bottom: 20px;
 }
 
 .voluntary_img_filter {
-  --size: 3.75rem;
   content: '';
-  width: var(--size);
-  height: var(--size);
+  width: var(--filter-size);
+  height: var(--filter-size);
   border-radius: 100%;
-  top: calc(var(--size) / -2);
+  top: calc(var(--filter-size) / -2);
   position: absolute;
   background-color: var(--primary-extra-light);
   align-self: center;
@@ -74,15 +75,17 @@
 @media (min-width: 48em) {
   .card {
     min-width: 310px;
+    --filter-size: 5.5rem;
+    --border-size: 0.5rem;
   }
-  .voluntary_img {
+  /* .voluntary_img {
     --size: 5.375rem;
     border: 0.5rem solid var(--neutral-white);
   }
 
   .voluntary_img_filter {
     --size: 5.375rem;
-  }
+  } */
 
   .quotation {
     margin-bottom: 1.75rem;
