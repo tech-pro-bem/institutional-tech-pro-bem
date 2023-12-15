@@ -4,6 +4,7 @@
 
 .office {
   opacity: 0.6;
+  margin-bottom: 1.5rem;
 }
 
 .card {
@@ -73,6 +74,9 @@
 }
 
 @media (min-width: 48em) {
+  .office {
+    margin-bottom: 0;
+  }
   .card {
     min-width: 310px;
     --filter-size: 5.5rem;

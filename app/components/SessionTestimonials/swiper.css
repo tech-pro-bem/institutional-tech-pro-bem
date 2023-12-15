@@ -22,9 +22,14 @@
   color: var(--primary-dark);
 }
 
+.swiper-pagination {
+  bottom: calc(2.5rem - (0.75rem / 2)) !important;
+}
+
 .swiper-pagination-bullet {
-  width: 0.75rem !important;
-  height: 0.75rem !important;
+  --size: 0.75rem;
+  width: var(--size) !important;
+  height: var(--size) !important;
   background: var(--neutral-gray-light) !important;
   opacity: 1 !important;
 }
@@ -43,6 +48,9 @@
 }
 
 @media (min-width: 48em) {
+  .swiper-pagination {
+    bottom: 0 !important;
+  }
   /* Classes para contole o navigation do Swiper  */
   .swiper-pagination-bullet {
     width: 1rem !important;
