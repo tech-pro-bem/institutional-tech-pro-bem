@@ -14,11 +14,11 @@ import { Card } from './Card'
 import { Tables } from '@/app/protocols'
 import { testimonialsContentType, testimonialsType } from './types'
 
-interface DepoimentsProps {
+interface TestimonialsProps {
   values: Tables<testimonialsContentType>[]
 }
 
-export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
+export const Testimonials: React.FC<TestimonialsProps> = ({ values }) => {
   const testimonialsContent = values[0].fields
   const [slidePerView, setSlidePerView] = useState(4)
   const [showNavigation, setShowNavigation] = useState(true)
@@ -43,19 +43,14 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
   }
 
   useEffect(() => {
-    // Chama a função de redimensionamento ao carregar a página
     handleResize()
-
-    // Adiciona o event listener para redimensionamento
     window.addEventListener('resize', handleResize)
-
-    // Retorna uma função de limpeza para remover o event listener quando o componente é desmontado
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
   return (
-    <section className={style.depoiments}>
+    <section className={style.testimonials}>
       <h2 className={`title ${style.title}`}>{testimonialsContent.title}</h2>
       <h3 className={`title--extra-small`}>
         {testimonialsContent.description}
@@ -63,15 +58,12 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation={showNavigation}
-        // scrollbar={{ draggable: true }}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
-        centeredSlides={true} // Define centeredSlides como true para centralizar os slides
-        spaceBetween={space} // Espaço entre os slides (opcional)
-        slidesPerView={slidePerView} // Quantidade de slides visíveis ao mesmo tempo
-        pagination={{ clickable: true }} // Configuração da paginação (opcional)
-        loop={true} // Define o loop como verdadeiro para tornar o Swiper infinito
-        initialSlide={0} // Define o slide inicial como o segundo slide (índice 1)
+        centeredSlides={true}
+        spaceBetween={space}
+        slidesPerView={slidePerView}
+        pagination={{ clickable: true }}
+        loop={true}
+        initialSlide={0}
         className={style.swiper__slide}
       >
         <div className={style.left}></div>
@@ -80,7 +72,7 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
           (item: Tables<testimonialsType>, index: number) => (
             <SwiperSlide key={index}>
               <Card
-                depoiment={item.fields}
+                testimonial={item.fields}
                 quotationMark={testimonialsContent.quotationMark}
               />
             </SwiperSlide>
@@ -91,4 +83,4 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
   )
 }
 
-export default Depoiments
+export default Testimonials

@@ -1,8 +1,7 @@
-.depoiments {
+.testimonials {
   background-color: var(--neutral-white);
   padding-top: 3.75rem;
   text-align: center;
-  /* height: 90vh; */
 }
 
 .title {
@@ -15,7 +14,7 @@
 }
 
 @media (min-width: 48em) {
-  .depoiments {
+  .testimonials {
     padding-top: 7.5rem;
     padding-inline: 2.5rem;
     padding-bottom: 5.375rem;

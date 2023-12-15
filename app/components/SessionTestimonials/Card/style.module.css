@@ -68,7 +68,7 @@
   margin-bottom: 0.75rem;
 }
 
-.text_depoiment {
+.text_testimonial {
   text-align: left;
 }
 
@@ -78,14 +78,6 @@
     --filter-size: 5.5rem;
     --border-size: 0.5rem;
   }
-  /* .voluntary_img {
-    --size: 5.375rem;
-    border: 0.5rem solid var(--neutral-white);
-  }
-
-  .voluntary_img_filter {
-    --size: 5.375rem;
-  } */
 
   .quotation {
     margin-bottom: 1.75rem;

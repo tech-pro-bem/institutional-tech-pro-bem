@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { imageType, testimonialsType } from '../types'
 
 interface CardProps {
-  depoiment: testimonialsType
+  testimonial: testimonialsType
   quotationMark: imageType
 }
-export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
-  const testimony = depoiment.testimony.replace(
+export const Card: React.FC<CardProps> = ({ testimonial, quotationMark }) => {
+  const testimony = testimonial.testimony.replace(
     /__(.*?)__/g,
     '<strong>$1</strong>',
   )
@@ -16,14 +16,14 @@ export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
     <article className={`${styles.card} `}>
       <Image
         className={styles.voluntary_img}
-        src={`https:${depoiment.image.fields.file.url}`}
-        alt={depoiment.image.fields.description}
-        width={depoiment.image.fields.file.details.image.width}
-        height={depoiment.image.fields.file.details.image.height}
+        src={`https:${testimonial.image.fields.file.url}`}
+        alt={testimonial.image.fields.description}
+        width={testimonial.image.fields.file.details.image.width}
+        height={testimonial.image.fields.file.details.image.height}
       />
       <div className={styles.voluntary_img_filter}></div>
-      <p className={`${styles.name} text2`}>{depoiment.name}</p>
-      <p className={`${styles.office} text2`}>{depoiment.office}</p>
+      <p className={`${styles.name} text2`}>{testimonial.name}</p>
+      <p className={`${styles.office} text2`}>{testimonial.office}</p>
       <Image
         className={styles.quotation}
         src={`https:${quotationMark.fields.file.url}`}
@@ -32,7 +32,7 @@ export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
         height={quotationMark.fields.file.details.image.height}
       />
       <p
-        className={`${styles.text_depoiment} regular-text `}
+        className={`${styles.text_testimonial} regular-text `}
         dangerouslySetInnerHTML={{
           __html: testimony,
         }}
