@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
     '<strong>$1</strong>',
   )
   return (
-    <div className={`${styles.card} `}>
+    <article className={`${styles.card} `}>
       <Image
         className={styles.voluntary_img}
         src={`https:${depoiment.image.fields.file.url}`}
@@ -37,6 +37,6 @@ export const Card: React.FC<CardProps> = ({ depoiment, quotationMark }) => {
           __html: testimony,
         }}
       ></p>
-    </div>
+    </article>
   )
 }
