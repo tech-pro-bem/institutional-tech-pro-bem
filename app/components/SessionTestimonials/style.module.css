@@ -9,14 +9,14 @@
 }
 .swiper__slide {
   position: relative;
-  padding-inline: 3rem;
+  /* padding-inline: 3rem; */
   padding-block: 5rem;
 }
 
 @media (min-width: 48em) {
   .testimonials {
     padding-top: 7.5rem;
-    padding-inline: 2.5rem;
+    /* padding-inline: 2.5rem; */
     padding-bottom: 5.375rem;
   }
 
@@ -60,7 +60,8 @@
 
 @media (min-width: 80em) {
   .swiper__slide {
-    padding-inline: 10%;
+    /* width: 77.6%; */
+    padding-inline: 11%;
   }
   .left {
     width: 35%;

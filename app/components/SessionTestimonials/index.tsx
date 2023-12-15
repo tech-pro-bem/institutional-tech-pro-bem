@@ -63,7 +63,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ values }) => {
         slidesPerView={slidePerView}
         pagination={{ clickable: true }}
         loop={true}
-        initialSlide={0}
+        initialSlide={0.5}
         className={style.swiper__slide}
       >
         <div className={style.left}></div>
