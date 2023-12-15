@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 20rem;
-  min-width: 17.5rem;
+  /* min-width: 17.5rem; */
 }
 
 .card::before {

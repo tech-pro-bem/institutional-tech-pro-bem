@@ -9,14 +9,12 @@
 }
 .swiper__slide {
   position: relative;
-  /* padding-inline: 3rem; */
   padding-block: 5rem;
 }
 
 @media (min-width: 48em) {
   .testimonials {
     padding-top: 7.5rem;
-    /* padding-inline: 2.5rem; */
     padding-bottom: 5.375rem;
   }
 
@@ -25,6 +23,8 @@
   }
 
   .swiper__slide {
+    width: 77.65%;
+    max-width: 1490px;
     padding-inline: 0;
   }
 
@@ -60,11 +60,11 @@
 
 @media (min-width: 80em) {
   .swiper__slide {
-    /* width: 77.6%; */
-    padding-inline: 11%;
+    width: 77.65%;
+    max-width: 1490px;
   }
   .left {
-    width: 35%;
+    width: 25%;
     background: linear-gradient(
       90deg,
       var(--neutral-white) 59.07%,
@@ -73,7 +73,7 @@
   }
 
   .right {
-    width: 35%;
+    width: 25%;
     background: linear-gradient(
       270deg,
       var(--neutral-white) 59.07%,

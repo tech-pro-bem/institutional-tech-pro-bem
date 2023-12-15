@@ -39,7 +39,7 @@
 
 .swiper-slide,
 .swiper-slide-active {
-  min-width: 17, 5rem !important;
+  min-width: 17.5rem !important;
 }
 
 @media (min-width: 48em) {
@@ -65,13 +65,13 @@
     width: 1rem !important;
     height: 1rem !important;
   }
-  /* .swiper-button-prev {
+  .swiper-button-prev {
     position: absolute !important;
-    left: 15% !important;
+    left: 10% !important;
   }
 
   .swiper-button-next {
     position: absolute !important;
-    right: 15% !important;
-  } */
+    right: 10% !important;
+  }
 }

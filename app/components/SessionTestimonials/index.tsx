@@ -25,9 +25,9 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ values }) => {
   const [space, setSpace] = useState(80)
   const handleResize = () => {
     if (window.innerWidth < 768) {
-      setSlidePerView(1)
+      setSlidePerView(1.25)
       setShowNavigation(false)
-      setSpace(30)
+      setSpace(16)
     }
 
     if (window.innerWidth >= 768 && window.innerWidth < 1280) {
