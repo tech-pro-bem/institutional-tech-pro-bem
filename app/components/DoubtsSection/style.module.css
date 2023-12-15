@@ -15,23 +15,25 @@
 
 .tabs__box {
   width: 100%;
-  
+
   margin-bottom: 1rem;
 
   border-bottom: 1px solid var(--neutral-gray-medium);
 }
 
-.tabs__box>div>div{
-  overflow-x: scroll;
+.tabs__box > div > div {
+  overflow-x: auto;
 }
 
-.tab__box{
+.tab__box {
   max-height: min-content;
   max-width: 33% !important;
-  
+  width: fit-content;
+  flex-shrink: 1 !important;
+
   padding-inline: 0.25rem !important;
   padding-block: 0.75rem !important;
-  
+
   font-weight: var(--fw-700) !important;
   color: var(--neutral-gray-dark);
 }
@@ -50,9 +52,6 @@
   }
   .doubts__description {
     margin-bottom: 3rem;
-  }
-  .tabs__box>div>div{
-    overflow-x: hidden;
   }
   .tab__box {
     padding-inline: 2rem !important;
