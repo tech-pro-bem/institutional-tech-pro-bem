@@ -36,24 +36,24 @@
 }
 
 .voluntary_img {
-  --tamanho: 3.75rem;
+  --size: 3.75rem;
   border-radius: 100%;
-  width: var(--tamanho);
-  height: var(--tamanho);
+  width: var(--size);
+  height: var(--size);
   object-fit: cover;
   border: 0.25rem solid white;
   position: absolute;
-  top: calc(var(--tamanho) / -2);
+  top: calc(var(--size) / -2);
   margin-bottom: 20px;
 }
 
 .voluntary_img_filter {
-  --tamanho: 3.75rem;
+  --size: 3.75rem;
   content: '';
-  width: var(--tamanho);
-  height: var(--tamanho);
+  width: var(--size);
+  height: var(--size);
   border-radius: 100%;
-  top: calc(var(--tamanho) / -2);
+  top: calc(var(--size) / -2);
   position: absolute;
   background-color: var(--primary-extra-light);
   align-self: center;
@@ -76,14 +76,12 @@
     min-width: 310px;
   }
   .voluntary_img {
-    --tamanho: 5.375rem;
-    width: var(--tamanho);
-    height: var(--tamanho);
+    --size: 5.375rem;
     border: 0.5rem solid white;
   }
 
   .voluntary_img_filter {
-    --tamanho: 5.375rem;
+    --size: 5.375rem;
   }
 
   .quotation {
