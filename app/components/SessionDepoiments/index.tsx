@@ -56,10 +56,10 @@ export const Depoiments: React.FC<DepoimentsProps> = ({ values }) => {
   }, [])
   return (
     <section className={style.depoiments}>
-      <h1 className={`title ${style.title}`}>{testimonialsContent.title}</h1>
-      <h2 className={`title--extra-small`}>
+      <h2 className={`title ${style.title}`}>{testimonialsContent.title}</h2>
+      <h3 className={`title--extra-small`}>
         {testimonialsContent.description}
-      </h2>
+      </h3>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation={showNavigation}
