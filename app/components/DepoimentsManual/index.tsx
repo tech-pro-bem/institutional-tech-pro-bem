@@ -26,6 +26,12 @@ const items = [
     depoimento:
       'A Tech contribuiu para que meu conhecimento teórico se transformasse em prática. Pude ter contato com uma equipe real e com profissionais da área ao atuar num time ágil como QA Jr voluntária.',
   },
+  {
+    nome: 'Will',
+    cargo: 'Dev Brabo',
+    depoimento:
+      'A Tech contribuiu para que meu conhecimento teórico se transformasse em prática. Pude ter contato com uma equipe real e com profissionais da área ao atuar num time ágil como QA Jr voluntária.',
+  },
 
   // Adicione URLs das imagens que deseja exibir
 ]

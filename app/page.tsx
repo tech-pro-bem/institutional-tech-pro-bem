@@ -3,7 +3,7 @@ import { Header } from './components/Header'
 import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { getContentfulData } from './utils/getContentfulData'
-// import { DepoimentsManual } from './components/DepoimentsManual'
+import { DepoimentsManual } from './components/DepoimentsManual'
 import { DepoimentsV1 } from './components/DepoimentsV1'
 import { DepoimentsV2 } from './components/DepoimentsV2'
 import DepoimentsSwiper from './components/DepoimentsSwiper'
@@ -31,8 +31,8 @@ export default async function Home() {
         <DepoimentsV1 />
         <div className="teste-dep"></div>
         <DepoimentsV2 />
-        {/* <div className="teste-dep"></div>
-        <DepoimentsManual /> */}
+        <div className="teste-dep"></div>
+        <DepoimentsManual />
         <div className="teste-dep"></div>
         <DepoimentsSwiper />
         {/* <div className="teste-dep"></div>
