@@ -149,12 +149,12 @@
   padding: 1rem 0;
   cursor: default;
 }
-
+  
 .navbar li a:active {
   background-color: var(--primary-extra-light);
 }
 
-.navbar li.activeLink a {
+.navbar li.activeLink a  {
   color: var(--primary-dark);
   padding-bottom: 0.5rem;
 }
