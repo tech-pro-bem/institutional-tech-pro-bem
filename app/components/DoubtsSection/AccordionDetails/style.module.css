@@ -1,30 +1,31 @@
-.link__underline{
+.link__underline {
   text-decoration: underline;
+  color: var(--primary-dark);
 }
 
-.accordion_details__box{
+.accordion_details__box {
   padding-inline: 0 !important;
-  padding-top: 0.5rem  !important;
-  padding-bottom: 1.5rem  !important;
-  
+  padding-top: 0.5rem !important;
+  padding-bottom: 1.5rem !important;
+
   text-align: start;
 }
 
-.text__number{
+.text__number {
   margin-left: 1.25rem;
   text-indent: -1rem;
 }
 
-.text__hyphen{
+.text__hyphen {
   margin-left: 1rem;
   margin-bottom: 0;
 }
 
-.text__no_margin{
+.text__no_margin {
   margin-bottom: 0;
 }
 
-.text__normal{
+.text__normal {
   margin-bottom: 1rem;
 }
 

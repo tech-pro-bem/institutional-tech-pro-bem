@@ -16,20 +16,24 @@ export const FAQAccordionDetails: React.FC<{ answer: string }> = ({
     return hyphen.test(text)
   }
 
-  function renderElement(match: string): JSX.Element {
-    if (match.startsWith('__') && match.endsWith('__')) {
-      return <strong>{match.slice(2, -2)}</strong>
-    } else if (match.startsWith('*') && match.endsWith('*')) {
-      return <em>{match.slice(1, -1)}</em>
-    } else if (match.startsWith('~~') && match.endsWith('~~')) {
-      const link = match.slice(2, -2)
-      return (
-        <a href={link} target="_blank" className={style.link__underline}>
-          {link}
-        </a>
-      )
+  function renderElement(text: string): JSX.Element {
+    if (text.startsWith('__') && text.endsWith('__')) {
+      return <strong>{text.slice(2, -2)}</strong>
+    } else if (text.startsWith('*') && text.endsWith('*')) {
+      return <em>{text.slice(1, -1)}</em>
+    } else {
+      const linkMatch = text.match(/^\[(.*)\]\((.+)\)$/)
+      if (linkMatch) {
+        const linkText = linkMatch[1]
+        const linkUrl = linkMatch[2]
+        return (
+          <a href={linkUrl} target="_blank" className={style.link__underline}>
+            {linkText}
+          </a>
+        )
+      }
     }
-    return <>{match}</>
+    return <>{text}</>
   }
 
   return (
@@ -50,7 +54,7 @@ export const FAQAccordionDetails: React.FC<{ answer: string }> = ({
               : style.text__normal
           }`}
         >
-          {i.split(/(__.*?__|\*.*?\*|~~.*?~~)/g).map((segment, idx) => (
+          {i.split(/(__.*?__|\*.*?\*|\[.*?\]\(.+?\))/g).map((segment, idx) => (
             <React.Fragment key={idx}>{renderElement(segment)}</React.Fragment>
           ))}
         </p>
