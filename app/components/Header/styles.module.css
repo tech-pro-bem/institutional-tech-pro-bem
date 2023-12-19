@@ -31,6 +31,12 @@
   padding: 1rem 0;
 }
 
+.headerContainer a:focus-visible,
+.headerContainer button:focus-visible {
+  outline: 2px solid var(--primary-dark);
+  border-radius: 3px;
+}
+
 .logo {
   max-height: 2rem;
   width: auto;
@@ -149,12 +155,12 @@
   padding: 1rem 0;
   cursor: default;
 }
-  
+
 .navbar li a:active {
   background-color: var(--primary-extra-light);
 }
 
-.navbar li.activeLink a  {
+.navbar li.activeLink a {
   color: var(--primary-dark);
   padding-bottom: 0.5rem;
 }
@@ -195,12 +201,14 @@
   .header::before {
     z-index: 0;
   }
+
   .navbar {
     --size: 0.25rem;
     padding-inline: var(--size);
     margin-right: calc(var(--size) * -1);
     overflow-y: hidden;
   }
+
   .header.hasShadow {
     box-shadow: var(--shadow-light);
   }
@@ -226,6 +234,7 @@
     display: flex;
     align-items: center;
     z-index: 0;
+    overflow-x: hidden;
 
     background-color: var(--neutral-white);
 
@@ -264,7 +273,6 @@
   }
 
   .indicator {
-    /* display: none; */
     /* TODO - foi identificado um bug na mudança de tela de 1279px para 1280px, por isso foi aplicado display none, rever transição de width quando todas as sessões estiverem disponeis .*/
     position: absolute;
     bottom: -0.5rem;
