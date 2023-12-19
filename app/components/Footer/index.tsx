@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = async ({ values }) => {
   return (
     <>
       {values.map((value: Tables<FooterValues>) => (
-        <footer id="contato" key={value.fields.id} className={styles.footer}>
+        <footer key={value.fields.id} className={styles.footer}>
           <div className={`${styles.infoContainer} container`}>
             <div>
               <h2>

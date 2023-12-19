@@ -44,6 +44,14 @@
   width: 100%;
 }
 
+.infoContainer a:focus {
+  outline: none;
+}
+
+.infoContainer a:focus span:before {
+  width: 100%;
+}
+
 .infoContainer a:active span:before {
   width: 100%;
 }
