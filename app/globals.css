@@ -16,11 +16,7 @@
   overflow-y: hidden;
 }
 
-*:focus-visible { 
-  outline: 3px solid var(--primary-medium);
-  cursor: pointer;
-}
-  
+
 @media (min-width: 80em) {
   .scrollMarginTop {
     scroll-margin-top: 6rem;

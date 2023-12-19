@@ -39,12 +39,11 @@
 
 .link:focus-within {
   outline: 3px solid var(--primary-medium);
-  cursor: pointer;
   background-color: var(--primary-extra-light);
 }
 
-.link:hover {
-  border: 1px solid var(--primary-dark);
+.link:hover, .link_linkedin:focus {
+  outline: none;
   cursor: pointer;
   background-color: var(--primary-extra-light);
 }
@@ -58,9 +57,6 @@
   width: 100%;
 }
 
-.link_linkedin:focus {
-  outline: none;
-}
 
 
 .image__logo {
