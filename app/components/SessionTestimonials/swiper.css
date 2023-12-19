@@ -1,3 +1,14 @@
+div:focus-visible {
+  outline: none;
+}
+
+.swiper-button-prev:focus-visible::after,
+.swiper-button-next:focus-visible::after {
+  outline: 2px solid var(--primary-dark);
+  color: var(--primary-dark);
+  border-radius: 3px;
+}
+
 .swiper-button-prev {
   scroll-margin-top: 50vh !important;
 }
@@ -34,6 +45,10 @@
   background: var(--neutral-gray-light) !important;
   opacity: 1 !important;
   scroll-margin-top: 50vh !important;
+}
+
+.swiper-pagination-bullet:focus-visible {
+  outline: 2px solid var(--primary-dark);
 }
 
 .swiper-pagination-bullet-active {
