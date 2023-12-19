@@ -3,6 +3,11 @@
   --primary-dark: #8742ff;
   --primary-extra-light: #e2d1ff;
   --primary-medium: #9e66ff;
+  --primary-dark: #8742FF;
+
+
+  /* Secondary colors */
+  --secondary-dark: #11787A;
 
   /* Neutral colors */
   --neutral-black: #030302;
