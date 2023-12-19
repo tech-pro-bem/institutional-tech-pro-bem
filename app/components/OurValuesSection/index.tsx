@@ -2,22 +2,22 @@ import { Tables } from '@/app/protocols'
 import Image from 'next/image'
 
 import style from './style.module.css'
-import { Values } from './types'
+import { Values, ValuesContent } from './types'
 
 interface OurValuesProps {
-  values: Tables<Values>[]
-  tableName: string
+  values: Tables<ValuesContent>[]
 }
 
-export const OurValues: React.FC<OurValuesProps> = async ({
-  values,
-  tableName,
-}) => {
+export const OurValues: React.FC<OurValuesProps> = async ({ values }) => {
+  const content = values[0]
+  const contentValues = content.fields.values
   return (
     <section className={`${style.main_box} container`}>
-      <h3 className={`title title--small ${style.title}`}>{tableName}</h3>
+      <h3 className={`title title--small ${style.title}`}>
+        {content.fields.title}
+      </h3>
       <div className={style.values_content}>
-        {values?.map((value: Tables<Values>) => (
+        {contentValues?.map((value: Tables<Values>) => (
           <div key={value.fields.title} className={style.value}>
             <Image
               className={style.value_image}
