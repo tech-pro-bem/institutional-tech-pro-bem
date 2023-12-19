@@ -1,5 +1,7 @@
 .link__underline {
   text-decoration: underline;
+  text-underline-offset: 0.125em;
+
   color: var(--primary-dark);
 }
 
