@@ -8,6 +8,7 @@ import { SessionLinkedin } from './components/SessionLinkedin'
 import { Footer } from './components/Footer'
 
 import { getContentfulData } from './utils/getContentfulData'
+import Testimonials from './components/SessionTestimonials'
 
 export default async function Home() {
   const promises = [
@@ -16,6 +17,7 @@ export default async function Home() {
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
     getContentfulData('ourImpact'),
+    getContentfulData('testimonialsContent'),
     getContentfulData('doubts'),
     getContentfulData('doubtsContent'),
     getContentfulData('linkedin'),
@@ -28,6 +30,7 @@ export default async function Home() {
     aboutValues,
     ourValues,
     ourImpact,
+    testimonialsContent,
     doubtsValues,
     doubtsContentValues,
     linkedin,
@@ -42,6 +45,7 @@ export default async function Home() {
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
         <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
+        <Testimonials values={testimonialsContent.entries} />
         <DoubtsSection
           values={doubtsValues.entries}
           content={doubtsContentValues.entries}
