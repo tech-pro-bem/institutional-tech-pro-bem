@@ -14,7 +14,7 @@ export const SessionLinkedin: React.FC<LinkedinProps> = async ({ values }) => {
   )
 
   return (
-    <section id="acompanhe">
+    <section>
       {values.map((value: Tables<LinkedinValues>) => (
         <div
           key={value.fields.id}

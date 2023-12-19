@@ -218,6 +218,7 @@
   /* Menu Navbar */
   .navbar {
     position: initial;
+    min-height: 3rem;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -260,7 +261,7 @@
   }
 
   .indicator {
-    display: none;
+    /* display: none; */
     /* TODO - foi identificado um bug na mudança de tela de 1279px para 1280px, por isso foi aplicado display none, rever transição de width quando todas as sessões estiverem disponeis .*/
     position: absolute;
     bottom: -0.5rem;
