@@ -1,16 +1,17 @@
-/* .swiper-button-prev {
-  background-image: url('../../../public//prevswiper.svg');
-  background-repeat: no-repeat;
-  object-fit: cover;
-} */
+.swiper-button-prev {
+  scroll-margin-top: 50vh !important;
+}
 
 .swiper-button-prev::after {
-  /* content: '' !important; */
   color: var(--neutral-gray-medium);
 }
 
 .swiper-button-prev:hover::after {
   color: var(--primary-dark);
+}
+
+.swiper-button-next {
+  scroll-margin-top: 50vh !important;
 }
 
 .swiper-button-next::after {
@@ -32,6 +33,7 @@
   height: var(--size) !important;
   background: var(--neutral-gray-light) !important;
   opacity: 1 !important;
+  scroll-margin-top: 50vh !important;
 }
 
 .swiper-pagination-bullet-active {
