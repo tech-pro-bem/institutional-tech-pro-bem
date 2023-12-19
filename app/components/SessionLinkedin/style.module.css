@@ -37,6 +37,18 @@
   border-radius: 0.25rem;
 }
 
+.link:focus-within {
+  outline: 3px solid var(--primary-medium);
+  cursor: pointer;
+  background-color: var(--primary-extra-light);
+}
+
+.link:hover {
+  border: 1px solid var(--primary-dark);
+  cursor: pointer;
+  background-color: var(--primary-extra-light);
+}
+
 .link_linkedin {
   color: var(--primary-medium);
 
@@ -45,6 +57,11 @@
 
   width: 100%;
 }
+
+.link_linkedin:focus {
+  outline: none;
+}
+
 
 .image__logo {
   transform: translateY(2.375rem);
