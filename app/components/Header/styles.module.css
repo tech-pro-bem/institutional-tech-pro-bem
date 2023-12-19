@@ -196,6 +196,9 @@
     z-index: 0;
   }
   .navbar {
+    --size: 0.25rem;
+    padding-inline: var(--size);
+    margin-right: calc(var(--size) * -1);
     overflow-y: hidden;
   }
   .header.hasShadow {
