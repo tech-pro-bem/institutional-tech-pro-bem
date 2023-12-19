@@ -3,6 +3,7 @@ import { SessionBegin } from './components/SessionBegin'
 import { SessionAboutUs } from './components/SessionAboutUs'
 import { OurValues } from './components/OurValuesSection'
 import { OurImpact } from './components/OurImpactSection'
+import { DoubtsSection } from './components/DoubtsSection'
 import { SessionLinkedin } from './components/SessionLinkedin'
 import { Footer } from './components/Footer'
 
@@ -15,6 +16,8 @@ export default async function Home() {
     getContentfulData('aboutUs'),
     getContentfulData('ourValues'),
     getContentfulData('ourImpact'),
+    getContentfulData('doubts'),
+    getContentfulData('doubtsContent'),
     getContentfulData('linkedin'),
     getContentfulData('footer'),
   ]
@@ -25,6 +28,8 @@ export default async function Home() {
     aboutValues,
     ourValues,
     ourImpact,
+    doubtsValues,
+    doubtsContentValues,
     linkedin,
     footer,
   ] = await Promise.all(promises)
@@ -37,6 +42,10 @@ export default async function Home() {
         <SessionAboutUs values={aboutValues.entries} />
         <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
         <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
+        <DoubtsSection
+          values={doubtsValues.entries}
+          content={doubtsContentValues.entries}
+        />
         <SessionLinkedin values={linkedin.entries} />
       </main>
       <Footer values={footer.entries} />

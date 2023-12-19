@@ -1,0 +1,39 @@
+.accordion__box{
+  width: 100%;
+
+  background-color: transparent;
+
+  box-shadow: none;
+  border-bottom: 1px solid var(--neutral-gray-light);
+}
+
+.accordion__box::before {
+  display: none;
+}
+
+.expand__icon{
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.accordion_summary__box{
+  padding-inline: 0 !important;
+  padding-block: 1rem !important;
+}
+
+.accordion_summary__box>div {
+  margin: 0;
+}
+
+.question__box{
+  margin-right: 2rem;
+
+  text-align: start;
+}
+
+@media (min-width: 48em) {
+  .accordion_summary__box {
+    padding-inline: 1rem !important;
+    padding-block: 1rem  !important;
+  }
+}
