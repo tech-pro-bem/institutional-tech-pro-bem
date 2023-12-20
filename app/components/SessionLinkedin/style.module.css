@@ -35,17 +35,36 @@
 
   border: 1px solid var(--primary-medium);
   border-radius: 0.25rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .link:focus-within {
-  outline: 3px solid var(--primary-medium);
-  background-color: var(--primary-extra-light);
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+  background-color: var(--primary-dark);
 }
 
-.link:hover, .link_linkedin:focus {
+.link:focus-within a {
+  color: var(--neutral-white);
+}
+
+.link:hover,
+.link_linkedin:focus {
   outline: none;
+}
+
+.link:hover {
   cursor: pointer;
-  background-color: var(--primary-extra-light);
+  background-color: var(--primary-dark);
+}
+
+.link:hover a {
+  color: var(--neutral-white);
+}
+
+.link:hover img,
+.link:focus-within img {
+  filter: brightness(0) invert(1);
 }
 
 .link_linkedin {
@@ -55,9 +74,8 @@
   gap: 0.375rem;
 
   width: 100%;
+  transition: color 0.3s ease-in-out;
 }
-
-
 
 .image__logo {
   transform: translateY(2.375rem);
@@ -66,6 +84,7 @@
   max-height: max(75vh, 320px);
 
   width: 100%;
+  transition: filter 0.1s ease-in-out;
 }
 
 @media (min-width: 48em) {
