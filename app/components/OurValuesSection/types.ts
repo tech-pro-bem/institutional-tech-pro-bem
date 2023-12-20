@@ -1,3 +1,5 @@
+import { Tables } from '@/app/protocols'
+
 export interface Values {
   title: string
   description: string
@@ -14,4 +16,9 @@ export interface Values {
       }
     }
   }
+}
+
+export interface ValuesContent {
+  title: string
+  values: Tables<Values>[]
 }

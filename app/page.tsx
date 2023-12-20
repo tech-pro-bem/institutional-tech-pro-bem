@@ -15,8 +15,8 @@ export default async function Home() {
     getContentfulData('header'),
     getContentfulData('begin'),
     getContentfulData('aboutUs'),
-    getContentfulData('ourValues'),
-    getContentfulData('ourImpact'),
+    getContentfulData('ourValuesContent'),
+    getContentfulData('ourImpactContent'),
     getContentfulData('testimonialsContent'),
     getContentfulData('doubts'),
     getContentfulData('doubtsContent'),
@@ -43,8 +43,8 @@ export default async function Home() {
       <main>
         <SessionBegin values={beginValues.entries} />
         <SessionAboutUs values={aboutValues.entries} />
-        <OurValues values={ourValues.entries} tableName={ourValues.tableName} />
-        <OurImpact values={ourImpact.entries} tableName={ourImpact.tableName} />
+        <OurValues values={ourValues.entries} />
+        <OurImpact values={ourImpact.entries} />
         <Testimonials values={testimonialsContent.entries} />
         <DoubtsSection
           values={doubtsValues.entries}
