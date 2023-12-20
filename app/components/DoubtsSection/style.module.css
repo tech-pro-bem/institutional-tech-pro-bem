@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.doubts__section p,
+.doubts__section span {
+  text-wrap: initial;
+}
+
 .doubts__title {
   margin-bottom: 1rem;
 }
