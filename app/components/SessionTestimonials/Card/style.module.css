@@ -24,6 +24,7 @@
   min-height: 20rem;
   /* min-width: 17.5rem; */
   z-index: -2;
+  user-select: none;
 }
 
 .card::before {

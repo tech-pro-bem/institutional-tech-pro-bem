@@ -30,7 +30,6 @@ div:focus-visible {
 }
 
 .swiper-button-next:hover::after {
-  width: 30px !important;
   color: var(--primary-dark);
 }
 

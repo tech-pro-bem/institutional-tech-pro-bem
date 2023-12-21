@@ -78,6 +78,17 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ values }) => {
             </SwiperSlide>
           ),
         )}
+        {/* {testimonialsContent.testimonials.length < 6 &&
+          testimonialsContent.testimonials.map(
+            (item: Tables<testimonialsType>, index: number) => (
+              <SwiperSlide key={index}>
+                <Card
+                  testimonial={item.fields}
+                  quotationMark={testimonialsContent.quotationMark}
+                />
+              </SwiperSlide>
+            ),
+          )} */}
       </Swiper>
     </section>
   )
