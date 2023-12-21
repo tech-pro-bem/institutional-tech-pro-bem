@@ -3,11 +3,22 @@
   --primary-dark: #8742ff;
   --primary-extra-light: #e2d1ff;
   --primary-medium: #9e66ff;
+  --primary-dark: #8742FF;
+
+
+  /* Secondary colors */
+  --secondary-dark: #11787A;
 
   /* Neutral colors */
   --neutral-black: #030302;
   --neutral-gray: #f5f3f2;
+  --neutral-gray-light: #e7e6e5;
+  --neutral-gray-medium: #bdbab9;
+  --neutral-gray-dark: #817c79;
   --neutral-gray-darkest: #575452;
+  --neutral-gray-dark: #817c79;
+  --neutral-gray-medium: #bdbab9;
+  --neutral-gray-light: #e7e6e5;
   --neutral-white: #fdfcfc;
 
   /* Shadows */

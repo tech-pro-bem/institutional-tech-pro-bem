@@ -1,5 +1,6 @@
 :root {
   /* Font sizes */
+  --fs-3: 0.875rem; /* 14px */
   --fs-4: 1rem; /* 16px */
   --fs-5: 1.125rem; /* 18px */
   --fs-6: 1.25rem; /* 20px */
@@ -12,6 +13,7 @@
   --fw-300: 300;
   --fw-400: 400;
   --fw-600: 600;
+  --fw-700: 700;
 }
 
 .title--big {
@@ -43,6 +45,12 @@
   line-height: 1.35;
 }
 
+.regular-text--small {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+}
+
 @media (min-width: 48em) {
   .title--big {
     line-height: 2.8rem;
@@ -70,5 +78,9 @@
 
   .regular-text {
     font-size: var(--fs-5);
+  }
+
+  .regular-text--small {
+    font-size: var(--fs-4);
   }
 }

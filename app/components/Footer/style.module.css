@@ -1,0 +1,102 @@
+.footer {
+  background: var(--gradiente-light);
+  word-break: break-word;
+  padding-top: 20rem;
+  margin-top: -16rem;
+  z-index: 0;
+  position: relative;
+}
+
+.infoContainer {
+  padding: 4rem 0;
+  gap: 3rem;
+}
+
+.infoContainer,
+.infoContainer div,
+.infoContainer address {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer div,
+.infoContainer address {
+  gap: 0.5rem;
+}
+
+.infoContainer a span {
+  position: relative;
+  text-decoration: none;
+}
+
+.infoContainer a span:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--neutral-black);
+  transition: width 0.2s ease;
+}
+
+.infoContainer a span:hover:before {
+  width: 100%;
+}
+
+.infoContainer a:focus {
+  outline: none;
+}
+
+.infoContainer a:focus span:before {
+  width: 100%;
+}
+
+.infoContainer a:active span:before {
+  width: 100%;
+}
+
+.infoContainer a:visited {
+  text-decoration: none;
+}
+
+.infoSubtitle {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  color: var(--neutral-gray-darkest);
+  text-wrap: wrap;
+}
+
+.infoField {
+  display: inline-flex;
+  gap: 0.5rem;
+
+  line-height: 1.375;
+}
+
+.infoField img {
+  width: 1.5rem;
+}
+
+.logoContainer {
+  padding: 1rem 0;
+  background: var(--neutral-white);
+}
+
+.tpblogo {
+  width: 9.75rem;
+  margin: auto;
+}
+
+@media (min-width: 48em) {
+  .infoContainer {
+    flex-direction: row;
+    gap: 5.5rem;
+  }
+
+  .footer {
+    padding-top: 14rem;
+    margin-top: -10rem;
+  }
+}

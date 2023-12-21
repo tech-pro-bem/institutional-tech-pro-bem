@@ -3,7 +3,7 @@
   top: 0;
 
   background-color: var(--neutral-white);
-  z-index: 2;
+  z-index: 3;
   transition: box-shadow 0.5s ease;
 }
 
@@ -29,6 +29,12 @@
 
   max-width: 120rem;
   padding: 1rem 0;
+}
+
+.headerContainer a:focus-visible,
+.headerContainer button:focus-visible {
+  outline: 2px solid var(--primary-dark);
+  border-radius: 3px;
 }
 
 .logo {
@@ -71,6 +77,7 @@
 
 .hamburguerIcon.closeIcon {
   padding: 0.4rem 0.3rem;
+  transform: translateX(0.185rem);
 }
 
 .hamburguerIcon span:nth-child(1) {
@@ -171,7 +178,7 @@
 
 .opacityMenu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 
   width: 100%;
   height: 100%;
@@ -195,9 +202,14 @@
   .header::before {
     z-index: 0;
   }
+
   .navbar {
+    --size: 0.25rem;
+    padding-inline: var(--size);
+    margin-right: calc(var(--size) * -1);
     overflow-y: hidden;
   }
+
   .header.hasShadow {
     box-shadow: var(--shadow-light);
   }
@@ -218,10 +230,12 @@
   /* Menu Navbar */
   .navbar {
     position: initial;
+    min-height: 3rem;
     width: fit-content;
     display: flex;
     align-items: center;
     z-index: 0;
+    overflow-x: hidden;
 
     background-color: var(--neutral-white);
 
@@ -260,8 +274,6 @@
   }
 
   .indicator {
-    display: none;
-    /* TODO - foi identificado um bug na mudança de tela de 1279px para 1280px, por isso foi aplicado display none, rever transição de width quando todas as sessões estiverem disponeis .*/
     position: absolute;
     bottom: -0.5rem;
     height: 2px;

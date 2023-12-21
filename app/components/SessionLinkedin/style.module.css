@@ -1,0 +1,157 @@
+.section__container_linkedin {
+  max-width: 19.5rem;
+  padding-top: 2rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--neutral-white);
+  box-shadow: var(--shadow-light);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+
+  gap: 1.625rem;
+}
+
+.section__container_text {
+  width: 100%;
+
+  padding-inline: 2rem;
+}
+.text_paragraph {
+  margin-top: 1rem;
+  text-wrap: initial;
+}
+
+.link {
+  display: flex;
+
+  max-width: 12.1875rem;
+  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+
+  margin-top: 2rem;
+
+  border: 1px solid var(--primary-medium);
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link:focus-within {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+  background-color: var(--primary-dark);
+}
+
+.link:focus-within a {
+  color: var(--neutral-white);
+}
+
+.link:hover,
+.link_linkedin:focus {
+  outline: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: var(--primary-dark);
+}
+
+.link:hover a {
+  color: var(--neutral-white);
+}
+
+.link:hover img,
+.link:focus-within img {
+  filter: brightness(0) invert(1);
+}
+
+.link_linkedin {
+  color: var(--primary-medium);
+
+  font-size: 0.875rem;
+  gap: 0.375rem;
+
+  width: 100%;
+  transition: color 0.3s ease-in-out;
+}
+
+.image__logo {
+  transform: translateY(2.375rem);
+
+  max-width: 17.5rem;
+  max-height: max(75vh, 320px);
+
+  width: 100%;
+  transition: filter 0.1s ease-in-out;
+}
+
+@media (min-width: 48em) {
+  .section__container_linkedin {
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    min-width: 18rem;
+    max-width: 40rem;
+
+    padding-inline: 1.5rem;
+    padding-bottom: 1rem;
+
+    /* transform: translateY(-10rem); */
+  }
+
+  .section__container_text {
+    min-width: 20rem;
+    max-width: 24rem;
+
+    /* padding-inline: 0; */
+    padding-left: 0;
+  }
+
+  .image__logo {
+    margin-bottom: 0;
+
+    align-items: center;
+
+    min-width: 17.5rem;
+    max-width: 24.75rem;
+
+    transform: translateY(3rem);
+  }
+}
+
+@media (min-width: 80em) {
+  .section__container_linkedin {
+    padding: 0;
+
+    max-width: 73.125rem;
+
+    gap: 6.25vw;
+
+    margin-top: 2rem;
+  }
+
+  .section__container_text {
+    max-width: 22.5rem;
+  }
+
+  .link {
+    max-width: 14.1875rem;
+  }
+
+  .link_linkedin {
+    color: var(--primary-dark);
+    font-weight: var(--fw-600);
+    font-size: var(--fs-4);
+    line-height: 1.35;
+  }
+
+  .image__logo {
+    padding-top: 0;
+
+    transform: translateY(3.625rem);
+
+    max-width: 24.75rem;
+  }
+}
