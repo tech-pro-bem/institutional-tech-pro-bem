@@ -15,10 +15,7 @@ export async function getContentfulData(table: string) {
     content_type: table,
   })
 
-  const getTable = await client.getContentType(table)
-  const tableName = getTable.name
-
   const entries: Tables<unknown>[] = getEntries.items
 
-  return { entries, tableName }
+  return { entries }
 }
