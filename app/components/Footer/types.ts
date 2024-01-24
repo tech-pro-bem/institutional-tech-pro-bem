@@ -1,3 +1,5 @@
+import { ImageType } from '@/app/protocols'
+
 export interface FooterValues {
   id: string
   textTalk: string
@@ -8,19 +10,5 @@ export interface FooterValues {
   textPartnership: string
   invitePartnership: string
   emailPartnership: string
-  logo: {
-    fields: {
-      title: string
-      description: string
-      file: {
-        url: string
-        details: {
-          image: {
-            width: number
-            height: number
-          }
-        }
-      }
-    }
-  }
+  logo: ImageType
 }

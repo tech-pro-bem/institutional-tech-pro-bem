@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './style.module.css'
 import Image from 'next/image'
-import { imageType, testimonialsType } from '../types'
+import { testimonialsType } from '../types'
+import { ImageType } from '@/app/protocols'
 
 interface CardProps {
   testimonial: testimonialsType
-  quotationMark: imageType
+  quotationMark: ImageType
 }
 export const Card: React.FC<CardProps> = ({ testimonial, quotationMark }) => {
   const testimony = testimonial.testimony.replace(

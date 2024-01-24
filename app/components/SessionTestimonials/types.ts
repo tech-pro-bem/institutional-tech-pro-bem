@@ -1,31 +1,15 @@
-import { Tables } from '@/app/protocols'
-
-export interface imageType {
-  fields: {
-    title: string
-    description: string
-    file: {
-      url: string
-      details: {
-        image: {
-          width: number
-          height: number
-        }
-      }
-    }
-  }
-}
+import { ImageType, Tables } from '@/app/protocols'
 
 export interface testimonialsType {
   name: string
   office: string
   testimony: string
-  image: imageType
+  image: ImageType
 }
 
 export interface testimonialsContentType {
   title: string
   description: string
-  quotationMark: imageType
+  quotationMark: ImageType
   testimonials: Tables<testimonialsType>[]
 }
