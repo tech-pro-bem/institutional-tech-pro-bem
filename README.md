@@ -18,6 +18,7 @@
 - [Husky + Lint Staged](#husky--lint-staged)
 - [Contentful](#contentful)
   - [Configurações do Contentful](#configurações-do-contentful)
+- [Material UI](#material-ui)
 - [Contribuições](#contribuições)
   - [Corrigindo Bugs ou adicionando novas funcionalidades](#corrigindo-bugs-ou-adicionando-novas-funcionalidades)
   - [Padrão de commits](#padrão-de-commits)
@@ -107,6 +108,9 @@ No Contentful, o conteúdo está organizado em tabelas, cada uma com um identifi
 
 * A tipagem de cada identificador está definida no arquivo `types.tsx` de cada componente.
 - Para obter mais detalhes sobre as configurações do Contentful, [clique aqui](https://docs.google.com/document/d/1WY30hDmkRWt4-N8uIg2J5ojYi0xA78U5sEpxdxkI42c/edit?usp=sharing).
+
+# Material UI
+Em nossa implementação da **seção Dúvidas**, optamos por incorporar a biblioteca Material UI para aprimorar a experiência do usuário. Para facilitar a navegação entre as diferentes categorias de perguntas, utilizamos o componente **Tabs**. Além disso, para apresentar as perguntas e respostas de maneira organizada e expansível, empregamos o componente **Accordion**.
 
 # Contribuições
 
