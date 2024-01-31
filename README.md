@@ -14,14 +14,15 @@
 - [Introdução](#introdução)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Setup](#setup)
+- [Testes](#testes)
+- [Husky + Lint Staged](#husky--lint-staged)
+- [Contentful](#contentful)
+  - [Configurações do Contentful](#configurações-do-contentful)
 - [Contribuições](#contribuições)
   - [Corrigindo Bugs ou adicionando novas funcionalidades](#corrigindo-bugs-ou-adicionando-novas-funcionalidades)
   - [Padrão de commits](#padrão-de-commits)
 - [Design e Guias de Estilo](#design-e-guias-de-estilo)
   - [Projeto no Figma](#projeto-no-figma)
-
-
-
 
 # Introdução
 
@@ -39,13 +40,12 @@ Neste projeto desenvolvemos o website institucional da Tech pro bem para apresen
 - [Contentful](https://www.contentful.com/) - Headless CMS
 - [Material UI](https://mui.com/) - Biblioteca de componentss
 - [ES Lint](https://eslint.org/) - Ferramenta para validação de código
-- [Husky](https://typicode.github.io/husky/) - Ferramenta para validar commits
-
+- [Husky](https://typicode.github.io/husky/) + [Lint Staged](https://github.com/okonet/lint-staged) - Ferramenta para validar commits
+- [Cypress](https://www.cypress.io/) - Framework de testes para aplicações front-end
 
 # Setup
 
 > Antes de começar, você vai precisar ter instalado o Node.js no mínimo na versão 18.
-
 
 1. Clone localmente este repositório.
 
@@ -61,11 +61,56 @@ npm install
 npm run dev
 ```
 
+# Testes
+
+Utilizamos o [Cypress](https://www.cypress.io/) para realizar testes automatizados nos componentes do nosso projeto. Os testes são desenvolvidos no diretório `/cypress` e podem ser executados locamente para garantir a integridade e o bom funcionamento dos componentes.
+
+Para executar os testes com Cypress, siga os passos abaixo:
+
+1. Certifique-se de que a aplicação está sendo executada locamente. Caso contrário, inicie-a com o seguinte comando:
+
+```bash
+npm run dev
+```
+
+2. Abra uma nova janela do terminal e execute o seguinte comando para iniciar o Cypress:
+
+```bash
+npx cypress open
+```
+
+Na interface do Cypress, selecione o teste que deseja executar e acompanhe os resultados.
+
+3. Ou você pode executar todos os testes na aba do terminal executando o seguinte comando:
+
+```bash
+npx cypress run
+```
+
+# Husky + Lint Staged
+
+Para assegurar a uniformidade do código e aderência às regras definidas, implementamos o Husky em conjunto com Lint Staged.
+
+O Husky atua acionando ganchos (hooks) do Git antes de eventos específicos, como commits. O Lint Staged executa linting apenas nos arquivos que estão sendo commitados. Dessa forma, antes de confirmar um commit, o Husky aciona o Lint Staged para garantir que o código esteja formatado corretamente e siga as convenções definidas.
+
+# Contentful
+
+Todas as informações exibidas no site, incluindo imagens, símbolos, títulos e textos, são gerenciados pelo Contentful, um Headless CMS. Isso permite uma fácil atualização e manutenção do conteúdo sem a necessidade de modificar diretamente o código do projeto.
+
+Alguns textos apresentam formatações específicas, como negrito, itálico e links. Nem todos os retornos do Contentful foram codificados para receber e formatar corretamente essas nuances. Portanto, **pode ser necessário ajustar o código para processar essas formatações** de maneira adequada.
+
+Atualmente, o Contentful está configurado com um webhook que aciona automaticamente um novo deploy na Vercel sempre que há alterações no conteúdo. Isso elimina a necessidade de realizar manualmente um deploy para atualizar o conteúdo.
+
+## Configurações do Contentful
+
+No Contentful, o conteúdo está organizado em tabelas, cada uma com um identificador. Manter os identificadores existentes é crucial para garantir a integridade das requisições de conteúdo no código. Evite modificar esses identificadores, pois podem estar sendo utilizados em requisições existentes.
+
+* A tipagem de cada identificador está definida no arquivo `types.tsx` de cada componente.
+- Para obter mais detalhes sobre as configurações do Contentful, [clique aqui](https://docs.google.com/document/d/1WY30hDmkRWt4-N8uIg2J5ojYi0xA78U5sEpxdxkI42c/edit?usp=sharing).
+
 # Contribuições
 
 ## Corrigindo Bugs ou adicionando novas funcionalidades
-
-
 
 1. Crie uma branch com o tópico para as suas mudanças:
 
@@ -106,7 +151,6 @@ git push origin fix/fix-for-that-thing
 Mais infos [aqui](https://github.com/iuricode/padroes-de-commits#:~:text=%F0%9F%93%84-,Padr%C3%B5es%20de%20commits,a%20cria%C3%A7%C3%A3o%20de%20ferramentas%20automatizadas.).
 
 ---
-
 
 # Design e Guias de Estilo
 
